@@ -1,10 +1,10 @@
-![登录页](https://github.com/LuSteven/Images/blob/master/SWM-Images/SmoWMSlogo.png)    
+![登录页](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/SmoWMSlogo.png)    
 
 ## 项目简介
 SmoWMS，仓库管理系统。是一款以.NET开发的移动端仓库管理解决方案。     
 IDE为VisualStudio，开发平台为Smobiler，SmobilerDesigner通过实现.NET的component组件方式，借助VisualStudio集成开发环境来开发移动应用。SmobilerClient是通用的框架客户端，使用自有的stml协议实现客户端的原生控件渲染和事件。云平台可在云端生成Android和IOS的安装文件。      
 SmoWMS is a Warehouse Management solution for APPs, developed by .NET. The development environment is VisualStudio, the development platform is Smobiler.      
-![登录页](https://github.com/LuSteven/Images/blob/master/SWM-Images/logon.gif)    
+![登录页](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/logon.gif)    
 
 该项目已经打包了Android和iOS的安装包。供大家体验。
 + [Android下载](https://apps.smobiler.cn/App/AppDetails?AppID=110)
@@ -21,7 +21,7 @@ IOS版本：支持IOS 8.0及以上版本
 .NET FrameWork版本: .支持NET FrameWork 4.0及以上版本   
 Visual Studio版本：支持Visual studio 2010及以上版本    
 SmobilerDesigner版本：450.1532931155([下载并安装SmobilerDesigner](https://www.smobiler.com/SmobilerDesigner.exe?v=4.5.0))     
-![下载](https://github.com/LuSteven/Images/blob/master/SEC-Images/down.gif)
+![下载](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/down.gif)
 
 ## SmobilerClient（开发调试客户端）获取
 [Android版调试客户端](https://www.smobiler.com/Smobiler.apk?v=4.5.0)          
@@ -33,13 +33,13 @@ SmobilerDesigner版本：450.1532931155([下载并安装SmobilerDesigner](https:
 确认Visual Studio已安装且版本正确。   
 确认SmobilerDesigner已安装且版本正确。   
 下载源码，在VisualStudio中打开。
-![演示](https://github.com/LuSteven/Images/blob/master/SWM-Images/menu.gif)
+![演示](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/menu.gif)
 
 ## 调试
 确认SmobilerClient已安装至手机且版本正确。    
 点击“启动“。   
 手机打开SmobilerClient，“扫一扫”，扫描二维码。    
-![调试](https://github.com/LuSteven/Images/blob/master/SWM-Images/start.gif)    
+![调试](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/start.gif)    
 注意：请确保手机和服务器处于同一局域网
 
 ## 相关资料
