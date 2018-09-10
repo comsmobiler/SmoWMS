@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75ADB9C8-D14E-415A-93C9-113E5795F63A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SMOWMS.Domain</RootNamespace>
+    <AssemblyName>SMOWMS.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Assets.cs" />
+    <Compile Include="Entity\AssetsType.cs" />
+    <Compile Include="Entity\AssInventory.cs" />
+    <Compile Include="Entity\AssInventoryResult.cs" />
+    <Compile Include="Entity\AssProcessRecord.cs" />
+    <Compile Include="Entity\AssPurchaseOrder.cs" />
+    <Compile Include="Entity\AssPurchaseOrderInstorage.cs" />
+    <Compile Include="Entity\AssPurchaseOrderReturn.cs" />
+    <Compile Include="Entity\AssPurchaseOrderRow.cs" />
+    <Compile Include="Entity\AssSalesOrder.cs" />
+    <Compile Include="Entity\AssSalesOrderOutbound.cs" />
+    <Compile Include="Entity\AssSalesOrderRetiring.cs" />
+    <Compile Include="Entity\AssSalesOrderRow.cs" />
+    <Compile Include="Entity\AssTemplate.cs" />
+    <Compile Include="Entity\AssTransferOrder.cs" />
+    <Compile Include="Entity\AssTransferOrderRow.cs" />
+    <Compile Include="Entity\ConInventory.cs" />
+    <Compile Include="Entity\ConInventoryResult.cs" />
+    <Compile Include="Entity\ConPurchaseOrder.cs" />
+    <Compile Include="Entity\ConPurchaseOrderInstorage.cs" />
+    <Compile Include="Entity\ConPurchaseOrderReturn.cs" />
+    <Compile Include="Entity\ConPurchaseOrderRow.cs" />
+    <Compile Include="Entity\ConQuant.cs" />
+    <Compile Include="Entity\ConSalesOrder.cs" />
+    <Compile Include="Entity\ConSalesOrderOutbound.cs" />
+    <Compile Include="Entity\ConSalesOrderRetiring.cs" />
+    <Compile Include="Entity\ConSalesOrderRow.cs" />
+    <Compile Include="Entity\Consumables.cs" />
+    <Compile Include="Entity\coreUser.cs" />
+    <Compile Include="Entity\Customer.cs" />
+    <Compile Include="Entity\ValidateCode.cs" />
+    <Compile Include="Entity\Vendor.cs" />
+    <Compile Include="Entity\WareHourse.cs" />
+    <Compile Include="Entity\WHStorageLocation.cs" />
+    <Compile Include="Entity\WHStorageType.cs" />
+    <Compile Include="IAggregateRoot.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IRepository\IAssetsRepository.cs" />
+    <Compile Include="IRepository\IAssetsTypeRepository.cs" />
+    <Compile Include="IRepository\IAssInventoryRepository.cs" />
+    <Compile Include="IRepository\IAssInventoryResultRepository.cs" />
+    <Compile Include="IRepository\IAssPOInstorageRepository.cs" />
+    <Compile Include="IRepository\IAssPORowRepository.cs" />
+    <Compile Include="IRepository\IAssProcessRecordRepository.cs" />
+    <Compile Include="IRepository\IAssPurchaseOrderRepository.cs" />
+    <Compile Include="IRepository\IAssSalesOrderRepository.cs" />
+    <Compile Include="IRepository\IAssSOOutboundRepository.cs" />
+    <Compile Include="IRepository\IAssSORowRepository.cs" />
+    <Compile Include="IRepository\IAssTemplateRepository.cs" />
+    <Compile Include="IRepository\IAssTransferOrderRepository.cs" />
+    <Compile Include="IRepository\IAssTransferOrderRowRepository.cs" />
+    <Compile Include="IRepository\IConInventoryRepository.cs" />
+    <Compile Include="IRepository\IConInventoryResultRepository.cs" />
+    <Compile Include="IRepository\IConPurchaseOrderInstorageReposity.cs" />
+    <Compile Include="IRepository\IConPurchaseOrderReposity.cs" />
+    <Compile Include="IRepository\IConPurchaseOrderReturnReposity.cs" />
+    <Compile Include="IRepository\IConPurchaseOrderRowReposity.cs" />
+    <Compile Include="IRepository\IConQuantRepository.cs" />
+    <Compile Include="IRepository\IConSalesOrderOutboundReposity.cs" />
+    <Compile Include="IRepository\IConSalesOrderReposity.cs" />
+    <Compile Include="IRepository\IConSalesOrderRetiringReposity.cs" />
+    <Compile Include="IRepository\IConSalesOrderRowReposity.cs" />
+    <Compile Include="IRepository\IConsumablesRepository.cs" />
+    <Compile Include="IRepository\IcoreUserRepository.cs" />
+    <Compile Include="IRepository\ICustomerReposity.cs" />
+    <Compile Include="IRepository\IRepository.cs" />
+    <Compile Include="IRepository\IValidateCodeRepository.cs" />
+    <Compile Include="IRepository\IVendorReposity.cs" />
+    <Compile Include="IRepository\IWarehouseRepository.cs" />
+    <Compile Include="IRepository\IWHStorageLocationRepository.cs" />
+    <Compile Include="IRepository\IWHStorageTypeReposity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Smobiler.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c28d201d12639a97, processorArchitecture=MSIL" />
+    <Reference Include="Smobiler.Core.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=276522cd3fa3b955, processorArchitecture=MSIL" />
+    <Reference Include="Smobiler.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9301bc54ca0d7a69, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4ED4BA2-0F97-4E61-A8CD-9F8FE47E7BAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SMOWMS.Application</RootNamespace>
+    <AssemblyName>SMOWMS.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper.cs" />
+    <Compile Include="IServices\IAssAnalysisService.cs" />
+    <Compile Include="IServices\IAssInventoryService.cs" />
+    <Compile Include="IServices\IAssPurchaseOrderService.cs" />
+    <Compile Include="IServices\IAssSalesOrderService.cs" />
+    <Compile Include="IServices\IAssTransferOrderService.cs" />
+    <Compile Include="IServices\IAssTypeService.cs" />
+    <Compile Include="IServices\IConInventoryService.cs" />
+    <Compile Include="IServices\IConPurchaseOrderService.cs" />
+    <Compile Include="IServices\IConSalesOrderService.cs" />
+    <Compile Include="IServices\IConsumablesService.cs" />
+    <Compile Include="IServices\IcoreUserService.cs" />
+    <Compile Include="IServices\ICustomerService.cs" />
+    <Compile Include="IServices\IOrderCommonService.cs" />
+    <Compile Include="IServices\ISettingService.cs" />
+    <Compile Include="IServices\IValidateCodeService.cs" />
+    <Compile Include="IServices\IVendorService.cs" />
+    <Compile Include="IServices\IWareHouseService.cs" />
+    <Compile Include="Services\AssAnalysisService.cs" />
+    <Compile Include="Services\AssInventoryService.cs" />
+    <Compile Include="Services\AssPurchaseOrderService.cs" />
+    <Compile Include="Services\AssSalesOrderService.cs" />
+    <Compile Include="Services\AssTransferOrderService.cs" />
+    <Compile Include="Services\AssTypeService.cs" />
+    <Compile Include="Services\ConInventoryService.cs" />
+    <Compile Include="Services\ConPurchaseOrderService.cs" />
+    <Compile Include="Services\ConSalesOrderService.cs" />
+    <Compile Include="Services\ConsumablesService.cs" />
+    <Compile Include="Services\coreUserService.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\OrderCommonService.cs" />
+    <Compile Include="Services\SettingService.cs" />
+    <Compile Include="Services\ValidateCodeService.cs" />
+    <Compile Include="Services\VendorService.cs" />
+    <Compile Include="Services\WareHouseService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMOWMS.CommLib\SMOWMS.CommLib.csproj">
+      <Project>{F67CF087-2032-479E-9B7E-D6ED0CB3904E}</Project>
+      <Name>SMOWMS.CommLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Domain\SMOWMS.Domain.csproj">
+      <Project>{75ADB9C8-D14E-415A-93C9-113E5795F63A}</Project>
+      <Name>SMOWMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.DTOs\SMOWMS.DTOs.csproj">
+      <Project>{B9B23883-06C5-4581-B315-4F2F649D55C5}</Project>
+      <Name>SMOWMS.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Infrastructure\SMOWMS.Infrastructure.csproj">
+      <Project>{C2679305-61A8-45C5-BCD5-482A734C71A2}</Project>
+      <Name>SMOWMS.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Repository\SMOWMS.Repository.csproj">
+      <Project>{A228840D-7E0B-49F0-987A-CF43E932BA50}</Project>
+      <Name>SMOWMS.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Smobiler.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c28d201d12639a97, processorArchitecture=MSIL" />
+    <Reference Include="Smobiler.Core.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=276522cd3fa3b955, processorArchitecture=MSIL" />
+    <Reference Include="Smobiler.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9301bc54ca0d7a69, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TopSdk">
+      <HintPath>..\..\Dll\TopSdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
