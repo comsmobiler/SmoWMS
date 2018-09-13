@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9B23883-06C5-4581-B315-4F2F649D55C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SMOWMS.DTOs</RootNamespace>
+    <AssemblyName>SMOWMS.DTOs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\EuserInfo.cs" />
+    <Compile Include="Enum\InventoryStatus.cs" />
+    <Compile Include="Enum\IsEnable.cs" />
+    <Compile Include="Enum\ISSNCONTROL.cs" />
+    <Compile Include="Enum\PROCESSMODE.cs" />
+    <Compile Include="Enum\PurchaseOrderStatus.cs" />
+    <Compile Include="Enum\ResultStatus.cs" />
+    <Compile Include="Enum\SalesOrderStatus.cs" />
+    <Compile Include="Enum\Sex.cs" />
+    <Compile Include="Enum\STATUS.cs" />
+    <Compile Include="Enum\OperateType.cs" />
+    <Compile Include="Enum\UnitType.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="InputDTO\AddAIResultInputDto.cs" />
+    <Compile Include="InputDTO\AddCIResultInputDto.cs" />
+    <Compile Include="InputDTO\AssetsInputDto.cs" />
+    <Compile Include="InputDTO\AssetsOrderRow.cs" />
+    <Compile Include="InputDTO\AssInStorageInputDto.cs" />
+    <Compile Include="InputDTO\AssInventoryInputDto.cs" />
+    <Compile Include="InputDTO\AssInventoryResultInputDto.cs" />
+    <Compile Include="InputDTO\AssProcessRecordInputDto.cs" />
+    <Compile Include="InputDTO\AssPurchaseOrderInputDto.cs" />
+    <Compile Include="InputDTO\AssRowInputDto.cs" />
+    <Compile Include="InputDTO\AssSalesInputDto.cs" />
+    <Compile Include="InputDTO\AssSalesOrderInputDto.cs" />
+    <Compile Include="InputDTO\AssTemplateInputDto.cs" />
+    <Compile Include="InputDTO\AssTransferInputDto.cs" />
+    <Compile Include="InputDTO\AssTypeDto.cs" />
+    <Compile Include="InputDTO\ConInventoryInputDto.cs" />
+    <Compile Include="InputDTO\ConInventoryResultInputDto.cs" />
+    <Compile Include="InputDTO\ConPOInStoInputDto.cs" />
+    <Compile Include="InputDTO\ConPORInstorageInputDto.cs" />
+    <Compile Include="InputDTO\ConPurAndSaleCreateInputDto.cs" />
+    <Compile Include="InputDTO\ConPurchaseOrderInputDto.cs" />
+    <Compile Include="InputDTO\ConPurchaseOrderRowInputDto.cs" />
+    <Compile Include="InputDTO\ConSalesOrderInputDto.cs" />
+    <Compile Include="InputDTO\ConSalesOrderRowInputDto.cs" />
+    <Compile Include="InputDTO\ConSOOutboundInputDto.cs" />
+    <Compile Include="InputDTO\ConsumablesInputDto.cs" />
+    <Compile Include="InputDTO\ConsumablesOrderRow.cs" />
+    <Compile Include="InputDTO\AssRetiringInputDto.cs" />
+    <Compile Include="InputDTO\AssReturnInputDto.cs" />
+    <Compile Include="InputDTO\QueryAssAnalysisInputDto.cs" />
+    <Compile Include="InputDTO\QueryAssCusandVenAnalysisInputDto.cs" />
+    <Compile Include="InputDTO\QueryAssQuantInputDto.cs" />
+    <Compile Include="InputDTO\TOInputDto.cs" />
+    <Compile Include="InputDTO\UploadPOResultInputDto.cs" />
+    <Compile Include="InputDTO\UploadSOResultInputDto.cs" />
+    <Compile Include="InputDTO\WareHouseInputDto.cs" />
+    <Compile Include="InputDTO\WHStorageLocationInputDto.cs" />
+    <Compile Include="InputDTO\WHStorageTypeInputDto.cs" />
+    <Compile Include="OutputDTO\AssCusAnalysisDto.cs" />
+    <Compile Include="OutputDTO\AssetsOutputDto.cs" />
+    <Compile Include="OutputDTO\AssImminentExpiryDto.cs" />
+    <Compile Include="OutputDTO\AssInventoryListOutputDto.cs" />
+    <Compile Include="OutputDTO\AssInventoryOutputDto.cs" />
+    <Compile Include="OutputDTO\AssInventoryResultOutputDto.cs" />
+    <Compile Include="OutputDTO\AssPOListOutputDto.cs" />
+    <Compile Include="OutputDTO\AssPORowOutputDto.cs" />
+    <Compile Include="OutputDTO\AssProRecordOutputDto.cs" />
+    <Compile Include="OutputDTO\AssPurchaseAnalysisDto.cs" />
+    <Compile Include="OutputDTO\AssPurchaseOrderOutputDto.cs" />
+    <Compile Include="OutputDTO\AssQuantDto.cs" />
+    <Compile Include="OutputDTO\AssSaleAnalysisDto.cs" />
+    <Compile Include="OutputDTO\AssSalesOrderOutputDto.cs" />
+    <Compile Include="OutputDTO\AssSOListOutputDto.cs" />
+    <Compile Include="OutputDTO\AssSORowOutputDto.cs" />
+    <Compile Include="OutputDTO\AssTempOutputDto.cs" />
+    <Compile Include="OutputDTO\AssVenAnalysisDto.cs" />
+    <Compile Include="OutputDTO\ATChooseOutputDto.cs" />
+    <Compile Include="OutputDTO\BarChartDto.cs" />
+    <Compile Include="OutputDTO\BarChartOutputDto.cs" />
+    <Compile Include="OutputDTO\ConInventoryListOutputDto.cs" />
+    <Compile Include="OutputDTO\ConInventoryOutputDto.cs" />
+    <Compile Include="OutputDTO\ConInventoryResultOutputDto.cs" />
+    <Compile Include="OutputDTO\ConOutputDto.cs" />
+    <Compile Include="OutputDTO\ConPurchaseOrderOutputDto.cs" />
+    <Compile Include="OutputDTO\ConPORInstorageOutputDto.cs" />
+    <Compile Include="OutputDTO\ConPurchaseOrderReturnOutputDto.cs" />
+    <Compile Include="OutputDTO\ConQuantOutputDto.cs" />
+    <Compile Include="OutputDTO\ConSalesOrderOutputDto.cs" />
+    <Compile Include="OutputDTO\ConSalesOrderOutboundOutputDto.cs" />
+    <Compile Include="OutputDTO\ConSORetiringOutputDto.cs" />
+    <Compile Include="OutputDTO\ConsumablesOutputDto.cs" />
+    <Compile Include="OutputDTO\WHStorageLocationOutputDto.cs" />
+    <Compile Include="OutputDTO\WHStorageTypeOutputDto.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMOWMS.Domain\SMOWMS.Domain.csproj">
+      <Project>{75ADB9C8-D14E-415A-93C9-113E5795F63A}</Project>
+      <Name>SMOWMS.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

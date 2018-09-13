@@ -1,0 +1,1557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08B0C94F-0BEA-44FC-937B-CB2CE03256A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SMOWMS.UI</RootNamespace>
+    <AssemblyName>SMOWMS.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Smobiler_128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Smobiler.Core.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=276522cd3fa3b955, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Smobiler Designer\Library\Smobiler.Core.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Smobiler.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f1ac7264a7cfc183, processorArchitecture=MSIL" />
+    <Reference Include="Smobiler.Device, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e0b1d6c313d28ffc, processorArchitecture=MSIL" />
+    <Reference Include="Smobiler.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9301bc54ca0d7a69, processorArchitecture=MSIL" />
+    <Reference Include="Smobiler.Utility" />
+    <Reference Include="Smobiler.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TopSdk, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\TopSdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analyze\Assets\frmAssCusAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssCusAnalysis.Designer.cs">
+      <DependentUpon>frmAssCusAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssPOAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssPOAnalysis.Designer.cs">
+      <DependentUpon>frmAssPOAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssQuantAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssQuantAnalysis.Designer.cs">
+      <DependentUpon>frmAssQuantAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssSOAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssSOAnalysis.Designer.cs">
+      <DependentUpon>frmAssSOAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssVenAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmAssVenAnalysis.Designer.cs">
+      <DependentUpon>frmAssVenAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmImminentExpiryAss.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Assets\frmImminentExpiryAss.Designer.cs">
+      <DependentUpon>frmImminentExpiryAss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmCustomerAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmCustomerAnalyze.Designer.cs">
+      <DependentUpon>frmCustomerAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmPurchaseAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmPurchaseAnalyze.Designer.cs">
+      <DependentUpon>frmPurchaseAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmQuantAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmQuantAnalyze.Designer.cs">
+      <DependentUpon>frmQuantAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmSafeQuantAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmSafeQuantAnalyze.Designer.cs">
+      <DependentUpon>frmSafeQuantAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmSaleAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmSaleAnalyze.Designer.cs">
+      <DependentUpon>frmSaleAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmVendorAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Analyze\Consumable\frmVendorAnalyze.Designer.cs">
+      <DependentUpon>frmVendorAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssIn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssIn.Designer.cs">
+      <DependentUpon>frmAssIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssInventory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssInventory.Designer.cs">
+      <DependentUpon>frmAssInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssInventoryCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssInventoryCreate.Designer.cs">
+      <DependentUpon>frmAssInventoryCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssInventoryEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssInventoryEdit.Designer.cs">
+      <DependentUpon>frmAssInventoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssInventoryResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssInventoryResult.Designer.cs">
+      <DependentUpon>frmAssInventoryResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssOut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssOut.Designer.cs">
+      <DependentUpon>frmAssOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssPurchaseOrderCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssPurchaseOrderCreate.Designer.cs">
+      <DependentUpon>frmAssPurchaseOrderCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssPurchaseOrderEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssPurchaseOrderEdit.Designer.cs">
+      <DependentUpon>frmAssPurchaseOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssPurchaseOrderResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssPurchaseOrderResult.Designer.cs">
+      <DependentUpon>frmAssPurchaseOrderResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssRetiring.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssRetiring.Designer.cs">
+      <DependentUpon>frmAssRetiring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssReturn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssReturn.Designer.cs">
+      <DependentUpon>frmAssReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssSalesOrderCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssSalesOrderCreate.Designer.cs">
+      <DependentUpon>frmAssSalesOrderCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssSalesOrderEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssSalesOrderEdit.Designer.cs">
+      <DependentUpon>frmAssSalesOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssSalesOrderResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssSalesOrderResult.Designer.cs">
+      <DependentUpon>frmAssSalesOrderResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssSourceChoose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssSourceChoose.Designer.cs">
+      <DependentUpon>frmAssSourceChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTemplateChoose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTemplateChoose.Designer.cs">
+      <DependentUpon>frmAssTemplateChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTransferCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTransferCreate.Designer.cs">
+      <DependentUpon>frmAssTransferCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTransferDeal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTransferDeal.Designer.cs">
+      <DependentUpon>frmAssTransferDeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTransferDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTransferDetail.Designer.cs">
+      <DependentUpon>frmAssTransferDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTransferRows.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssetsManager\frmAssTransferRows.Designer.cs">
+      <DependentUpon>frmAssTransferRows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutofacConfig.cs" />
+    <Compile Include="AutomapperConfig.cs" />
+    <Compile Include="ConsumablesManager\frmConInventory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConInventory.Designer.cs">
+      <DependentUpon>frmConInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConInventoryCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConInventoryCreate.Designer.cs">
+      <DependentUpon>frmConInventoryCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConInventoryEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConInventoryEdit.Designer.cs">
+      <DependentUpon>frmConInventoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConInventoryResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConInventoryResult.Designer.cs">
+      <DependentUpon>frmConInventoryResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConPORInSto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConPORInSto.Designer.cs">
+      <DependentUpon>frmConPORInSto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConPORReturn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConPORReturn.Designer.cs">
+      <DependentUpon>frmConPORReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConPurchaseCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConPurchaseCreate.Designer.cs">
+      <DependentUpon>frmConPurchaseCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConPurchaseResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConPurchaseResult.Designer.cs">
+      <DependentUpon>frmConPurchaseResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConQuant.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConQuant.Designer.cs">
+      <DependentUpon>frmConQuant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConSalesCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConSalesCreate.Designer.cs">
+      <DependentUpon>frmConSalesCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConSalesResult.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConSalesResult.Designer.cs">
+      <DependentUpon>frmConSalesResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConsChoose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConsChoose.Designer.cs">
+      <DependentUpon>frmConsChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConSOROutbound.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConSOROutbound.Designer.cs">
+      <DependentUpon>frmConSOROutbound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConSORRetiring.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmConSORRetiring.Designer.cs">
+      <DependentUpon>frmConSORRetiring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferConsChoose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferConsChoose.Designer.cs">
+      <DependentUpon>frmTransferConsChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferCreate.Designer.cs">
+      <DependentUpon>frmTransferCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferDeal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferDeal.Designer.cs">
+      <DependentUpon>frmTransferDeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferDetail.Designer.cs">
+      <DependentUpon>frmTransferDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferRows.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsumablesManager\frmTransferRows.Designer.cs">
+      <DependentUpon>frmTransferRows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridviewbyUser.cs" />
+    <Compile Include="DepartmentMode.cs" />
+    <Compile Include="frmGenerateQRcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateQRcode.Designer.cs">
+      <DependentUpon>frmGenerateQRcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmLogon.designer.cs">
+      <DependentUpon>frmLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\AssetTypeTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\AssetTypeTree.Designer.cs">
+      <DependentUpon>AssetTypeTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\AssSelectLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\AssSelectLayout.Designer.cs">
+      <DependentUpon>AssSelectLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\EditUserInfoLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\EditUserInfoLayout.Designer.cs">
+      <DependentUpon>EditUserInfoLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAIResultLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAIResultLayout.Designer.cs">
+      <DependentUpon>frmAIResultLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssCusAnalysisLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssCusAnalysisLayout.Designer.cs">
+      <DependentUpon>frmAssCusAnalysisLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssetsExLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssetsExLayout.Designer.cs">
+      <DependentUpon>frmAssetsExLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssetsShowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssetsShowLayout.Designer.cs">
+      <DependentUpon>frmAssetsShowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssetsSNLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssetsSNLayout.Designer.cs">
+      <DependentUpon>frmAssetsSNLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssetsSNShowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssetsSNShowLayout.Designer.cs">
+      <DependentUpon>frmAssetsSNShowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssetsTypeCreateLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssetsTypeCreateLayout.Designer.cs">
+      <DependentUpon>frmAssetsTypeCreateLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssInventoryLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssInventoryLayout.Designer.cs">
+      <DependentUpon>frmAssInventoryLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssPOAnalysisLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssPOAnalysisLayout.Designer.cs">
+      <DependentUpon>frmAssPOAnalysisLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssPOLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssPOLayout.Designer.cs">
+      <DependentUpon>frmAssPOLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssPOResultLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssPOResultLayout.Designer.cs">
+      <DependentUpon>frmAssPOResultLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssPORowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssPORowLayout.Designer.cs">
+      <DependentUpon>frmAssPORowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssQuantLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssQuantLayout.Designer.cs">
+      <DependentUpon>frmAssQuantLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssSNTDLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssSNTDLayout.Designer.cs">
+      <DependentUpon>frmAssSNTDLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssSOAnalysisLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssSOAnalysisLayout.Designer.cs">
+      <DependentUpon>frmAssSOAnalysisLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssSOLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssSOLayout.Designer.cs">
+      <DependentUpon>frmAssSOLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssSOResultLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssSOResultLayout.Designer.cs">
+      <DependentUpon>frmAssSOResultLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssSORowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssSORowLayout.Designer.cs">
+      <DependentUpon>frmAssSORowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssTDLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssTDLayout.Designer.cs">
+      <DependentUpon>frmAssTDLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssTemplateLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssTemplateLayout.Designer.cs">
+      <DependentUpon>frmAssTemplateLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmAssVenAnalysisLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmAssVenAnalysisLayout.Designer.cs">
+      <DependentUpon>frmAssVenAnalysisLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmATChooseLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmATChooseLayout.Designer.cs">
+      <DependentUpon>frmATChooseLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmATFirstLevelLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmATFirstLevelLayout.Designer.cs">
+      <DependentUpon>frmATFirstLevelLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmATThirdLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmATThirdLayout.Designer.cs">
+      <DependentUpon>frmATThirdLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmCIResultLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmCIResultLayout.Designer.cs">
+      <DependentUpon>frmCIResultLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmCIResultTotalLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmCIResultTotalLayout.Designer.cs">
+      <DependentUpon>frmCIResultTotalLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConInventoryLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConInventoryLayout.Designer.cs">
+      <DependentUpon>frmConInventoryLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConPORInStoLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConPORInStoLayout.Designer.cs">
+      <DependentUpon>frmConPORInStoLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConPORReturnLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConPORReturnLayout.Designer.cs">
+      <DependentUpon>frmConPORReturnLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConPurchaseLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConPurchaseLayout.Designer.cs">
+      <DependentUpon>frmConPurchaseLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConPurResultLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConPurResultLayout.Designer.cs">
+      <DependentUpon>frmConPurResultLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConSalesLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConSalesLayout.Designer.cs">
+      <DependentUpon>frmConSalesLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConSalesResultLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConSalesResultLayout.Designer.cs">
+      <DependentUpon>frmConSalesResultLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConsChooseLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConsChooseLayout.Designer.cs">
+      <DependentUpon>frmConsChooseLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConsLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConsLayout.Designer.cs">
+      <DependentUpon>frmConsLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConSOROutboundLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConSOROutboundLayout.Designer.cs">
+      <DependentUpon>frmConSOROutboundLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConSORRetiringLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConSORRetiringLayout.Designer.cs">
+      <DependentUpon>frmConSORRetiringLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmConsumablesLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmConsumablesLayout.Designer.cs">
+      <DependentUpon>frmConsumablesLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmCustomerLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmCustomerLayout.Designer.cs">
+      <DependentUpon>frmCustomerLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmIEAssLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmIEAssLayout.Designer.cs">
+      <DependentUpon>frmIEAssLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmSafeQuantAnalyzeLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmSafeQuantAnalyzeLayout.Designer.cs">
+      <DependentUpon>frmSafeQuantAnalyzeLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmSalesCreateLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmSalesCreateLayout.Designer.cs">
+      <DependentUpon>frmSalesCreateLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmVendorLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmVendorLayout.Designer.cs">
+      <DependentUpon>frmVendorLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmWHLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmWHLayout.Designer.cs">
+      <DependentUpon>frmWHLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmWHSLLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmWHSLLayout.Designer.cs">
+      <DependentUpon>frmWHSLLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmWHSTLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmWHSTLayout.Designer.cs">
+      <DependentUpon>frmWHSTLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\snDelete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\snDelete.Designer.cs">
+      <DependentUpon>snDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\svEnable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\svEnable.Designer.cs">
+      <DependentUpon>svEnable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\svDelete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\svDelete.Designer.cs">
+      <DependentUpon>svDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsTypeFirstLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsTypeFirstLevel.Designer.cs">
+      <DependentUpon>frmAssetsTypeFirstLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsTypeSecondLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsTypeSecondLevel.Designer.cs">
+      <DependentUpon>frmAssetsTypeSecondLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsTypeThirdLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsTypeThirdLevel.Designer.cs">
+      <DependentUpon>frmAssetsTypeThirdLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmCustomerCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmCustomerCreate.Designer.cs">
+      <DependentUpon>frmCustomerCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmCustomerDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmCustomerDetail.Designer.cs">
+      <DependentUpon>frmCustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmWH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmWH.Designer.cs">
+      <DependentUpon>frmWH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmWHStorageLocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmWHStorageLocation.Designer.cs">
+      <DependentUpon>frmWHStorageLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmWHStorgageType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmWHStorgageType.Designer.cs">
+      <DependentUpon>frmWHStorgageType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="UserControl\MenuToolbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\MenuToolbar.Designer.cs">
+      <DependentUpon>MenuToolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmOrderCreateLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmOrderCreateLayout.Designer.cs">
+      <DependentUpon>frmOrderCreateLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmOrderCreateSNLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmOrderCreateSNLayout.Designer.cs">
+      <DependentUpon>frmOrderCreateSNLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmPurchaseCreateLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmPurchaseCreateLayout.Designer.cs">
+      <DependentUpon>frmPurchaseCreateLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmSLCreateLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmSLCreateLayout.Designer.cs">
+      <DependentUpon>frmSLCreateLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmSTCreateLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmSTCreateLayout.Designer.cs">
+      <DependentUpon>frmSTCreateLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmTransferRowsLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmTransferRowsLayout.Designer.cs">
+      <DependentUpon>frmTransferRowsLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmUserLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmUserLayout.Designer.cs">
+      <DependentUpon>frmUserLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmUserPwdLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmUserPwdLayout.Designer.cs">
+      <DependentUpon>frmUserPwdLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\frmWarehouseCreateLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\frmWarehouseCreateLayout.Designer.cs">
+      <DependentUpon>frmWarehouseCreateLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\PRShowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\PRShowLayout.Designer.cs">
+      <DependentUpon>PRShowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\QuantShowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\QuantShowLayout.Designer.cs">
+      <DependentUpon>QuantShowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\SNRowLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\SNRowLayout.Designer.cs">
+      <DependentUpon>SNRowLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssets.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssets.Designer.cs">
+      <DependentUpon>frmAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsDetail.Designer.cs">
+      <DependentUpon>frmAssetsDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsDetailEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssetsDetailEdit.Designer.cs">
+      <DependentUpon>frmAssetsDetailEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssTemplate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssTemplate.Designer.cs">
+      <DependentUpon>frmAssTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssTemplateCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssTemplateCreate.Designer.cs">
+      <DependentUpon>frmAssTemplateCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssTemplateDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssTemplateDetail.Designer.cs">
+      <DependentUpon>frmAssTemplateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmAssTemplateDetailEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmAssTemplateDetailEdit.Designer.cs">
+      <DependentUpon>frmAssTemplateDetailEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmConsumables.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmConsumables.Designer.cs">
+      <DependentUpon>frmConsumables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmConsumablesCreate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmConsumablesCreate.Designer.cs">
+      <DependentUpon>frmConsumablesCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmConsumablesDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmConsumablesDetail.Designer.cs">
+      <DependentUpon>frmConsumablesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmConsumablesDetailEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmConsumablesDetailEdit.Designer.cs">
+      <DependentUpon>frmConsumablesDetailEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmAnalyze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu\frmAnalyze.Designer.cs">
+      <DependentUpon>frmAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmMasterData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu\frmMasterData.Designer.cs">
+      <DependentUpon>frmMasterData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmPrShow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmPrShow.Designer.cs">
+      <DependentUpon>frmPrShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu\frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="UserControl\Title.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\Title.Designer.cs">
+      <DependentUpon>Title.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmChangeMeg.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmChangeMeg.Designer.cs">
+      <DependentUpon>frmChangeMeg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmChangePwd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmChangePwd.Designer.cs">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmMessage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmRegisterTel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmRegisterTel.Designer.cs">
+      <DependentUpon>frmRegisterTel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmSet.Designer.cs">
+      <DependentUpon>frmSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmSettingPWD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmSettingPWD.Designer.cs">
+      <DependentUpon>frmSettingPWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmVCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmVCode.Designer.cs">
+      <DependentUpon>frmVCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\frmVerificationCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfo\frmVerificationCode.Designer.cs">
+      <DependentUpon>frmVerificationCode.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Analyze\Assets\frmAssCusAnalysis.resx">
+      <DependentUpon>frmAssCusAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\frmAssPOAnalysis.resx">
+      <DependentUpon>frmAssPOAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\frmAssQuantAnalysis.resx">
+      <DependentUpon>frmAssQuantAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\frmAssSOAnalysis.resx">
+      <DependentUpon>frmAssSOAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\frmAssVenAnalysis.resx">
+      <DependentUpon>frmAssVenAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Assets\frmImminentExpiryAss.resx">
+      <DependentUpon>frmImminentExpiryAss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\frmCustomerAnalyze.resx">
+      <DependentUpon>frmCustomerAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\frmPurchaseAnalyze.resx">
+      <DependentUpon>frmPurchaseAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\frmQuantAnalyze.resx">
+      <DependentUpon>frmQuantAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\frmSafeQuantAnalyze.resx">
+      <DependentUpon>frmSafeQuantAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\frmSaleAnalyze.resx">
+      <DependentUpon>frmSaleAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analyze\Consumable\frmVendorAnalyze.resx">
+      <DependentUpon>frmVendorAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssIn.resx">
+      <DependentUpon>frmAssIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssInventory.resx">
+      <DependentUpon>frmAssInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssInventoryCreate.resx">
+      <DependentUpon>frmAssInventoryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssInventoryEdit.resx">
+      <DependentUpon>frmAssInventoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssInventoryResult.resx">
+      <DependentUpon>frmAssInventoryResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssOut.resx">
+      <DependentUpon>frmAssOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssPurchaseOrderCreate.resx">
+      <DependentUpon>frmAssPurchaseOrderCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssPurchaseOrderEdit.resx">
+      <DependentUpon>frmAssPurchaseOrderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssPurchaseOrderResult.resx">
+      <DependentUpon>frmAssPurchaseOrderResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssRetiring.resx">
+      <DependentUpon>frmAssRetiring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssReturn.resx">
+      <DependentUpon>frmAssReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssSalesOrderCreate.resx">
+      <DependentUpon>frmAssSalesOrderCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssSalesOrderEdit.resx">
+      <DependentUpon>frmAssSalesOrderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssSalesOrderResult.resx">
+      <DependentUpon>frmAssSalesOrderResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssSourceChoose.resx">
+      <DependentUpon>frmAssSourceChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssTemplateChoose.resx">
+      <DependentUpon>frmAssTemplateChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssTransferCreate.resx">
+      <DependentUpon>frmAssTransferCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssTransferDeal.resx">
+      <DependentUpon>frmAssTransferDeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssTransferDetail.resx">
+      <DependentUpon>frmAssTransferDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetsManager\frmAssTransferRows.resx">
+      <DependentUpon>frmAssTransferRows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConInventory.resx">
+      <DependentUpon>frmConInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConInventoryCreate.resx">
+      <DependentUpon>frmConInventoryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConInventoryEdit.resx">
+      <DependentUpon>frmConInventoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConInventoryResult.resx">
+      <DependentUpon>frmConInventoryResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConPORInSto.resx">
+      <DependentUpon>frmConPORInSto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConPORReturn.resx">
+      <DependentUpon>frmConPORReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConPurchaseCreate.resx">
+      <DependentUpon>frmConPurchaseCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConPurchaseResult.resx">
+      <DependentUpon>frmConPurchaseResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConQuant.resx">
+      <DependentUpon>frmConQuant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConSalesCreate.resx">
+      <DependentUpon>frmConSalesCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConSalesResult.resx">
+      <DependentUpon>frmConSalesResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConsChoose.resx">
+      <DependentUpon>frmConsChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConSOROutbound.resx">
+      <DependentUpon>frmConSOROutbound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmConSORRetiring.resx">
+      <DependentUpon>frmConSORRetiring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmTransferConsChoose.resx">
+      <DependentUpon>frmTransferConsChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmTransferCreate.resx">
+      <DependentUpon>frmTransferCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmTransferDeal.resx">
+      <DependentUpon>frmTransferDeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmTransferDetail.resx">
+      <DependentUpon>frmTransferDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumablesManager\frmTransferRows.resx">
+      <DependentUpon>frmTransferRows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerateQRcode.resx">
+      <DependentUpon>frmGenerateQRcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogon.resx">
+      <DependentUpon>frmLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\AssetTypeTree.resx">
+      <DependentUpon>AssetTypeTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\AssSelectLayout.resx">
+      <DependentUpon>AssSelectLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\EditUserInfoLayout.resx">
+      <DependentUpon>EditUserInfoLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAIResultLayout.resx">
+      <DependentUpon>frmAIResultLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssCusAnalysisLayout.resx">
+      <DependentUpon>frmAssCusAnalysisLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssetsExLayout.resx">
+      <DependentUpon>frmAssetsExLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssetsShowLayout.resx">
+      <DependentUpon>frmAssetsShowLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssetsSNLayout.resx">
+      <DependentUpon>frmAssetsSNLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssetsSNShowLayout.resx">
+      <DependentUpon>frmAssetsSNShowLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssetsTypeCreateLayout.resx">
+      <DependentUpon>frmAssetsTypeCreateLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssInventoryLayout.resx">
+      <DependentUpon>frmAssInventoryLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssPOAnalysisLayout.resx">
+      <DependentUpon>frmAssPOAnalysisLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssPOLayout.resx">
+      <DependentUpon>frmAssPOLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssPOResultLayout.resx">
+      <DependentUpon>frmAssPOResultLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssPORowLayout.resx">
+      <DependentUpon>frmAssPORowLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssQuantLayout.resx">
+      <DependentUpon>frmAssQuantLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssSNTDLayout.resx">
+      <DependentUpon>frmAssSNTDLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssSOAnalysisLayout.resx">
+      <DependentUpon>frmAssSOAnalysisLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssSOLayout.resx">
+      <DependentUpon>frmAssSOLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssSOResultLayout.resx">
+      <DependentUpon>frmAssSOResultLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssSORowLayout.resx">
+      <DependentUpon>frmAssSORowLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssTDLayout.resx">
+      <DependentUpon>frmAssTDLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssTemplateLayout.resx">
+      <DependentUpon>frmAssTemplateLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmAssVenAnalysisLayout.resx">
+      <DependentUpon>frmAssVenAnalysisLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmATChooseLayout.resx">
+      <DependentUpon>frmATChooseLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmATFirstLevelLayout.resx">
+      <DependentUpon>frmATFirstLevelLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmATThirdLayout.resx">
+      <DependentUpon>frmATThirdLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmCIResultLayout.resx">
+      <DependentUpon>frmCIResultLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmCIResultTotalLayout.resx">
+      <DependentUpon>frmCIResultTotalLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConInventoryLayout.resx">
+      <DependentUpon>frmConInventoryLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConPORInStoLayout.resx">
+      <DependentUpon>frmConPORInStoLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConPORReturnLayout.resx">
+      <DependentUpon>frmConPORReturnLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConPurchaseLayout.resx">
+      <DependentUpon>frmConPurchaseLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConPurResultLayout.resx">
+      <DependentUpon>frmConPurResultLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConSalesLayout.resx">
+      <DependentUpon>frmConSalesLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConSalesResultLayout.resx">
+      <DependentUpon>frmConSalesResultLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConsChooseLayout.resx">
+      <DependentUpon>frmConsChooseLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConsLayout.resx">
+      <DependentUpon>frmConsLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConSOROutboundLayout.resx">
+      <DependentUpon>frmConSOROutboundLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConSORRetiringLayout.resx">
+      <DependentUpon>frmConSORRetiringLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmConsumablesLayout.resx">
+      <DependentUpon>frmConsumablesLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmCustomerLayout.resx">
+      <DependentUpon>frmCustomerLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmIEAssLayout.resx">
+      <DependentUpon>frmIEAssLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmSafeQuantAnalyzeLayout.resx">
+      <DependentUpon>frmSafeQuantAnalyzeLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmSalesCreateLayout.resx">
+      <DependentUpon>frmSalesCreateLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmVendorLayout.resx">
+      <DependentUpon>frmVendorLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmWHLayout.resx">
+      <DependentUpon>frmWHLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmWHSLLayout.resx">
+      <DependentUpon>frmWHSLLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmWHSTLayout.resx">
+      <DependentUpon>frmWHSTLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\snDelete.resx">
+      <DependentUpon>snDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\svEnable.resx">
+      <DependentUpon>svEnable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\svDelete.resx">
+      <DependentUpon>svDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssetsTypeFirstLevel.resx">
+      <DependentUpon>frmAssetsTypeFirstLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssetsTypeSecondLevel.resx">
+      <DependentUpon>frmAssetsTypeSecondLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssetsTypeThirdLevel.resx">
+      <DependentUpon>frmAssetsTypeThirdLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmCustomerCreate.resx">
+      <DependentUpon>frmCustomerCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmCustomerDetail.resx">
+      <DependentUpon>frmCustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmWH.resx">
+      <DependentUpon>frmWH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmWHStorageLocation.resx">
+      <DependentUpon>frmWHStorageLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmWHStorgageType.resx">
+      <DependentUpon>frmWHStorgageType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmMasterData.resx">
+      <DependentUpon>frmMasterData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\MenuToolbar.resx">
+      <DependentUpon>MenuToolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmOrderCreateLayout.resx">
+      <DependentUpon>frmOrderCreateLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmOrderCreateSNLayout.resx">
+      <DependentUpon>frmOrderCreateSNLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmPurchaseCreateLayout.resx">
+      <DependentUpon>frmPurchaseCreateLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmSLCreateLayout.resx">
+      <DependentUpon>frmSLCreateLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmSTCreateLayout.resx">
+      <DependentUpon>frmSTCreateLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmTransferRowsLayout.resx">
+      <DependentUpon>frmTransferRowsLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmUserLayout.resx">
+      <DependentUpon>frmUserLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmUserPwdLayout.resx">
+      <DependentUpon>frmUserPwdLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\frmWarehouseCreateLayout.resx">
+      <DependentUpon>frmWarehouseCreateLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\PRShowLayout.resx">
+      <DependentUpon>PRShowLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\QuantShowLayout.resx">
+      <DependentUpon>QuantShowLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\SNRowLayout.resx">
+      <DependentUpon>SNRowLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssets.resx">
+      <DependentUpon>frmAssets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssetsDetail.resx">
+      <DependentUpon>frmAssetsDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\FrmAssetsDetailEdit.resx">
+      <DependentUpon>frmAssetsDetailEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssTemplate.resx">
+      <DependentUpon>frmAssTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssTemplateCreate.resx">
+      <DependentUpon>frmAssTemplateCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssTemplateDetail.resx">
+      <DependentUpon>frmAssTemplateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmAssTemplateDetailEdit.resx">
+      <DependentUpon>frmAssTemplateDetailEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmConsumables.resx">
+      <DependentUpon>frmConsumables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmConsumablesCreate.resx">
+      <DependentUpon>frmConsumablesCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmConsumablesDetail.resx">
+      <DependentUpon>frmConsumablesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmConsumablesDetailEdit.resx">
+      <DependentUpon>frmConsumablesDetailEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmAnalyze.resx">
+      <DependentUpon>frmAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmPrShow.resx">
+      <DependentUpon>frmPrShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Title.resx">
+      <DependentUpon>Title.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmChangeMeg.resx">
+      <DependentUpon>frmChangeMeg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmChangePwd.resx">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmRegisterTel.resx">
+      <DependentUpon>frmRegisterTel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmSet.resx">
+      <DependentUpon>frmSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmSettingPWD.resx">
+      <DependentUpon>frmSettingPWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmVCode.resx">
+      <DependentUpon>frmVCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo\frmVerificationCode.resx">
+      <DependentUpon>frmVerificationCode.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Smobiler_128.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SMOSEC.Application\SMOWMS.Application.csproj">
+      <Project>{b4ed4ba2-0f97-4e61-a8cd-9f8fe47e7bab}</Project>
+      <Name>SMOWMS.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.CommLib\SMOWMS.CommLib.csproj">
+      <Project>{F67CF087-2032-479E-9B7E-D6ED0CB3904E}</Project>
+      <Name>SMOWMS.CommLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Domain\SMOWMS.Domain.csproj">
+      <Project>{75ADB9C8-D14E-415A-93C9-113E5795F63A}</Project>
+      <Name>SMOWMS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.DTOs\SMOWMS.DTOs.csproj">
+      <Project>{B9B23883-06C5-4581-B315-4F2F649D55C5}</Project>
+      <Name>SMOWMS.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Infrastructure\SMOWMS.Infrastructure.csproj">
+      <Project>{C2679305-61A8-45C5-BCD5-482A734C71A2}</Project>
+      <Name>SMOWMS.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOWMS.Repository\SMOWMS.Repository.csproj">
+      <Project>{A228840D-7E0B-49F0-987A-CF43E932BA50}</Project>
+      <Name>SMOWMS.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
