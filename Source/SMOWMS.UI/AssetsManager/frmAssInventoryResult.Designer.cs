@@ -26,23 +26,15 @@ namespace SMOWMS.UI.AssetsManager
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.ActionButtonItem actionButtonItem1 = new Smobiler.Core.Controls.ActionButtonItem();
-            Smobiler.Core.Controls.ActionButtonItem actionButtonItem2 = new Smobiler.Core.Controls.ActionButtonItem();
             this.plContent = new Smobiler.Core.Controls.Panel();
-            this.Label8 = new Smobiler.Core.Controls.Label();
             this.txtName = new Smobiler.Core.Controls.TextBox();
-            this.label1 = new Smobiler.Core.Controls.Label();
             this.txtHandleMan = new Smobiler.Core.Controls.TextBox();
-            this.label2 = new Smobiler.Core.Controls.Label();
             this.txtCount = new Smobiler.Core.Controls.TextBox();
-            this.label3 = new Smobiler.Core.Controls.Label();
             this.txtWare = new Smobiler.Core.Controls.TextBox();
-            this.label4 = new Smobiler.Core.Controls.Label();
             this.txtST = new Smobiler.Core.Controls.TextBox();
-            this.label5 = new Smobiler.Core.Controls.Label();
             this.txtType = new Smobiler.Core.Controls.TextBox();
-            this.label12 = new Smobiler.Core.Controls.Label();
             this.txtSL = new Smobiler.Core.Controls.TextBox();
+            this.imgUser = new Smobiler.Core.Controls.Image();
             this.image2 = new Smobiler.Core.Controls.Image();
             this.label6 = new Smobiler.Core.Controls.Label();
             this.barcodeScanner1 = new Smobiler.Core.Controls.BarcodeScanner();
@@ -52,196 +44,113 @@ namespace SMOWMS.UI.AssetsManager
             this.label9 = new Smobiler.Core.Controls.Label();
             this.image4 = new Smobiler.Core.Controls.Image();
             this.label10 = new Smobiler.Core.Controls.Label();
-            this.Title1 = new SMOWMS.UI.UserControl.Title();
-            this.plButton = new Smobiler.Core.Controls.Panel();
+            this.plScan = new Smobiler.Core.Controls.Panel();
             this.panelScan = new Smobiler.Core.Controls.Panel();
             this.image5 = new Smobiler.Core.Controls.Image();
             this.label11 = new Smobiler.Core.Controls.Label();
             this.tabPageView1 = new Smobiler.Core.Controls.TabPageView();
             this.r2000Scanner1 = new Smobiler.Device.R2000Scanner();
+            this.plButton = new Smobiler.Core.Controls.Panel();
+            this.ibStart = new Smobiler.Core.Controls.ImageButton();
+            this.ibUpload = new Smobiler.Core.Controls.ImageButton();
+            this.Title1 = new SMOWMS.UI.UserControl.Title();
             // 
             // plContent
             // 
             this.plContent.BackColor = System.Drawing.Color.White;
+            this.plContent.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
+            this.plContent.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.plContent.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.Label8,
             this.txtName,
-            this.label1,
             this.txtHandleMan,
-            this.label2,
             this.txtCount,
-            this.label3,
             this.txtWare,
-            this.label4,
             this.txtST,
-            this.label5,
             this.txtType,
-            this.label12,
-            this.txtSL});
+            this.txtSL,
+            this.imgUser});
             this.plContent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.plContent.Location = new System.Drawing.Point(0, 40);
+            this.plContent.Location = new System.Drawing.Point(0, 100);
             this.plContent.Name = "plContent";
-            this.plContent.Size = new System.Drawing.Size(300, 210);
-            // 
-            // Label8
-            // 
-            this.Label8.BackColor = System.Drawing.Color.White;
-            this.Label8.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.Label8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.Label8.Name = "Label8";
-            this.Label8.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.Label8.Size = new System.Drawing.Size(100, 30);
-            this.Label8.Text = "盘点表";
+            this.plContent.Size = new System.Drawing.Size(300, 136);
             // 
             // txtName
             // 
-            this.txtName.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtName.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtName.Location = new System.Drawing.Point(100, 0);
+            this.txtName.Location = new System.Drawing.Point(52, 9);
             this.txtName.Name = "txtName";
-            this.txtName.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtName.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(200, 30);
+            this.txtName.Size = new System.Drawing.Size(200, 20);
             this.txtName.WaterMarkText = "(选填)";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label1.Location = new System.Drawing.Point(0, 30);
-            this.label1.Name = "label1";
-            this.label1.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label1.Size = new System.Drawing.Size(100, 30);
-            this.label1.Text = "盘点人";
             // 
             // txtHandleMan
             // 
-            this.txtHandleMan.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtHandleMan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtHandleMan.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtHandleMan.Location = new System.Drawing.Point(100, 30);
+            this.txtHandleMan.Location = new System.Drawing.Point(52, 30);
             this.txtHandleMan.Name = "txtHandleMan";
-            this.txtHandleMan.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtHandleMan.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtHandleMan.ReadOnly = true;
-            this.txtHandleMan.Size = new System.Drawing.Size(200, 30);
+            this.txtHandleMan.Size = new System.Drawing.Size(200, 16);
             this.txtHandleMan.WaterMarkText = "(选填)";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label2.Location = new System.Drawing.Point(0, 180);
-            this.label2.Name = "label2";
-            this.label2.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label2.Size = new System.Drawing.Size(100, 30);
-            this.label2.Text = "需盘点总数";
             // 
             // txtCount
             // 
-            this.txtCount.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtCount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtCount.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtCount.Location = new System.Drawing.Point(100, 180);
+            this.txtCount.Location = new System.Drawing.Point(52, 110);
             this.txtCount.Name = "txtCount";
-            this.txtCount.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtCount.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtCount.ReadOnly = true;
-            this.txtCount.Size = new System.Drawing.Size(200, 30);
+            this.txtCount.Size = new System.Drawing.Size(200, 16);
             this.txtCount.WaterMarkText = "(选填)";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label3.Location = new System.Drawing.Point(0, 60);
-            this.label3.Name = "label3";
-            this.label3.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label3.Size = new System.Drawing.Size(100, 30);
-            this.label3.Text = "仓库";
             // 
             // txtWare
             // 
-            this.txtWare.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtWare.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtWare.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtWare.Location = new System.Drawing.Point(100, 60);
+            this.txtWare.Location = new System.Drawing.Point(52, 46);
             this.txtWare.Name = "txtWare";
-            this.txtWare.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtWare.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtWare.ReadOnly = true;
-            this.txtWare.Size = new System.Drawing.Size(200, 30);
+            this.txtWare.Size = new System.Drawing.Size(200, 16);
             this.txtWare.WaterMarkText = "(选填)";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label4.Location = new System.Drawing.Point(0, 90);
-            this.label4.Name = "label4";
-            this.label4.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label4.Size = new System.Drawing.Size(100, 30);
-            this.label4.Text = "存储类型";
             // 
             // txtST
             // 
-            this.txtST.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtST.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtST.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtST.Location = new System.Drawing.Point(100, 90);
+            this.txtST.Location = new System.Drawing.Point(52, 62);
             this.txtST.Name = "txtST";
-            this.txtST.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtST.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtST.ReadOnly = true;
-            this.txtST.Size = new System.Drawing.Size(200, 30);
+            this.txtST.Size = new System.Drawing.Size(200, 16);
             this.txtST.WaterMarkText = "(选填)";
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label5.Location = new System.Drawing.Point(0, 120);
-            this.label5.Name = "label5";
-            this.label5.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label5.Size = new System.Drawing.Size(100, 30);
-            this.label5.Text = "库位";
             // 
             // txtType
             // 
-            this.txtType.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtType.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtType.Location = new System.Drawing.Point(100, 150);
+            this.txtType.Location = new System.Drawing.Point(52, 94);
             this.txtType.Name = "txtType";
-            this.txtType.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtType.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtType.ReadOnly = true;
-            this.txtType.Size = new System.Drawing.Size(200, 30);
+            this.txtType.Size = new System.Drawing.Size(200, 16);
             this.txtType.WaterMarkText = "(选填)";
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.label12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label12.Location = new System.Drawing.Point(0, 150);
-            this.label12.Name = "label12";
-            this.label12.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label12.Size = new System.Drawing.Size(100, 30);
-            this.label12.Text = "资产类型";
             // 
             // txtSL
             // 
-            this.txtSL.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtSL.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtSL.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtSL.Location = new System.Drawing.Point(100, 120);
+            this.txtSL.Location = new System.Drawing.Point(52, 78);
             this.txtSL.Name = "txtSL";
-            this.txtSL.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtSL.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtSL.ReadOnly = true;
-            this.txtSL.Size = new System.Drawing.Size(200, 30);
+            this.txtSL.Size = new System.Drawing.Size(200, 16);
             this.txtSL.WaterMarkText = "(选填)";
+            // 
+            // imgUser
+            // 
+            this.imgUser.BorderRadius = 14;
+            this.imgUser.Location = new System.Drawing.Point(12, 12);
+            this.imgUser.Name = "imgUser";
+            this.imgUser.Size = new System.Drawing.Size(29, 29);
+            this.imgUser.SizeMode = Smobiler.Core.Controls.ImageSizeMode.Cover;
             // 
             // image2
             // 
@@ -304,27 +213,17 @@ namespace SMOWMS.UI.AssetsManager
             this.label10.Size = new System.Drawing.Size(84, 25);
             this.label10.Text = "扫码添加";
             // 
-            // Title1
+            // plScan
             // 
-            this.Title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
-            this.Title1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Title1.FontSize = 15F;
-            this.Title1.ForeColor = System.Drawing.Color.White;
-            this.Title1.Name = "Title1";
-            this.Title1.Size = new System.Drawing.Size(300, 40);
-            this.Title1.TitleText = "资产盘点";
-            // 
-            // plButton
-            // 
-            this.plButton.BackColor = System.Drawing.Color.White;
-            this.plButton.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.plButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.plButton.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.plScan.BackColor = System.Drawing.Color.White;
+            this.plScan.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
+            this.plScan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.plScan.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panelScan});
-            this.plButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.plButton.Location = new System.Drawing.Point(0, 279);
-            this.plButton.Name = "plButton";
-            this.plButton.Size = new System.Drawing.Size(300, 28);
+            this.plScan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.plScan.Location = new System.Drawing.Point(0, 279);
+            this.plScan.Name = "plScan";
+            this.plScan.Size = new System.Drawing.Size(300, 28);
             // 
             // panelScan
             // 
@@ -356,8 +255,11 @@ namespace SMOWMS.UI.AssetsManager
             // tabPageView1
             // 
             this.tabPageView1.BackColor = System.Drawing.Color.White;
+            this.tabPageView1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
+            this.tabPageView1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.tabPageView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPageView1.Location = new System.Drawing.Point(0, 248);
+            this.tabPageView1.Margin = new Smobiler.Core.Controls.Margin(0F, 12F, 0F, 0F);
             this.tabPageView1.Name = "tabPageView1";
             this.tabPageView1.PageIndicator = Smobiler.Core.Controls.TabPageIndicator.Title;
             this.tabPageView1.Size = new System.Drawing.Size(300, 252);
@@ -372,29 +274,72 @@ namespace SMOWMS.UI.AssetsManager
             this.r2000Scanner1.BarcodeDataCaptured += new Smobiler.Device.R2000BarcodeScanEventHandler(this.r2000Scanner1_BarcodeDataCaptured);
             this.r2000Scanner1.RFIDDataCaptured += new Smobiler.Device.R2000RFIDScanEventHandler(this.r2000Scanner1_RFIDDataCaptured);
             // 
+            // plButton
+            // 
+            this.plButton.BackColor = System.Drawing.Color.White;
+            this.plButton.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
+            this.plButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.plButton.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.ibStart,
+            this.ibUpload});
+            this.plButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.plButton.Location = new System.Drawing.Point(0, 278);
+            this.plButton.Name = "plButton";
+            this.plButton.Size = new System.Drawing.Size(300, 60);
+            // 
+            // ibStart
+            // 
+            this.ibStart.FontSize = 14F;
+            this.ibStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.ibStart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.ibStart.ImageDirection = Smobiler.Core.Controls.Direction.Left;
+            this.ibStart.ImgTextRatio = new Smobiler.Core.Controls.Ratio(2, 8);
+            this.ibStart.Location = new System.Drawing.Point(0, 12);
+            this.ibStart.Name = "ibStart";
+            this.ibStart.ResourceID = "48-start";
+            this.ibStart.Size = new System.Drawing.Size(142, 36);
+            this.ibStart.Press += new System.EventHandler(this.ibStart_Press);
+            // 
+            // ibUpload
+            // 
+            this.ibUpload.FontSize = 14F;
+            this.ibUpload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.ibUpload.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.ibUpload.ImageDirection = Smobiler.Core.Controls.Direction.Left;
+            this.ibUpload.ImgTextRatio = new Smobiler.Core.Controls.Ratio(2, 8);
+            this.ibUpload.Location = new System.Drawing.Point(164, 12);
+            this.ibUpload.Name = "ibUpload";
+            this.ibUpload.ResourceID = "48-upload";
+            this.ibUpload.Size = new System.Drawing.Size(142, 36);
+            this.ibUpload.Text = "上传结果";
+            this.ibUpload.Press += new System.EventHandler(this.ibUpload_Press);
+            // 
+            // Title1
+            // 
+            this.Title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.Title1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Title1.FontSize = 15F;
+            this.Title1.ForeColor = System.Drawing.Color.White;
+            this.Title1.Name = "Title1";
+            this.Title1.Size = new System.Drawing.Size(300, 40);
+            this.Title1.TitleText = "资产盘点";
+            // 
             // frmAssInventoryResult
             // 
             this.ActionButton.ButtonSpacing = 12;
-            this.ActionButton.Enabled = true;
-            actionButtonItem1.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
-            actionButtonItem1.Text = "上传结果";
-            actionButtonItem2.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
-            actionButtonItem2.Text = "盘点结束";
-            this.ActionButton.Items.AddRange(new Smobiler.Core.Controls.ActionButtonItem[] {
-            actionButtonItem1,
-            actionButtonItem2});
             this.ActionButton.ItemSize = 45;
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
             this.barcodeScanner1,
             this.r2000Scanner1});
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.Title1,
-            this.plContent,
             this.plButton,
+            this.plContent,
+            this.plScan,
             this.tabPageView1});
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmAssInventoryResult_KeyDown);
-            this.ActionButtonPress += new Smobiler.Core.Controls.ActionButtonPressEventHandler(this.frmAssInventoryResult_ActionButtonPress);
             this.Load += new System.EventHandler(this.frmAssInventoryResult_Load);
             this.Name = "frmAssInventoryResult";
 
@@ -403,18 +348,11 @@ namespace SMOWMS.UI.AssetsManager
 
         private UserControl.Title Title1;
         private Smobiler.Core.Controls.Panel plContent;
-        internal Smobiler.Core.Controls.Label Label8;
         internal Smobiler.Core.Controls.TextBox txtName;
-        internal Smobiler.Core.Controls.Label label1;
         internal Smobiler.Core.Controls.TextBox txtHandleMan;
-        internal Smobiler.Core.Controls.Label label2;
         internal Smobiler.Core.Controls.TextBox txtCount;
         private Smobiler.Core.Controls.BarcodeScanner barcodeScanner1;
-        internal Smobiler.Core.Controls.Label label3;
-        internal Smobiler.Core.Controls.TextBox txtWare;
-        internal Smobiler.Core.Controls.Label label4;
         internal Smobiler.Core.Controls.TextBox txtST;
-        internal Smobiler.Core.Controls.Label label5;
         internal Smobiler.Core.Controls.TextBox txtType;
         private Smobiler.Core.Controls.Image image2;
         private Smobiler.Core.Controls.Label label6;
@@ -424,13 +362,17 @@ namespace SMOWMS.UI.AssetsManager
         private Smobiler.Core.Controls.Label label9;
         private Smobiler.Core.Controls.Image image4;
         private Smobiler.Core.Controls.Label label10;
-        private Smobiler.Core.Controls.Panel plButton;
+        private Smobiler.Core.Controls.Panel plScan;
         internal Smobiler.Core.Controls.Panel panelScan;
         private Smobiler.Core.Controls.Image image5;
         private Smobiler.Core.Controls.Label label11;
         private Smobiler.Core.Controls.TabPageView tabPageView1;
         private Smobiler.Device.R2000Scanner r2000Scanner1;
-        internal Smobiler.Core.Controls.Label label12;
         internal Smobiler.Core.Controls.TextBox txtSL;
+        private Smobiler.Core.Controls.Panel plButton;
+        internal Smobiler.Core.Controls.ImageButton ibStart;
+        private Smobiler.Core.Controls.Image imgUser;
+        internal Smobiler.Core.Controls.ImageButton ibUpload;
+        internal Smobiler.Core.Controls.TextBox txtWare;
     }
 }

@@ -28,9 +28,9 @@ namespace SMOWMS.UI.MasterData
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.ActionButtonItem actionButtonItem4 = new Smobiler.Core.Controls.ActionButtonItem();
-            Smobiler.Core.Controls.ActionButtonItem actionButtonItem5 = new Smobiler.Core.Controls.ActionButtonItem();
-            Smobiler.Core.Controls.ActionButtonItem actionButtonItem6 = new Smobiler.Core.Controls.ActionButtonItem();
+            Smobiler.Core.Controls.ActionButtonItem actionButtonItem1 = new Smobiler.Core.Controls.ActionButtonItem();
+            Smobiler.Core.Controls.ActionButtonItem actionButtonItem2 = new Smobiler.Core.Controls.ActionButtonItem();
+            Smobiler.Core.Controls.ActionButtonItem actionButtonItem3 = new Smobiler.Core.Controls.ActionButtonItem();
             this.plSearch = new Smobiler.Core.Controls.Panel();
             this.imageButton1 = new Smobiler.Core.Controls.ImageButton();
             this.panel1 = new Smobiler.Core.Controls.Panel();
@@ -161,16 +161,16 @@ namespace SMOWMS.UI.MasterData
             // frmAssTemplate
             // 
             this.ActionButton.Enabled = true;
-            actionButtonItem4.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
-            actionButtonItem4.Text = "添加";
-            actionButtonItem5.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
-            actionButtonItem5.Text = "复制";
-            actionButtonItem6.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
-            actionButtonItem6.Text = "打印标签";
+            actionButtonItem1.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
+            actionButtonItem1.Text = "添加";
+            actionButtonItem2.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
+            actionButtonItem2.Text = "复制";
+            actionButtonItem3.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
+            actionButtonItem3.Text = "打印标签";
             this.ActionButton.Items.AddRange(new Smobiler.Core.Controls.ActionButtonItem[] {
-            actionButtonItem4,
-            actionButtonItem5,
-            actionButtonItem6});
+            actionButtonItem1,
+            actionButtonItem2,
+            actionButtonItem3});
             this.BackColor = System.Drawing.Color.White;
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
             this.popType,
@@ -182,6 +182,7 @@ namespace SMOWMS.UI.MasterData
             this.plSearch,
             this.tpSearch,
             this.gridAssRows});
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.ActionButtonPress += new Smobiler.Core.Controls.ActionButtonPressEventHandler(this.frmAssTemplate_ActionButtonPress);
             this.Load += new System.EventHandler(this.frmAssTemplate_Load);
             this.Name = "frmAssTemplate";

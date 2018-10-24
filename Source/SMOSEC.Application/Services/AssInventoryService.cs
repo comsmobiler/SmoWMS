@@ -81,6 +81,9 @@ namespace SMOWMS.Application.Services
                         {
                             NAME = Inventory.NAME,
                             CREATEDATE = Inventory.CREATEDATE,
+//                            DEPARTMENTID = Inventory.DEPARTMENTID,
+//                            DEPARTMENTNAME = "",
+
                             WAREID = Inventory.WAREID,
                             WareNAME = wareHouse.NAME,
                             STID = Inventory.STID,
@@ -90,11 +93,14 @@ namespace SMOWMS.Application.Services
                             HANDLEMAN = Inventory.HANDLEMAN,
                             HANDLEMANNAME = user.USER_NAME,
                             IID = Inventory.IID,
+//                            LOCATIONID = Inventory.LOCATIONID,
+//                            LOCATIONNAME = location.NAME,
                             STATUS = Inventory.STATUS,
                             STATUSNAME = "",
                             TYPEID = Inventory.TYPEID,
                             TYPENAME = "",
-                            TOTAL = Inventory.TOTAL
+                            TOTAL = Inventory.TOTAL,
+                            Image= user.USER_IMAGEID
                         };
                     var result = list.FirstOrDefault();
                     string wareId = result.WAREID;
@@ -160,13 +166,13 @@ namespace SMOWMS.Application.Services
                     NAME = assInventory.NAME,
                     CREATEDATE = assInventory.CREATEDATE,
                     CREATEUSER = user.USER_NAME,
-                    TOTAL = assInventory.TOTAL,
-                    RESULTCOUNT = assInventory.RESULTCOUNT,
+                    Result = assInventory.RESULTCOUNT+"/"+ assInventory.TOTAL,
                     STATUS = assInventory.STATUS,
                     STATUSNAME = "",
                     CanStart = "",
                     CanEdit = "",
                     CanDelete = "",
+                    Image = user.USER_IMAGEID,
                     Time = ""
                 };
             var temTable = LINQToDataTable.ToDataTable(list);
@@ -174,17 +180,17 @@ namespace SMOWMS.Application.Services
             {
                 int status = int.Parse(row["STATUS"].ToString());
                 row["STATUSNAME"] = Enum.GetName(typeof(InventoryStatus), status);
-                switch (status)
-                {
-                    case (int)InventoryStatus.盘点未开始:
-                        row["CanStart"] = "开始盘点";
-                        row["CanDelete"] = "删除";
-                        row["CanEdit"] = "编辑";
-                        break;
-                    case (int)InventoryStatus.盘点中:
-                        row["CanStart"] = "开始盘点";
-                        break;
-                }
+//                switch (status)
+//                {
+//                    case (int)InventoryStatus.盘点未开始:
+//                        row["CanStart"] = "开始盘点";
+//                        row["CanDelete"] = "删除";
+//                        row["CanEdit"] = "编辑";
+//                        break;
+//                    case (int)InventoryStatus.盘点中:
+//                        row["CanStart"] = "开始盘点";
+//                        break;
+//                }
                 row["Time"] = DateTime.Parse(row["CREATEDATE"].ToString()).ToShortDateString();
             }
             return temTable;
@@ -352,7 +358,7 @@ namespace SMOWMS.Application.Services
             if (sb.Length == 0)
             {
                 var assbo = Mapper.Map<AssInventoryInputDto, AssInventory>(inputDto);
-                assbo.STATUS = (int)InventoryStatus.盘点未开始;
+                assbo.STATUS = (int)InventoryStatus.未盘点;
                 assbo.CREATEDATE = DateTime.Now;
                 assbo.MODIFYDATE = DateTime.Now;
                 try
@@ -402,7 +408,7 @@ namespace SMOWMS.Application.Services
             else
             {
                 //根据盘点单状态，已开始盘点就不能删除了
-                if (inventory.STATUS == (int)InventoryStatus.盘点未开始)
+                if (inventory.STATUS == (int)InventoryStatus.未盘点)
                 {
                     //可以删除
                     try

@@ -211,7 +211,7 @@ namespace SMOWMS.UI.AssetsManager
         {
             if (String.IsNullOrEmpty(popMan.Selection.Text) == false)
             {
-                btnDealMan.Text = popMan.Selection.Text + "   > ";
+                btnDealMan.Text = popMan.Selection.Text;
                 btnDealMan.Tag = popMan.Selection.Value;         //采购人编号
             }
         }
@@ -281,9 +281,9 @@ namespace SMOWMS.UI.AssetsManager
                     txtName.Text = assso.NAME;
                     txtRealID.Text = assso.REALID;
                     btnDealMan.Tag = assso.SALESPERSON;
-                    btnDealMan.Text = assso.SALESPERSONNAME + "   > ";
+                    btnDealMan.Text = assso.SALESPERSONNAME;
                     btnCus.Tag = assso.CUSID;
-                    btnCus.Text=assso.CUSNAME + "   > ";
+                    btnCus.Text=assso.CUSNAME;
                 }
                 var assSorow = _autofacConfig.AssSalesOrderService.GetSORows(SOID);
                 if (assSorow != null)
@@ -345,7 +345,7 @@ namespace SMOWMS.UI.AssetsManager
         {
             if (String.IsNullOrEmpty(popCus.Selection.Text) == false)
             {
-                btnCus.Text = popCus.Selection.Text + "   > ";
+                btnCus.Text = popCus.Selection.Text;
                 btnCus.Tag = popCus.Selection.Value;         //采购人编号
             }
         }
@@ -365,6 +365,26 @@ namespace SMOWMS.UI.AssetsManager
                 }
             }
             Bind();       //刷新当前页面
+        }
+
+        private void btnDelete_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                ReturnInfo rInfo = _autofacConfig.AssSalesOrderService.DeleteSalesOrder(((frmAssSOLayout)Parent.Parent).SOID);
+                if (rInfo.IsSuccess)
+                {
+                    Toast("删除销售单成功");
+                }
+                else
+                {
+                    throw new Exception(rInfo.ErrorInfo);
+                }
+            }
+            catch (Exception ex)
+            {
+                Form.Toast(ex.Message);
+            }
         }
     }
 }

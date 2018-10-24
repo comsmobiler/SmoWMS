@@ -6,6 +6,7 @@ using Smobiler.Core;
 using Smobiler.Core.Controls;
 using SMOWMS.Domain.Entity;
 using SMOWMS.DTOs.Enum;
+using SMOWMS.DTOs.OutputDTO;
 
 namespace SMOWMS.UI.ConsumablesManager
 {
@@ -14,7 +15,12 @@ namespace SMOWMS.UI.ConsumablesManager
         #region "definition"
         AutofacConfig autofacConfig = new AutofacConfig();     //调用配置类
         #endregion
-        private void btnCreate_Press(object sender, EventArgs e)
+        /// <summary>
+        /// 调拨新增
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plAdd_Press(object sender, EventArgs e)
         {
             frmTransferCreate frm = new frmTransferCreate();
             Show(frm, (MobileForm sender1, object args) => {
@@ -23,6 +29,15 @@ namespace SMOWMS.UI.ConsumablesManager
                     Bind();   //重新加载数据
                 }
             });
+        }
+        /// <summary>
+        /// 关闭当前页(返回上个界面)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plBack_Press(object sender, EventArgs e)
+        {
+            Close();
         }
         /// <summary>
         /// 页面初始化
@@ -40,7 +55,7 @@ namespace SMOWMS.UI.ConsumablesManager
         {
             try
             {
-                List<AssTransferOrder> Data = new List<AssTransferOrder>();
+                List<AssTransferOrderOutputDto> Data = new List<AssTransferOrderOutputDto>();
                 if (Client.Session["Role"].ToString() == "SMOWMSUser")
                 {
                     Data = autofacConfig.assTransferOrderService.GetByUser(Client.Session["UserID"].ToString(),OperateType.耗材);

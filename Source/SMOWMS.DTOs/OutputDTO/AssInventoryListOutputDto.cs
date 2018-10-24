@@ -37,15 +37,15 @@ namespace SMOWMS.DTOs.OutputDTO
         /// </summary>
         public string CREATEUSER { get; set; }
 
-        /// <summary>
-        /// 需要盘点的数量
-        /// </summary>
-        public int TOTAL { get; set; }
-
-        /// <summary>
-        /// 已盘点数量
-        /// </summary>
-        public int RESULTCOUNT { get; set; }
+//        /// <summary>
+//        /// 需要盘点的数量
+//        /// </summary>
+//        public int TOTAL { get; set; }
+//
+//        /// <summary>
+//        /// 已盘点数量
+//        /// </summary>
+//        public int RESULTCOUNT { get; set; }
 
         /// <summary>
         /// 是否可编辑
@@ -66,5 +66,15 @@ namespace SMOWMS.DTOs.OutputDTO
         /// 时间
         /// </summary>
         public string Time { get; set; }
+
+        /// <summary>
+        /// 用户头像
+        /// </summary>
+        public string Image { get; set; }
+
+        /// <summary>
+        /// 盘点数量
+        /// </summary>
+        public string Result { get; set; }
     }
 }

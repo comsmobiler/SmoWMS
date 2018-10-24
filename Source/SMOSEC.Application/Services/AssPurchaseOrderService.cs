@@ -90,7 +90,8 @@ namespace SMOWMS.Application.Services
                     REALID = order.REALID,
                     STATUS = order.STATUS,
                     VID = order.VID,
-                    VNAME = vendor.NAME
+                    VNAME = vendor.NAME,
+                    Image = user.USER_IMAGEID
                 };
 
             return result.AsNoTracking().FirstOrDefault();

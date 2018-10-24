@@ -73,13 +73,15 @@ namespace SMOWMS.UI.MasterData
             this.plButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.plButton.Location = new System.Drawing.Point(0, 480);
             this.plButton.Name = "plButton";
-            this.plButton.Size = new System.Drawing.Size(300, 40);
+            this.plButton.Size = new System.Drawing.Size(300, 50);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(100, 5);
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.btnEdit.BorderRadius = 0;
+            this.btnEdit.Location = new System.Drawing.Point(12, 0);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 30);
+            this.btnEdit.Size = new System.Drawing.Size(276, 38);
             this.btnEdit.Text = "ÐÞ¸Ä";
             this.btnEdit.Press += new System.EventHandler(this.btnEdit_Press);
             // 
@@ -322,7 +324,7 @@ namespace SMOWMS.UI.MasterData
             this.Title1,
             this.plButton,
             this.plContent});
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmAssTemplateDetail_KeyDown);
             this.Load += new System.EventHandler(this.frmAssTemplateDetail_Load);
             this.Name = "frmAssTemplateDetail";

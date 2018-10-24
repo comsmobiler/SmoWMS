@@ -2,6 +2,7 @@
 using SMOWMS.Domain.Entity;
 using SMOWMS.DTOs.Enum;
 using SMOWMS.DTOs.InputDTO;
+using SMOWMS.DTOs.OutputDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace SMOWMS.Application.IServices
         ///// </summary>
         ///// <param name="UserID"></param>
         ///// <returns></returns>
-        List<AssTransferOrder> GetByUser(String UserID,OperateType type);
+        List<AssTransferOrderOutputDto> GetByUser(String UserID,OperateType type);
         #endregion
 
         #region 操作

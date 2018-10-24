@@ -279,7 +279,7 @@ namespace SMOWMS.UI.AssetsManager
                 {
                     txtSOID.Text = SOID;
                     ImgBtnForSOID.Visible = false;
-                    txtSOID.Size = new Size(200, 30);
+//                    txtSOID.Size = new Size(200, 30);
                     var tempOutputDtos = _autofacConfig.AssSalesOrderService.GetTemplateList(SOID);
                     foreach (var tempOutput in tempOutputDtos)
                     {

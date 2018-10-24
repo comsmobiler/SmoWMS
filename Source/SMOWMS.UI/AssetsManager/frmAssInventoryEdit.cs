@@ -144,31 +144,31 @@ namespace SMOWMS.UI.AssetsManager
 
                 var assInventory = _autofacConfig.AssInventoryService.GetAssInventoryById(IID);
                 txtName.Text = assInventory.NAME;
-                btnManager.Text=assInventory.HANDLEMANNAME+ "   > ";
-                btnWareHouse.Text=assInventory.WareNAME+ "   > ";
+                btnManager.Text=assInventory.HANDLEMANNAME;
+                btnWareHouse.Text=assInventory.WareNAME;
                 if (string.IsNullOrEmpty(assInventory.STID))
                 {
-                    btnST.Text = "全部   > ";
+                    btnST.Text = "全部";
                 }
                 else
                 {
-                    btnST.Text=assInventory.STNAME + "   > ";
+                    btnST.Text=assInventory.STNAME;
                 }
                 if (string.IsNullOrEmpty(assInventory.SLID))
                 {
-                    btnSL.Text = "全部   > ";
+                    btnSL.Text = "全部";
                 }
                 else
                 {
-                    btnSL.Text = assInventory.SLNAME + "   > ";
+                    btnSL.Text = assInventory.SLNAME;
                 }
                 if (string.IsNullOrEmpty(assInventory.TYPEID))
                 {
-                    btnType.Text= "全部   > ";
+                    btnType.Text= "全部";
                 }
                 else
                 {
-                    btnType.Text=assInventory.TYPENAME + "   > ";
+                    btnType.Text=assInventory.TYPENAME;
                 }             
                 btnManager.Tag = assInventory.HANDLEMAN;
                 btnWareHouse.Tag = assInventory.WAREID;
@@ -201,7 +201,7 @@ namespace SMOWMS.UI.AssetsManager
             {
                 if (popMan.Selection != null)
                 {
-                    btnManager.Text = popMan.Selection.Text + "   > ";
+                    btnManager.Text = popMan.Selection.Text;
                     btnManager.Tag = popMan.Selection.Value;
                 }
             }
@@ -222,7 +222,7 @@ namespace SMOWMS.UI.AssetsManager
             {
                 if (popType.Selection != null)
                 {
-                    btnType.Text = popType.Selection.Text + "   > ";
+                    btnType.Text = popType.Selection.Text;
                     btnType.Tag = popType.Selection.Value;
                 }
             }
@@ -369,7 +369,7 @@ namespace SMOWMS.UI.AssetsManager
             {
                 if (popSL.Selection != null)
                 {
-                    btnSL.Text = popSL.Selection.Text + "   > ";
+                    btnSL.Text = popSL.Selection.Text;
                     if (btnSL.Tag == null || btnSL.Tag.ToString() != popSL.Selection.Value)
                     {
                         //赋最新的值
@@ -390,13 +390,13 @@ namespace SMOWMS.UI.AssetsManager
             {
                 if (popST.Selection != null)
                 {
-                    btnST.Text = popST.Selection.Text + "   > ";
+                    btnST.Text = popST.Selection.Text;
                     if (btnST.Tag == null || btnST.Tag.ToString() != popST.Selection.Value)
                     {
 
                         popSL.Groups.Clear();
                         btnSL.Tag = null;
-                        btnSL.Text="全部" + "   > ";
+                        btnSL.Text="全部";
                         //赋最新的值
                         btnST.Tag = popST.Selection.Value;
                     }
@@ -415,15 +415,15 @@ namespace SMOWMS.UI.AssetsManager
             {
                 if (popWH.Selection != null)
                 {
-                    btnWareHouse.Text = popWH.Selection.Text + "   > ";
+                    btnWareHouse.Text = popWH.Selection.Text;
                     if (btnWareHouse.Tag == null || btnWareHouse.Tag.ToString() != popWH.Selection.Value)
                     {
                         //如果之前的选中项和现在的不同,则把相关的选择清空
                         popST.Groups.Clear();
                         popSL.Groups.Clear();
                         btnST.Tag = null;
-                        btnST.Text = "全部" + "   > ";
-                        btnSL.Text = "全部" + "   > ";
+                        btnST.Text = "全部";
+                        btnSL.Text = "全部";
                         btnSL.Tag = null;
                         //给btnWareHouse.Tag赋值最新的值
                         btnWareHouse.Tag = popWH.Selection.Value;
@@ -448,7 +448,28 @@ namespace SMOWMS.UI.AssetsManager
         public void GetType(object sender, EventArgs e)
         {
             btnType.Tag = tree.ID;
-            btnType.Text = tree.TypeName + "   > ";
+            btnType.Text = tree.TypeName;
+        }
+
+        private void btnDelete_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                ReturnInfo rInfo = _autofacConfig.AssInventoryService.DeleteInventory(IID);
+                if (rInfo.IsSuccess)
+                {
+                    Toast("删除盘点单成功.");
+                    ((frmAssInventory)Form).Bind();
+                }
+                else
+                {
+                    throw new Exception(rInfo.ErrorInfo);
+                }
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
         }
     }
 }

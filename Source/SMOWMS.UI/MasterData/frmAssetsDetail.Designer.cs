@@ -95,12 +95,13 @@ namespace SMOWMS.UI.MasterData
             this.plButton.Layout = Smobiler.Core.Controls.LayoutPosition.Relative;
             this.plButton.Location = new System.Drawing.Point(0, 40);
             this.plButton.Name = "plButton";
-            this.plButton.Size = new System.Drawing.Size(300, 35);
+            this.plButton.Size = new System.Drawing.Size(300, 40);
             // 
             // btnPrint
             // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
             this.btnPrint.Flex = 1;
-            this.btnPrint.Margin = new Smobiler.Core.Controls.Margin(2F, 5F, 2F, 5F);
+            this.btnPrint.Margin = new Smobiler.Core.Controls.Margin(2F, 0F, 2F, 5F);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(0, 0);
             this.btnPrint.Text = "打印";
@@ -108,8 +109,9 @@ namespace SMOWMS.UI.MasterData
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
             this.btnEdit.Flex = 1;
-            this.btnEdit.Margin = new Smobiler.Core.Controls.Margin(2F, 5F, 2F, 5F);
+            this.btnEdit.Margin = new Smobiler.Core.Controls.Margin(2F, 0F, 2F, 5F);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(0, 0);
             this.btnEdit.Text = "修改资产";
@@ -117,8 +119,9 @@ namespace SMOWMS.UI.MasterData
             // 
             // btnLog
             // 
+            this.btnLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
             this.btnLog.Flex = 1;
-            this.btnLog.Margin = new Smobiler.Core.Controls.Margin(2F, 5F, 2F, 5F);
+            this.btnLog.Margin = new Smobiler.Core.Controls.Margin(2F, 0F, 2F, 5F);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(0, 0);
             this.btnLog.Text = "处理记录";
@@ -172,10 +175,10 @@ namespace SMOWMS.UI.MasterData
             this.label35.BackColor = System.Drawing.Color.White;
             this.label35.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label35.Location = new System.Drawing.Point(0, 80);
+            this.label35.Location = new System.Drawing.Point(0, 72);
             this.label35.Name = "label35";
-            this.label35.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label35.Size = new System.Drawing.Size(100, 55);
+            this.label35.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label35.Size = new System.Drawing.Size(68, 55);
             this.label35.Text = "图片";
             // 
             // label36
@@ -183,10 +186,10 @@ namespace SMOWMS.UI.MasterData
             this.label36.BackColor = System.Drawing.Color.White;
             this.label36.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label36.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label36.Location = new System.Drawing.Point(0, 40);
+            this.label36.Location = new System.Drawing.Point(0, 36);
             this.label36.Name = "label36";
-            this.label36.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label36.Size = new System.Drawing.Size(100, 40);
+            this.label36.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label36.Size = new System.Drawing.Size(68, 36);
             this.label36.Text = "名称";
             // 
             // label37
@@ -194,10 +197,10 @@ namespace SMOWMS.UI.MasterData
             this.label37.BackColor = System.Drawing.Color.White;
             this.label37.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label37.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label37.Location = new System.Drawing.Point(0, 215);
+            this.label37.Location = new System.Drawing.Point(0, 199);
             this.label37.Name = "label37";
-            this.label37.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label37.Size = new System.Drawing.Size(100, 40);
+            this.label37.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label37.Size = new System.Drawing.Size(68, 36);
             this.label37.Text = "类别";
             // 
             // label38
@@ -205,10 +208,10 @@ namespace SMOWMS.UI.MasterData
             this.label38.BackColor = System.Drawing.Color.White;
             this.label38.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label38.Location = new System.Drawing.Point(0, 255);
+            this.label38.Location = new System.Drawing.Point(0, 235);
             this.label38.Name = "label38";
-            this.label38.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label38.Size = new System.Drawing.Size(100, 55);
+            this.label38.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label38.Size = new System.Drawing.Size(68, 55);
             this.label38.Text = "规格型号";
             // 
             // label39
@@ -216,10 +219,10 @@ namespace SMOWMS.UI.MasterData
             this.label39.BackColor = System.Drawing.Color.White;
             this.label39.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label39.Location = new System.Drawing.Point(0, 310);
+            this.label39.Location = new System.Drawing.Point(0, 290);
             this.label39.Name = "label39";
-            this.label39.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label39.Size = new System.Drawing.Size(100, 40);
+            this.label39.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label39.Size = new System.Drawing.Size(68, 36);
             this.label39.Text = "库位";
             // 
             // label40
@@ -227,10 +230,10 @@ namespace SMOWMS.UI.MasterData
             this.label40.BackColor = System.Drawing.Color.White;
             this.label40.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label40.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label40.Location = new System.Drawing.Point(0, 390);
+            this.label40.Location = new System.Drawing.Point(0, 362);
             this.label40.Name = "label40";
-            this.label40.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label40.Size = new System.Drawing.Size(100, 40);
+            this.label40.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label40.Size = new System.Drawing.Size(68, 36);
             this.label40.Text = "模板编号";
             // 
             // label41
@@ -238,10 +241,10 @@ namespace SMOWMS.UI.MasterData
             this.label41.BackColor = System.Drawing.Color.White;
             this.label41.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label41.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label41.Location = new System.Drawing.Point(0, 430);
+            this.label41.Location = new System.Drawing.Point(0, 398);
             this.label41.Name = "label41";
-            this.label41.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label41.Size = new System.Drawing.Size(100, 40);
+            this.label41.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label41.Size = new System.Drawing.Size(68, 36);
             this.label41.Text = "单位";
             // 
             // label42
@@ -249,10 +252,10 @@ namespace SMOWMS.UI.MasterData
             this.label42.BackColor = System.Drawing.Color.White;
             this.label42.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label42.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label42.Location = new System.Drawing.Point(0, 135);
+            this.label42.Location = new System.Drawing.Point(0, 127);
             this.label42.Name = "label42";
-            this.label42.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label42.Size = new System.Drawing.Size(100, 40);
+            this.label42.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label42.Size = new System.Drawing.Size(68, 36);
             this.label42.Text = "SN";
             // 
             // label43
@@ -260,10 +263,10 @@ namespace SMOWMS.UI.MasterData
             this.label43.BackColor = System.Drawing.Color.White;
             this.label43.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label43.Location = new System.Drawing.Point(0, 175);
+            this.label43.Location = new System.Drawing.Point(0, 163);
             this.label43.Name = "label43";
-            this.label43.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label43.Size = new System.Drawing.Size(100, 40);
+            this.label43.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label43.Size = new System.Drawing.Size(68, 36);
             this.label43.Text = "金额";
             // 
             // label44
@@ -271,10 +274,10 @@ namespace SMOWMS.UI.MasterData
             this.label44.BackColor = System.Drawing.Color.White;
             this.label44.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label44.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label44.Location = new System.Drawing.Point(0, 470);
+            this.label44.Location = new System.Drawing.Point(0, 434);
             this.label44.Name = "label44";
-            this.label44.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label44.Size = new System.Drawing.Size(100, 40);
+            this.label44.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label44.Size = new System.Drawing.Size(68, 36);
             this.label44.Text = "购入时间";
             // 
             // label45
@@ -283,8 +286,8 @@ namespace SMOWMS.UI.MasterData
             this.label45.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label45.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.label45.Name = "label45";
-            this.label45.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label45.Size = new System.Drawing.Size(100, 40);
+            this.label45.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label45.Size = new System.Drawing.Size(68, 36);
             this.label45.Text = "资产编号";
             // 
             // label46
@@ -292,91 +295,86 @@ namespace SMOWMS.UI.MasterData
             this.label46.BackColor = System.Drawing.Color.White;
             this.label46.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label46.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label46.Location = new System.Drawing.Point(100, 80);
+            this.label46.Location = new System.Drawing.Point(68, 72);
             this.label46.Name = "label46";
-            this.label46.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label46.Size = new System.Drawing.Size(200, 55);
+            this.label46.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
+            this.label46.Size = new System.Drawing.Size(232, 55);
             // 
             // txtName1
             // 
             this.txtName1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtName1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtName1.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtName1.Location = new System.Drawing.Point(100, 40);
+            this.txtName1.Location = new System.Drawing.Point(68, 36);
             this.txtName1.Name = "txtName1";
-            this.txtName1.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtName1.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtName1.ReadOnly = true;
-            this.txtName1.Size = new System.Drawing.Size(199, 40);
+            this.txtName1.Size = new System.Drawing.Size(232, 36);
             this.txtName1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // txtSPE1
             // 
             this.txtSPE1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtSPE1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtSPE1.Location = new System.Drawing.Point(100, 255);
+            this.txtSPE1.Location = new System.Drawing.Point(68, 235);
             this.txtSPE1.Multiline = true;
             this.txtSPE1.Name = "txtSPE1";
-            this.txtSPE1.Padding = new Smobiler.Core.Controls.Padding(0F, 5F, 10F, 0F);
+            this.txtSPE1.Padding = new Smobiler.Core.Controls.Padding(7F, 5F, 5F, 0F);
             this.txtSPE1.ReadOnly = true;
-            this.txtSPE1.Size = new System.Drawing.Size(199, 55);
+            this.txtSPE1.Size = new System.Drawing.Size(232, 55);
             this.txtSPE1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // txtATID
             // 
             this.txtATID.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtATID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtATID.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
             this.txtATID.KeyboardType = Smobiler.Core.Controls.KeyboardType.Numeric;
-            this.txtATID.Location = new System.Drawing.Point(100, 390);
+            this.txtATID.Location = new System.Drawing.Point(68, 362);
             this.txtATID.Name = "txtATID";
-            this.txtATID.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtATID.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtATID.ReadOnly = true;
-            this.txtATID.Size = new System.Drawing.Size(199, 40);
+            this.txtATID.Size = new System.Drawing.Size(232, 36);
             this.txtATID.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // txtUnit1
             // 
             this.txtUnit1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtUnit1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtUnit1.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtUnit1.Location = new System.Drawing.Point(100, 430);
+            this.txtUnit1.Location = new System.Drawing.Point(68, 398);
             this.txtUnit1.Name = "txtUnit1";
-            this.txtUnit1.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtUnit1.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtUnit1.ReadOnly = true;
-            this.txtUnit1.Size = new System.Drawing.Size(199, 40);
+            this.txtUnit1.Size = new System.Drawing.Size(232, 36);
             this.txtUnit1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // txtSN1
             // 
             this.txtSN1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtSN1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtSN1.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
             this.txtSN1.KeyboardType = Smobiler.Core.Controls.KeyboardType.Numeric;
-            this.txtSN1.Location = new System.Drawing.Point(100, 135);
+            this.txtSN1.Location = new System.Drawing.Point(68, 127);
             this.txtSN1.Name = "txtSN1";
-            this.txtSN1.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtSN1.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtSN1.ReadOnly = true;
-            this.txtSN1.Size = new System.Drawing.Size(199, 40);
+            this.txtSN1.Size = new System.Drawing.Size(232, 36);
             this.txtSN1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // txtPrice1
             // 
             this.txtPrice1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtPrice1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtPrice1.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
             this.txtPrice1.KeyboardType = Smobiler.Core.Controls.KeyboardType.Numeric;
-            this.txtPrice1.Location = new System.Drawing.Point(100, 175);
+            this.txtPrice1.Location = new System.Drawing.Point(68, 163);
             this.txtPrice1.Name = "txtPrice1";
-            this.txtPrice1.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtPrice1.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtPrice1.ReadOnly = true;
-            this.txtPrice1.Size = new System.Drawing.Size(199, 40);
+            this.txtPrice1.Size = new System.Drawing.Size(232, 36);
             this.txtPrice1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // panel6
             // 
             this.panel6.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.image2});
-            this.panel6.Location = new System.Drawing.Point(260, 92);
+            this.panel6.Location = new System.Drawing.Point(260, 84);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(30, 30);
             // 
@@ -391,22 +389,22 @@ namespace SMOWMS.UI.MasterData
             this.label47.BackColor = System.Drawing.Color.White;
             this.label47.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label47.Location = new System.Drawing.Point(0, 630);
+            this.label47.Location = new System.Drawing.Point(0, 578);
             this.label47.Name = "label47";
-            this.label47.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label47.Size = new System.Drawing.Size(100, 55);
+            this.label47.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label47.Size = new System.Drawing.Size(68, 55);
             this.label47.Text = "备注";
             // 
             // txtNote1
             // 
             this.txtNote1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtNote1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtNote1.Location = new System.Drawing.Point(100, 630);
+            this.txtNote1.Location = new System.Drawing.Point(68, 578);
             this.txtNote1.Multiline = true;
             this.txtNote1.Name = "txtNote1";
-            this.txtNote1.Padding = new Smobiler.Core.Controls.Padding(0F, 5F, 5F, 0F);
+            this.txtNote1.Padding = new Smobiler.Core.Controls.Padding(7F, 5F, 5F, 0F);
             this.txtNote1.ReadOnly = true;
-            this.txtNote1.Size = new System.Drawing.Size(200, 55);
+            this.txtNote1.Size = new System.Drawing.Size(232, 55);
             this.txtNote1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // label48
@@ -414,23 +412,22 @@ namespace SMOWMS.UI.MasterData
             this.label48.BackColor = System.Drawing.Color.White;
             this.label48.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label48.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label48.Location = new System.Drawing.Point(0, 510);
+            this.label48.Location = new System.Drawing.Point(0, 470);
             this.label48.Name = "label48";
-            this.label48.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label48.Size = new System.Drawing.Size(100, 40);
+            this.label48.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label48.Size = new System.Drawing.Size(68, 36);
             this.label48.Text = "过期时间";
             // 
             // txtAssId1
             // 
             this.txtAssId1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtAssId1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtAssId1.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
             this.txtAssId1.KeyboardType = Smobiler.Core.Controls.KeyboardType.Numeric;
-            this.txtAssId1.Location = new System.Drawing.Point(100, 0);
+            this.txtAssId1.Location = new System.Drawing.Point(68, 0);
             this.txtAssId1.Name = "txtAssId1";
-            this.txtAssId1.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtAssId1.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtAssId1.ReadOnly = true;
-            this.txtAssId1.Size = new System.Drawing.Size(200, 40);
+            this.txtAssId1.Size = new System.Drawing.Size(232, 36);
             this.txtAssId1.WaterMarkText = "(必填)";
             this.txtAssId1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
@@ -439,23 +436,22 @@ namespace SMOWMS.UI.MasterData
             this.label49.BackColor = System.Drawing.Color.White;
             this.label49.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label49.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label49.Location = new System.Drawing.Point(0, 350);
+            this.label49.Location = new System.Drawing.Point(0, 326);
             this.label49.Name = "label49";
-            this.label49.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label49.Size = new System.Drawing.Size(100, 40);
+            this.label49.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label49.Size = new System.Drawing.Size(68, 36);
             this.label49.Text = "地点";
             // 
             // txtPlace1
             // 
             this.txtPlace1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtPlace1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtPlace1.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
             this.txtPlace1.KeyboardType = Smobiler.Core.Controls.KeyboardType.Numeric;
-            this.txtPlace1.Location = new System.Drawing.Point(100, 350);
+            this.txtPlace1.Location = new System.Drawing.Point(68, 326);
             this.txtPlace1.Name = "txtPlace1";
-            this.txtPlace1.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtPlace1.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtPlace1.ReadOnly = true;
-            this.txtPlace1.Size = new System.Drawing.Size(199, 40);
+            this.txtPlace1.Size = new System.Drawing.Size(232, 36);
             this.txtPlace1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // label50
@@ -463,23 +459,22 @@ namespace SMOWMS.UI.MasterData
             this.label50.BackColor = System.Drawing.Color.White;
             this.label50.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label50.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label50.Location = new System.Drawing.Point(0, 550);
+            this.label50.Location = new System.Drawing.Point(0, 506);
             this.label50.Name = "label50";
-            this.label50.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label50.Size = new System.Drawing.Size(100, 40);
+            this.label50.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label50.Size = new System.Drawing.Size(68, 36);
             this.label50.Text = "供应商";
             // 
             // txtVendor1
             // 
             this.txtVendor1.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtVendor1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtVendor1.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
             this.txtVendor1.KeyboardType = Smobiler.Core.Controls.KeyboardType.Numeric;
-            this.txtVendor1.Location = new System.Drawing.Point(100, 550);
+            this.txtVendor1.Location = new System.Drawing.Point(68, 506);
             this.txtVendor1.Name = "txtVendor1";
-            this.txtVendor1.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtVendor1.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtVendor1.ReadOnly = true;
-            this.txtVendor1.Size = new System.Drawing.Size(199, 40);
+            this.txtVendor1.Size = new System.Drawing.Size(232, 36);
             this.txtVendor1.WaterMarkTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             // 
             // label51
@@ -487,66 +482,61 @@ namespace SMOWMS.UI.MasterData
             this.label51.BackColor = System.Drawing.Color.White;
             this.label51.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label51.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label51.Location = new System.Drawing.Point(0, 590);
+            this.label51.Location = new System.Drawing.Point(0, 542);
             this.label51.Name = "label51";
-            this.label51.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label51.Size = new System.Drawing.Size(100, 40);
+            this.label51.Padding = new Smobiler.Core.Controls.Padding(12F, 0F, 0F, 0F);
+            this.label51.Size = new System.Drawing.Size(68, 36);
             this.label51.Text = "管理者";
             // 
             // txtType
             // 
             this.txtType.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtType.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtType.Location = new System.Drawing.Point(100, 215);
+            this.txtType.Location = new System.Drawing.Point(68, 199);
             this.txtType.Name = "txtType";
-            this.txtType.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtType.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtType.ReadOnly = true;
-            this.txtType.Size = new System.Drawing.Size(200, 40);
+            this.txtType.Size = new System.Drawing.Size(232, 36);
             // 
             // txtSL
             // 
             this.txtSL.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtSL.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtSL.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtSL.Location = new System.Drawing.Point(100, 310);
+            this.txtSL.Location = new System.Drawing.Point(68, 290);
             this.txtSL.Name = "txtSL";
-            this.txtSL.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtSL.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtSL.ReadOnly = true;
-            this.txtSL.Size = new System.Drawing.Size(200, 40);
+            this.txtSL.Size = new System.Drawing.Size(232, 36);
             // 
             // txtManager
             // 
             this.txtManager.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtManager.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtManager.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtManager.Location = new System.Drawing.Point(100, 590);
+            this.txtManager.Location = new System.Drawing.Point(68, 542);
             this.txtManager.Name = "txtManager";
-            this.txtManager.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtManager.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtManager.ReadOnly = true;
-            this.txtManager.Size = new System.Drawing.Size(200, 40);
+            this.txtManager.Size = new System.Drawing.Size(232, 36);
             // 
             // txtBuyDate
             // 
             this.txtBuyDate.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtBuyDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtBuyDate.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtBuyDate.Location = new System.Drawing.Point(100, 470);
+            this.txtBuyDate.Location = new System.Drawing.Point(68, 434);
             this.txtBuyDate.Name = "txtBuyDate";
-            this.txtBuyDate.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtBuyDate.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtBuyDate.ReadOnly = true;
-            this.txtBuyDate.Size = new System.Drawing.Size(200, 40);
+            this.txtBuyDate.Size = new System.Drawing.Size(232, 36);
             // 
             // txtEDate
             // 
             this.txtEDate.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtEDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtEDate.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtEDate.Location = new System.Drawing.Point(100, 510);
+            this.txtEDate.Location = new System.Drawing.Point(68, 470);
             this.txtEDate.Name = "txtEDate";
-            this.txtEDate.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.txtEDate.Padding = new Smobiler.Core.Controls.Padding(7F, 0F, 0F, 0F);
             this.txtEDate.ReadOnly = true;
-            this.txtEDate.Size = new System.Drawing.Size(200, 40);
+            this.txtEDate.Size = new System.Drawing.Size(232, 36);
             // 
             // popCurrentUser
             // 
@@ -565,7 +555,7 @@ namespace SMOWMS.UI.MasterData
             this.Title1,
             this.plButton,
             this.plContent});
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmAssetsDetail_KeyDown);
             this.Load += new System.EventHandler(this.frmAssetsDetail_Load);
             this.Name = "frmAssetsDetail";

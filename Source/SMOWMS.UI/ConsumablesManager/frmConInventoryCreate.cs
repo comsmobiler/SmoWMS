@@ -271,11 +271,20 @@ namespace SMOWMS.UI.ConsumablesManager
             }
         }
         /// <summary>
-        /// 保存盘点单
+        /// 关闭当前页面
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnSave_Press(object sender, EventArgs e)
+        private void plBack_Press(object sender, EventArgs e)
+        {
+            Close();
+        }
+        /// <summary>
+        /// 盘点单创建
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plSave_Press(object sender, EventArgs e)
         {
             try
             {

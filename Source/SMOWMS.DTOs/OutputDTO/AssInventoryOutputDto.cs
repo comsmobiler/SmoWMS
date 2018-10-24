@@ -86,6 +86,8 @@ namespace SMOWMS.DTOs.OutputDTO
         /// 需要盘点的总数
         /// </summary>
         public int TOTAL { get; set; }
+
+        public string Image { get; set; }
     }
 
 }

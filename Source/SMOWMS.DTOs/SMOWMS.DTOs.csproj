@@ -107,6 +107,7 @@
     <Compile Include="OutputDTO\AssSOListOutputDto.cs" />
     <Compile Include="OutputDTO\AssSORowOutputDto.cs" />
     <Compile Include="OutputDTO\AssTempOutputDto.cs" />
+    <Compile Include="OutputDTO\AssTransferOrderOutputDto.cs" />
     <Compile Include="OutputDTO\AssVenAnalysisDto.cs" />
     <Compile Include="OutputDTO\ATChooseOutputDto.cs" />
     <Compile Include="OutputDTO\BarChartDto.cs" />

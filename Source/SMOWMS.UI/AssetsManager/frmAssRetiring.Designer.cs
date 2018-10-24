@@ -99,6 +99,7 @@ namespace SMOWMS.UI.AssetsManager
             this.txtSLID,
             this.ImgBtnForSLID,
             this.panelScan});
+            this.plContent.Dock = System.Windows.Forms.DockStyle.Top;
             this.plContent.Flex = 3;
             this.plContent.Location = new System.Drawing.Point(0, 40);
             this.plContent.Name = "plContent";
@@ -191,6 +192,7 @@ namespace SMOWMS.UI.AssetsManager
             // lvSN
             // 
             this.lvSN.BackColor = System.Drawing.Color.White;
+            this.lvSN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvSN.Flex = 11;
             this.lvSN.Location = new System.Drawing.Point(0, 130);
             this.lvSN.Name = "lvSN";
@@ -234,7 +236,7 @@ namespace SMOWMS.UI.AssetsManager
             this.plButton,
             this.plContent,
             this.lvSN});
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmAssRetiring_KeyDown);
             this.Load += new System.EventHandler(this.frmAssRetiring_Load);
             this.Name = "frmAssRetiring";

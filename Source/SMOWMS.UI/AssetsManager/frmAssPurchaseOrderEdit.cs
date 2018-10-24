@@ -212,7 +212,7 @@ namespace SMOWMS.UI.AssetsManager
         {
             if (String.IsNullOrEmpty(popMan.Selection.Text) == false)
             {
-                btnDealMan.Text = popMan.Selection.Text + "   > ";
+                btnDealMan.Text = popMan.Selection.Text;
                 btnDealMan.Tag = popMan.Selection.Value;         //采购人编号
             }
         }
@@ -299,9 +299,9 @@ namespace SMOWMS.UI.AssetsManager
                     txtName.Text = asspo.NAME;
                     txtRealID.Text = asspo.REALID;
                     btnDealMan.Tag = asspo.PURCHASER;
-                    btnDealMan.Text=asspo.PURCHASERNAME + "   > ";
+                    btnDealMan.Text=asspo.PURCHASERNAME;
                     btnVendor.Tag = asspo.VID;
-                    btnVendor.Text=asspo.VNAME + "   > ";
+                    btnVendor.Text=asspo.VNAME;
                 }
                 var assporow = _autofacConfig.AssPurchaseOrderService.GetPORows(POID);
                 if (assporow != null)
@@ -363,8 +363,30 @@ namespace SMOWMS.UI.AssetsManager
         {
             if (String.IsNullOrEmpty(popVendor.Selection.Text) == false)
             {
-                btnVendor.Text = popVendor.Selection.Text + "   > ";
+                btnVendor.Text = popVendor.Selection.Text;
                 btnVendor.Tag = popVendor.Selection.Value;         //采购人编号
+            }
+        }
+
+        private void btnDelete_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                ReturnInfo rInfo = _autofacConfig.AssPurchaseOrderService.DeletePurchaseOrder(((frmAssPOLayout)Parent.Parent).POID);
+                if (rInfo.IsSuccess)
+                {
+                    Toast("删除采购单成功");
+                    ShowResult=ShowResult.Yes;
+                    Close();
+                }
+                else
+                {
+                    throw new Exception(rInfo.ErrorInfo);
+                }
+            }
+            catch (Exception ex)
+            {
+                Form.Toast(ex.Message);
             }
         }
     }

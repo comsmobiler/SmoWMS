@@ -49,18 +49,15 @@ namespace SMOWMS.UI.ConsumablesManager
                 foreach (var row in listView.Rows)
                 {
                     frmConInventoryLayout layout = (frmConInventoryLayout)row.Control;
-                    switch (layout.label1.Text)
+                    if (layout.lblStatus.Text == "盘点中")
                     {
-                        case "盘点结束":
-                            layout.label1.ForeColor = Color.FromArgb(43, 125, 43);
-                            break;
-                        case "盘点中":
-                            layout.label1.ForeColor = Color.FromArgb(43, 140, 255);
-                            layout.btnStart.Text = "继续盘点";
-                            break;
-                        case "盘点未开始":
-                            layout.label1.ForeColor = Color.FromArgb(211, 215, 217);
-                            break;
+                        layout.lblStatus.ForeColor = Color.FromArgb(77, 216, 101);
+                        layout.ibEdit.Visible = false;
+                    }
+                    else if (layout.lblStatus.Text == "盘点结束")
+                    {
+                        layout.lblStatus.ForeColor = Color.FromArgb(3, 58, 82);
+                        layout.ibEdit.Visible = false;
                     }
                 }
             }
@@ -71,11 +68,20 @@ namespace SMOWMS.UI.ConsumablesManager
 
         }
         /// <summary>
+        /// 关闭当前界面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plBack_Press(object sender, EventArgs e)
+        {
+            Close();
+        }
+        /// <summary>
         /// 耗材盘点单创建
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAdd_Press(object sender, EventArgs e)
+        private void plAdd_Press(object sender, EventArgs e)
         {
             try
             {

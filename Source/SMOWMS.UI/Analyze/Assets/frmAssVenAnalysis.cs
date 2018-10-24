@@ -167,11 +167,11 @@ namespace SMOWMS.UI.Analyze.Assets
             try
             {
                 int? Id = null;
-                if (!string.IsNullOrEmpty(btnVendor.Tag?.ToString()))
+                if (!string.IsNullOrEmpty(btnVendor.Tag == null ? null : btnVendor.Tag.ToString()))
                 {
                     Id = int.Parse(btnVendor.Tag.ToString());
                 }
-                
+
                 QueryAssCusandVenAnalysisInputDto inputDto = new QueryAssCusandVenAnalysisInputDto
                 {
                     StarTime = startTime,

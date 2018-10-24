@@ -54,15 +54,11 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Smobiler.Core.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=276522cd3fa3b955, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\Smobiler Designer\Library\Smobiler.Core.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Smobiler.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f1ac7264a7cfc183, processorArchitecture=MSIL" />
-    <Reference Include="Smobiler.Device, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e0b1d6c313d28ffc, processorArchitecture=MSIL" />
-    <Reference Include="Smobiler.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9301bc54ca0d7a69, processorArchitecture=MSIL" />
-    <Reference Include="Smobiler.Utility" />
     <Reference Include="Smobiler.Core" />
+    <Reference Include="Smobiler.Core.Controls" />
+    <Reference Include="Smobiler.Device" />
+    <Reference Include="Smobiler.Plugins" />
+    <Reference Include="Smobiler.Utility" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -721,6 +717,12 @@
     <Compile Include="Layout\snDelete.Designer.cs">
       <DependentUpon>snDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Layout\svCIDelete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Layout\svCIDelete.Designer.cs">
+      <DependentUpon>svCIDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layout\svEnable.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1350,6 +1352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\snDelete.resx">
       <DependentUpon>snDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\svCIDelete.resx">
+      <DependentUpon>svCIDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\svEnable.resx">
       <DependentUpon>svEnable.cs</DependentUpon>

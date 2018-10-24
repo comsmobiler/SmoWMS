@@ -28,9 +28,17 @@ namespace SMOWMS.UI.ConsumablesManager
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.title1 = new SMOWMS.UI.UserControl.Title();
-            this.plButton = new Smobiler.Core.Controls.Panel();
-            this.btnSave = new Smobiler.Core.Controls.Button();
+            this.popDealMan = new Smobiler.Core.Controls.PopList();
+            this.popDealInMan = new Smobiler.Core.Controls.PopList();
+            this.BarcodeScanner1 = new Smobiler.Core.Controls.BarcodeScanner();
+            this.bsLoc = new Smobiler.Core.Controls.BarcodeScanner();
+            this.popLocation = new Smobiler.Core.Controls.PopList();
+            this.plTitle = new Smobiler.Core.Controls.Panel();
+            this.plBack = new Smobiler.Core.Controls.Panel();
+            this.Image1 = new Smobiler.Core.Controls.Image();
+            this.label4 = new Smobiler.Core.Controls.Label();
+            this.plSave = new Smobiler.Core.Controls.Panel();
+            this.label7 = new Smobiler.Core.Controls.Label();
             this.spContent = new Smobiler.Core.Controls.Panel();
             this.plContent = new Smobiler.Core.Controls.Panel();
             this.plTDInMan = new Smobiler.Core.Controls.Panel();
@@ -53,48 +61,95 @@ namespace SMOWMS.UI.ConsumablesManager
             this.btnAdd = new Smobiler.Core.Controls.Button();
             this.betGet = new Smobiler.Core.Controls.Button();
             this.ListCons = new Smobiler.Core.Controls.ListView();
-            this.popDealMan = new Smobiler.Core.Controls.PopList();
-            this.popDealInMan = new Smobiler.Core.Controls.PopList();
-            this.BarcodeScanner1 = new Smobiler.Core.Controls.BarcodeScanner();
-            this.bsLoc = new Smobiler.Core.Controls.BarcodeScanner();
-            this.popLocation = new Smobiler.Core.Controls.PopList();
             // 
-            // title1
+            // popDealMan
             // 
-            this.title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
-            this.title1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.title1.FontSize = 15F;
-            this.title1.ForeColor = System.Drawing.Color.White;
-            this.title1.Location = new System.Drawing.Point(54, 0);
-            this.title1.Name = "title1";
-            this.title1.Size = new System.Drawing.Size(100, 40);
-            this.title1.TitleText = "耗材调拨单创建";
+            this.popDealMan.Name = "popDealMan";
+            this.popDealMan.Selected += new System.EventHandler(this.popDealMan_Selected);
             // 
-            // plButton
+            // popDealInMan
             // 
-            this.plButton.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.btnSave});
-            this.plButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.plButton.Location = new System.Drawing.Point(0, 382);
-            this.plButton.Name = "plButton";
-            this.plButton.Size = new System.Drawing.Size(300, 35);
+            this.popDealInMan.Name = "popDealInMan";
+            this.popDealInMan.Selected += new System.EventHandler(this.popDealInMan_Selected);
             // 
-            // btnSave
+            // BarcodeScanner1
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(146)))), ((int)(((byte)(223)))));
-            this.btnSave.BorderRadius = 4;
-            this.btnSave.FontSize = 17F;
-            this.btnSave.Location = new System.Drawing.Point(10, 0);
-            this.btnSave.Margin = new Smobiler.Core.Controls.Margin(0F, 0F, 10F, 0F);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(280, 35);
-            this.btnSave.Text = "提交";
-            this.btnSave.Press += new System.EventHandler(this.btnSave_Press);
+            this.BarcodeScanner1.Name = "BarcodeScanner1";
+            this.BarcodeScanner1.BarcodeScanned += new Smobiler.Core.Controls.BarcodeScannerCallBackHandler(this.BarcodeScanner1_BarcodeScanned);
+            // 
+            // bsLoc
+            // 
+            this.bsLoc.Name = "bsLoc";
+            this.bsLoc.BarcodeScanned += new Smobiler.Core.Controls.BarcodeScannerCallBackHandler(this.bsLoc_BarcodeScanned);
+            // 
+            // popLocation
+            // 
+            this.popLocation.Name = "popLocation";
+            this.popLocation.Selected += new System.EventHandler(this.popLocation_Selected);
+            // 
+            // plTitle
+            // 
+            this.plTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
+            this.plTitle.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.plBack,
+            this.label4,
+            this.plSave});
+            this.plTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.plTitle.Name = "plTitle";
+            this.plTitle.Size = new System.Drawing.Size(300, 40);
+            // 
+            // plBack
+            // 
+            this.plBack.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.Image1});
+            this.plBack.Location = new System.Drawing.Point(10, 0);
+            this.plBack.Name = "plBack";
+            this.plBack.Size = new System.Drawing.Size(40, 40);
+            this.plBack.Touchable = true;
+            this.plBack.TouchOpacity = 100;
+            this.plBack.Press += new System.EventHandler(this.plBack_Press);
+            // 
+            // Image1
+            // 
+            this.Image1.Name = "Image1";
+            this.Image1.ResourceID = "back";
+            this.Image1.Size = new System.Drawing.Size(40, 40);
+            // 
+            // label4
+            // 
+            this.label4.FontSize = 15F;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Center;
+            this.label4.Location = new System.Drawing.Point(50, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 40);
+            this.label4.Text = "耗材调拨创建";
+            // 
+            // plSave
+            // 
+            this.plSave.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.label7});
+            this.plSave.Location = new System.Drawing.Point(250, 0);
+            this.plSave.Name = "plSave";
+            this.plSave.Size = new System.Drawing.Size(40, 40);
+            this.plSave.Touchable = true;
+            this.plSave.TouchOpacity = 100;
+            this.plSave.Press += new System.EventHandler(this.plSave_Press);
+            // 
+            // label7
+            // 
+            this.label7.FontSize = 15F;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Center;
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 40);
+            this.label7.Text = "完成";
             // 
             // spContent
             // 
             this.spContent.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.plContent,
+            this.plAdd,
             this.ListCons});
             this.spContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.spContent.Location = new System.Drawing.Point(0, 110);
@@ -108,11 +163,10 @@ namespace SMOWMS.UI.ConsumablesManager
             this.plDate,
             this.plLocation,
             this.plNote,
-            this.plTDMan,
-            this.plAdd});
+            this.plTDMan});
             this.plContent.Dock = System.Windows.Forms.DockStyle.Top;
             this.plContent.Name = "plContent";
-            this.plContent.Size = new System.Drawing.Size(300, 245);
+            this.plContent.Size = new System.Drawing.Size(300, 230);
             // 
             // plTDInMan
             // 
@@ -122,6 +176,7 @@ namespace SMOWMS.UI.ConsumablesManager
             this.plTDInMan.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.label1,
             this.btnDealInMan});
+            this.plTDInMan.Location = new System.Drawing.Point(0, 10);
             this.plTDInMan.Name = "plTDInMan";
             this.plTDInMan.Size = new System.Drawing.Size(300, 35);
             // 
@@ -143,7 +198,7 @@ namespace SMOWMS.UI.ConsumablesManager
             this.btnDealInMan.Name = "btnDealInMan";
             this.btnDealInMan.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
             this.btnDealInMan.Size = new System.Drawing.Size(212, 35);
-            this.btnDealInMan.Text = "选择（必填）   > ";
+            this.btnDealInMan.Text = "必填   > ";
             this.btnDealInMan.Press += new System.EventHandler(this.btnDealInMan_Press);
             // 
             // plDate
@@ -154,7 +209,7 @@ namespace SMOWMS.UI.ConsumablesManager
             this.plDate.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.label5,
             this.DatePicker});
-            this.plDate.Location = new System.Drawing.Point(0, 35);
+            this.plDate.Location = new System.Drawing.Point(0, 45);
             this.plDate.Name = "plDate";
             this.plDate.Size = new System.Drawing.Size(300, 35);
             // 
@@ -183,7 +238,7 @@ namespace SMOWMS.UI.ConsumablesManager
             this.label2,
             this.lblLocation,
             this.imgBS});
-            this.plLocation.Location = new System.Drawing.Point(0, 70);
+            this.plLocation.Location = new System.Drawing.Point(0, 90);
             this.plLocation.Name = "plLocation";
             this.plLocation.Size = new System.Drawing.Size(300, 35);
             // 
@@ -220,7 +275,7 @@ namespace SMOWMS.UI.ConsumablesManager
             this.plNote.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.label6,
             this.txtNote});
-            this.plNote.Location = new System.Drawing.Point(0, 140);
+            this.plNote.Location = new System.Drawing.Point(0, 160);
             this.plNote.Name = "plNote";
             this.plNote.Size = new System.Drawing.Size(300, 70);
             // 
@@ -253,7 +308,7 @@ namespace SMOWMS.UI.ConsumablesManager
             this.plTDMan.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.Label3,
             this.btnDealMan});
-            this.plTDMan.Location = new System.Drawing.Point(0, 105);
+            this.plTDMan.Location = new System.Drawing.Point(0, 125);
             this.plTDMan.Name = "plTDMan";
             this.plTDMan.Size = new System.Drawing.Size(300, 35);
             // 
@@ -275,7 +330,7 @@ namespace SMOWMS.UI.ConsumablesManager
             this.btnDealMan.Name = "btnDealMan";
             this.btnDealMan.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
             this.btnDealMan.Size = new System.Drawing.Size(212, 35);
-            this.btnDealMan.Text = "选择（必填）   > ";
+            this.btnDealMan.Text = "必填   > ";
             this.btnDealMan.Press += new System.EventHandler(this.btnDealMan_Press);
             // 
             // plAdd
@@ -283,23 +338,30 @@ namespace SMOWMS.UI.ConsumablesManager
             this.plAdd.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.btnAdd,
             this.betGet});
-            this.plAdd.Location = new System.Drawing.Point(0, 210);
+            this.plAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.plAdd.Location = new System.Drawing.Point(0, 230);
             this.plAdd.Name = "plAdd";
-            this.plAdd.Size = new System.Drawing.Size(300, 35);
+            this.plAdd.Size = new System.Drawing.Size(300, 90);
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.BorderRadius = 4;
+            this.btnAdd.ForeColor = System.Drawing.Color.Black;
             this.btnAdd.Location = new System.Drawing.Point(10, 0);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(130, 35);
+            this.btnAdd.Size = new System.Drawing.Size(280, 35);
             this.btnAdd.Text = "耗材选择";
             this.btnAdd.Press += new System.EventHandler(this.btnAdd_Press);
             // 
             // betGet
             // 
-            this.betGet.Location = new System.Drawing.Point(160, 0);
+            this.betGet.BackColor = System.Drawing.Color.White;
+            this.betGet.BorderRadius = 4;
+            this.betGet.ForeColor = System.Drawing.Color.Black;
+            this.betGet.Location = new System.Drawing.Point(10, 45);
             this.betGet.Name = "betGet";
-            this.betGet.Size = new System.Drawing.Size(130, 35);
+            this.betGet.Size = new System.Drawing.Size(280, 35);
             this.betGet.Text = "扫码添加";
             this.betGet.Press += new System.EventHandler(this.betGet_Press);
             // 
@@ -316,31 +378,6 @@ namespace SMOWMS.UI.ConsumablesManager
             this.ListCons.SplitLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ListCons.TemplateControlName = "frmOrderCreateLayout";
             // 
-            // popDealMan
-            // 
-            this.popDealMan.Name = "popDealMan";
-            this.popDealMan.Selected += new System.EventHandler(this.popDealMan_Selected);
-            // 
-            // popDealInMan
-            // 
-            this.popDealInMan.Name = "popDealInMan";
-            this.popDealInMan.Selected += new System.EventHandler(this.popDealInMan_Selected);
-            // 
-            // BarcodeScanner1
-            // 
-            this.BarcodeScanner1.Name = "BarcodeScanner1";
-            this.BarcodeScanner1.BarcodeScanned += new Smobiler.Core.Controls.BarcodeScannerCallBackHandler(this.BarcodeScanner1_BarcodeScanned);
-            // 
-            // bsLoc
-            // 
-            this.bsLoc.Name = "bsLoc";
-            this.bsLoc.BarcodeScanned += new Smobiler.Core.Controls.BarcodeScannerCallBackHandler(this.bsLoc_BarcodeScanned);
-            // 
-            // popLocation
-            // 
-            this.popLocation.Name = "popLocation";
-            this.popLocation.Selected += new System.EventHandler(this.popLocation_Selected);
-            // 
             // frmTransferCreate
             // 
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
@@ -350,8 +387,7 @@ namespace SMOWMS.UI.ConsumablesManager
             this.bsLoc,
             this.popLocation});
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.title1,
-            this.plButton,
+            this.plTitle,
             this.spContent});
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
@@ -359,16 +395,18 @@ namespace SMOWMS.UI.ConsumablesManager
 
         }
         #endregion
-
-        private UserControl.Title title1;
-        private Smobiler.Core.Controls.Panel plButton;
-        private Smobiler.Core.Controls.Button btnSave;
-        internal Smobiler.Core.Controls.Panel spContent;
         internal Smobiler.Core.Controls.PopList popDealMan;
         internal Smobiler.Core.Controls.PopList popDealInMan;
         internal Smobiler.Core.Controls.BarcodeScanner BarcodeScanner1;
         private Smobiler.Core.Controls.BarcodeScanner bsLoc;
         private Smobiler.Core.Controls.PopList popLocation;
+        internal Smobiler.Core.Controls.Panel plTitle;
+        private Smobiler.Core.Controls.Panel plBack;
+        internal Smobiler.Core.Controls.Image Image1;
+        private Smobiler.Core.Controls.Label label4;
+        private Smobiler.Core.Controls.Panel plSave;
+        private Smobiler.Core.Controls.Label label7;
+        internal Smobiler.Core.Controls.Panel spContent;
         private Smobiler.Core.Controls.Panel plContent;
         private Smobiler.Core.Controls.Panel plTDInMan;
         private Smobiler.Core.Controls.Label label1;

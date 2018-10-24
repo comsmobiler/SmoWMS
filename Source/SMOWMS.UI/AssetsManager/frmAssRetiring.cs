@@ -320,7 +320,7 @@ namespace SMOWMS.UI.AssetsManager
                 {
                     txtSOID.Text = SOID;
                     ImgBtnForSOID.Visible = false;
-                    txtSOID.Size = new Size(200, 30);
+//                    txtSOID.Size = new Size(200, 30);
                 }
             }
             catch (Exception ex)

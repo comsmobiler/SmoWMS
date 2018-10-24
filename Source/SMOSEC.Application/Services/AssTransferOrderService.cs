@@ -5,6 +5,7 @@ using SMOWMS.Domain.Entity;
 using SMOWMS.Domain.IRepository;
 using SMOWMS.DTOs.Enum;
 using SMOWMS.DTOs.InputDTO;
+using SMOWMS.DTOs.OutputDTO;
 using SMOWMS.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -76,9 +77,19 @@ namespace SMOWMS.Application.Services
         /// </summary>
         /// <param name="UserID"></param>
         /// <returns></returns>
-        public List<AssTransferOrder> GetByUser(String UserID, OperateType type)
+        public List<AssTransferOrderOutputDto> GetByUser(String UserID, OperateType type)
         {
-            return _AssTransferOrderRepository.GetByUser(UserID, (int)type).AsNoTracking().ToList();
+            List<AssTransferOrderOutputDto> result = new List<AssTransferOrderOutputDto>();
+            List<AssTransferOrder> data= _AssTransferOrderRepository.GetByUser(UserID, (int)type).AsNoTracking().ToList();
+            foreach(AssTransferOrder row in data)
+            {
+                AssTransferOrderOutputDto resultRow = new AssTransferOrderOutputDto();
+                resultRow.TOID = row.TOID;
+                resultRow.NOTE = row.NOTE;
+                resultRow.CREATEDATE = string.Format("{0:yyyy.MM.dd}", row.TRANSFERDATE);
+                result.Add(resultRow);
+            }
+            return result;
         }
         /// <summary>
         /// 根据调拨单编号返回调拨单信息

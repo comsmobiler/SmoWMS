@@ -68,10 +68,12 @@ namespace SMOWMS.UI.AssetsManager
                     {
                         case "盘点结束":
                             layout.label1.ForeColor= Color.FromArgb(43, 125, 43);
+                            layout.ibEdit.Visible = false;
                             break;
                         case "盘点中":
                             layout.label1.ForeColor = Color.FromArgb(43, 140, 255);
-                            layout.btnStart.Text = "继续盘点";
+//                            layout.btnStart.Text = "继续盘点";
+                            layout.ibEdit.Visible = false;
                             break;
                         case "盘点未开始":
                             layout.label1.ForeColor = Color.FromArgb(211, 215, 217);
@@ -107,6 +109,30 @@ namespace SMOWMS.UI.AssetsManager
             {
                 Toast(ex.Message);
             } 
+        }
+
+        /// <summary>
+        /// 添加盘点单
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ibEdit_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAssInventoryCreate assInventoryCreate = new frmAssInventoryCreate();
+                Show(assInventoryCreate, (MobileForm sender1, object args) =>
+                {
+                    if (assInventoryCreate.ShowResult == ShowResult.Yes)
+                    {
+                        Bind();
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
         }
     }
 }

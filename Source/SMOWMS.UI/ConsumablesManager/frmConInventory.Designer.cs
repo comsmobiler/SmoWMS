@@ -28,33 +28,109 @@ namespace SMOWMS.UI.ConsumablesManager
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.Title1 = new SMOWMS.UI.UserControl.Title();
-            this.btnAdd = new Smobiler.Core.Controls.Button();
+            this.plTitle = new Smobiler.Core.Controls.Panel();
+            this.plBack = new Smobiler.Core.Controls.Panel();
+            this.label3 = new Smobiler.Core.Controls.Label();
+            this.label4 = new Smobiler.Core.Controls.Label();
+            this.label1 = new Smobiler.Core.Controls.Label();
+            this.label2 = new Smobiler.Core.Controls.Label();
+            this.plContent = new Smobiler.Core.Controls.Panel();
+            this.plAdd = new Smobiler.Core.Controls.Panel();
+            this.imgAdd = new Smobiler.Core.Controls.Image();
+            this.label5 = new Smobiler.Core.Controls.Label();
             this.listView = new Smobiler.Core.Controls.ListView();
             // 
-            // Title1
+            // plTitle
             // 
-            this.Title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
-            this.Title1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Title1.FontSize = 15F;
-            this.Title1.ForeColor = System.Drawing.Color.White;
-            this.Title1.Name = "Title1";
-            this.Title1.Size = new System.Drawing.Size(300, 40);
-            this.Title1.TitleText = "耗材盘点单列表";
+            this.plTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229)))));
+            this.plTitle.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.plBack,
+            this.label1,
+            this.label2});
+            this.plTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.plTitle.Name = "plTitle";
+            this.plTitle.Size = new System.Drawing.Size(300, 40);
             // 
-            // btnAdd
+            // plBack
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(146)))), ((int)(((byte)(223)))));
-            this.btnAdd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnAdd.BorderRadius = 4;
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdd.FontSize = 15F;
-            this.btnAdd.Location = new System.Drawing.Point(0, 39);
-            this.btnAdd.Margin = new Smobiler.Core.Controls.Margin(10F, 10F, 10F, 0F);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(280, 35);
-            this.btnAdd.Text = "新增";
-            this.btnAdd.Press += new System.EventHandler(this.btnAdd_Press);
+            this.plBack.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.label3,
+            this.label4});
+            this.plBack.Location = new System.Drawing.Point(10, 0);
+            this.plBack.Name = "plBack";
+            this.plBack.Size = new System.Drawing.Size(40, 40);
+            this.plBack.Touchable = true;
+            this.plBack.TouchOpacity = 100;
+            this.plBack.Press += new System.EventHandler(this.plBack_Press);
+            // 
+            // label3
+            // 
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(10, 40);
+            this.label3.Text = "<";
+            // 
+            // label4
+            // 
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(10, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 40);
+            this.label4.Text = "仓库";
+            // 
+            // label1
+            // 
+            this.label1.FontSize = 15F;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Center;
+            this.label1.Location = new System.Drawing.Point(50, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 40);
+            this.label1.Text = "耗材盘点";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(250, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 40);
+            // 
+            // plContent
+            // 
+            this.plContent.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.plAdd,
+            this.listView});
+            this.plContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plContent.Location = new System.Drawing.Point(0, 158);
+            this.plContent.Name = "plContent";
+            this.plContent.Size = new System.Drawing.Size(300, 100);
+            // 
+            // plAdd
+            // 
+            this.plAdd.BackColor = System.Drawing.Color.White;
+            this.plAdd.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.imgAdd,
+            this.label5});
+            this.plAdd.Location = new System.Drawing.Point(0, 10);
+            this.plAdd.Name = "plAdd";
+            this.plAdd.Size = new System.Drawing.Size(180, 30);
+            this.plAdd.Touchable = true;
+            this.plAdd.TouchOpacity = 100;
+            this.plAdd.Press += new System.EventHandler(this.plAdd_Press);
+            // 
+            // imgAdd
+            // 
+            this.imgAdd.Location = new System.Drawing.Point(10, 3);
+            this.imgAdd.Name = "imgAdd";
+            this.imgAdd.ResourceID = "icon-add";
+            this.imgAdd.Size = new System.Drawing.Size(24, 24);
+            // 
+            // label5
+            // 
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.label5.Location = new System.Drawing.Point(44, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(136, 30);
+            this.label5.Text = "新增盘点单";
             // 
             // listView
             // 
@@ -63,19 +139,21 @@ namespace SMOWMS.UI.ConsumablesManager
             this.listView.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.listView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView.Location = new System.Drawing.Point(0, 40);
-            this.listView.Margin = new Smobiler.Core.Controls.Margin(0F, 20F, 0F, 0F);
+            this.listView.Margin = new Smobiler.Core.Controls.Margin(0F, 50F, 0F, 0F);
             this.listView.Name = "listView";
             this.listView.PageSizeTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.listView.PageSizeTextSize = 11F;
+            this.listView.ShowSplitLine = true;
             this.listView.Size = new System.Drawing.Size(300, 300);
+            this.listView.SplitLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.listView.TemplateControlName = "frmConInventoryLayout";
             // 
             // frmConInventory
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.Title1,
-            this.btnAdd,
-            this.listView});
+            this.plTitle,
+            this.plContent});
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
             this.Load += new System.EventHandler(this.frmConInventory_Load);
@@ -83,9 +161,16 @@ namespace SMOWMS.UI.ConsumablesManager
 
         }
         #endregion
-
-        private UserControl.Title Title1;
-        internal Smobiler.Core.Controls.Button btnAdd;
+        private Smobiler.Core.Controls.Panel plTitle;
+        private Smobiler.Core.Controls.Panel plBack;
+        private Smobiler.Core.Controls.Label label3;
+        private Smobiler.Core.Controls.Label label4;
+        private Smobiler.Core.Controls.Label label1;
+        private Smobiler.Core.Controls.Label label2;
+        private Smobiler.Core.Controls.Panel plContent;
+        private Smobiler.Core.Controls.Panel plAdd;
+        private Smobiler.Core.Controls.Image imgAdd;
+        private Smobiler.Core.Controls.Label label5;
         private Smobiler.Core.Controls.ListView listView;
     }
 }

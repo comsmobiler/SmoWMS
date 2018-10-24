@@ -31,7 +31,7 @@ namespace SMOWMS.UI.AssetsManager
             this.Title1 = new SMOWMS.UI.UserControl.Title();
             this.label3 = new Smobiler.Core.Controls.Label();
             this.plButton = new Smobiler.Core.Controls.Panel();
-            this.button1 = new Smobiler.Core.Controls.Button();
+            this.btnSave2 = new Smobiler.Core.Controls.Button();
             this.plContent = new Smobiler.Core.Controls.Panel();
             this.Label7 = new Smobiler.Core.Controls.Label();
             this.txtPOID = new Smobiler.Core.Controls.TextBox();
@@ -51,6 +51,7 @@ namespace SMOWMS.UI.AssetsManager
             this.bcScanForSN = new Smobiler.Core.Controls.BarcodeScanner();
             this.r2000ScanForSN = new Smobiler.Device.R2000Scanner();
             this.popTemp = new Smobiler.Core.Controls.PopList();
+            this.btnSave = new Smobiler.Core.Controls.Button();
             // 
             // Title1
             // 
@@ -69,10 +70,10 @@ namespace SMOWMS.UI.AssetsManager
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 1F);
             this.label3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label3.Location = new System.Drawing.Point(0, 60);
+            this.label3.Location = new System.Drawing.Point(0, 72);
             this.label3.Name = "label3";
             this.label3.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label3.Size = new System.Drawing.Size(100, 30);
+            this.label3.Size = new System.Drawing.Size(68, 36);
             this.label3.Text = "库位";
             // 
             // plButton
@@ -81,19 +82,21 @@ namespace SMOWMS.UI.AssetsManager
             this.plButton.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.plButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.plButton.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.button1});
+            this.btnSave2});
             this.plButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.plButton.Location = new System.Drawing.Point(0, 468);
             this.plButton.Name = "plButton";
-            this.plButton.Size = new System.Drawing.Size(300, 40);
+            this.plButton.Size = new System.Drawing.Size(300, 50);
             // 
-            // button1
+            // btnSave2
             // 
-            this.button1.Location = new System.Drawing.Point(56, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 30);
-            this.button1.Text = "确定";
-            this.button1.Press += new System.EventHandler(this.btnSave_Press);
+            this.btnSave2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.btnSave2.BorderRadius = 0;
+            this.btnSave2.Location = new System.Drawing.Point(12, 0);
+            this.btnSave2.Name = "btnSave2";
+            this.btnSave2.Size = new System.Drawing.Size(276, 38);
+            this.btnSave2.Text = "完成";
+            this.btnSave2.Press += new System.EventHandler(this.btnSave_Press);
             // 
             // plContent
             // 
@@ -113,7 +116,7 @@ namespace SMOWMS.UI.AssetsManager
             this.plContent.Flex = 2;
             this.plContent.Location = new System.Drawing.Point(0, 40);
             this.plContent.Name = "plContent";
-            this.plContent.Size = new System.Drawing.Size(300, 120);
+            this.plContent.Size = new System.Drawing.Size(300, 138);
             // 
             // Label7
             // 
@@ -122,19 +125,18 @@ namespace SMOWMS.UI.AssetsManager
             this.Label7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.Label7.Name = "Label7";
             this.Label7.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.Label7.Size = new System.Drawing.Size(100, 30);
+            this.Label7.Size = new System.Drawing.Size(68, 36);
             this.Label7.Text = "采购单号";
             // 
             // txtPOID
             // 
             this.txtPOID.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.txtPOID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtPOID.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtPOID.Location = new System.Drawing.Point(100, 0);
+            this.txtPOID.Location = new System.Drawing.Point(68, 0);
             this.txtPOID.Name = "txtPOID";
             this.txtPOID.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
             this.txtPOID.ReadOnly = true;
-            this.txtPOID.Size = new System.Drawing.Size(170, 30);
+            this.txtPOID.Size = new System.Drawing.Size(232, 36);
             this.txtPOID.WaterMarkText = "（必填）";
             // 
             // label4
@@ -142,10 +144,10 @@ namespace SMOWMS.UI.AssetsManager
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.label4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.label4.Location = new System.Drawing.Point(0, 30);
+            this.label4.Location = new System.Drawing.Point(0, 36);
             this.label4.Name = "label4";
             this.label4.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.label4.Size = new System.Drawing.Size(100, 30);
+            this.label4.Size = new System.Drawing.Size(68, 36);
             this.label4.Text = "模板编号";
             // 
             // ImgBtnForPOID
@@ -153,22 +155,21 @@ namespace SMOWMS.UI.AssetsManager
             this.ImgBtnForPOID.BackColor = System.Drawing.Color.White;
             this.ImgBtnForPOID.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 0F);
             this.ImgBtnForPOID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ImgBtnForPOID.Location = new System.Drawing.Point(270, 0);
+            this.ImgBtnForPOID.Location = new System.Drawing.Point(264, 0);
             this.ImgBtnForPOID.Name = "ImgBtnForPOID";
             this.ImgBtnForPOID.ResourceID = "scan";
-            this.ImgBtnForPOID.Size = new System.Drawing.Size(30, 30);
+            this.ImgBtnForPOID.Size = new System.Drawing.Size(36, 36);
             this.ImgBtnForPOID.Press += new System.EventHandler(this.ImgBtnForPOID_Press);
             // 
             // txtSLID
             // 
             this.txtSLID.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 1F);
             this.txtSLID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtSLID.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.txtSLID.Location = new System.Drawing.Point(100, 60);
+            this.txtSLID.Location = new System.Drawing.Point(68, 72);
             this.txtSLID.Name = "txtSLID";
             this.txtSLID.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
             this.txtSLID.ReadOnly = true;
-            this.txtSLID.Size = new System.Drawing.Size(170, 30);
+            this.txtSLID.Size = new System.Drawing.Size(232, 36);
             this.txtSLID.WaterMarkText = "（必填）";
             // 
             // ImgBtnForSLID
@@ -176,10 +177,10 @@ namespace SMOWMS.UI.AssetsManager
             this.ImgBtnForSLID.BackColor = System.Drawing.Color.White;
             this.ImgBtnForSLID.Border = new Smobiler.Core.Controls.Border(0F, 1F, 0F, 1F);
             this.ImgBtnForSLID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ImgBtnForSLID.Location = new System.Drawing.Point(270, 60);
+            this.ImgBtnForSLID.Location = new System.Drawing.Point(264, 72);
             this.ImgBtnForSLID.Name = "ImgBtnForSLID";
             this.ImgBtnForSLID.ResourceID = "scan";
-            this.ImgBtnForSLID.Size = new System.Drawing.Size(30, 30);
+            this.ImgBtnForSLID.Size = new System.Drawing.Size(36, 36);
             this.ImgBtnForSLID.Press += new System.EventHandler(this.ImgBtnForSLID_Press);
             // 
             // btnTemplate
@@ -189,12 +190,12 @@ namespace SMOWMS.UI.AssetsManager
             this.btnTemplate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.btnTemplate.BorderRadius = 0;
             this.btnTemplate.ForeColor = System.Drawing.Color.Black;
-            this.btnTemplate.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.btnTemplate.Location = new System.Drawing.Point(100, 30);
+            this.btnTemplate.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Left;
+            this.btnTemplate.Location = new System.Drawing.Point(68, 36);
             this.btnTemplate.Name = "btnTemplate";
             this.btnTemplate.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
-            this.btnTemplate.Size = new System.Drawing.Size(200, 30);
-            this.btnTemplate.Text = "选择（必填）   > ";
+            this.btnTemplate.Size = new System.Drawing.Size(232, 36);
+            this.btnTemplate.Text = "选择（必填）";
             this.btnTemplate.Press += new System.EventHandler(this.btnTemplate_Press);
             // 
             // plSacnRow
@@ -205,7 +206,7 @@ namespace SMOWMS.UI.AssetsManager
             this.plSacnRow.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panelScan,
             this.lblQuant});
-            this.plSacnRow.Location = new System.Drawing.Point(0, 90);
+            this.plSacnRow.Location = new System.Drawing.Point(0, 108);
             this.plSacnRow.Name = "plSacnRow";
             this.plSacnRow.Size = new System.Drawing.Size(300, 30);
             // 
@@ -284,6 +285,17 @@ namespace SMOWMS.UI.AssetsManager
             this.popTemp.Name = "popTemp";
             this.popTemp.Selected += new System.EventHandler(this.popTemp_Selected);
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.btnSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.btnSave.BorderRadius = 0;
+            this.btnSave.Location = new System.Drawing.Point(261, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(30, 13);
+            this.btnSave.Text = "完成";
+            this.btnSave.Press += new System.EventHandler(this.btnSave_Press);
+            // 
             // frmAssIn
             // 
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
@@ -296,8 +308,9 @@ namespace SMOWMS.UI.AssetsManager
             this.Title1,
             this.plContent,
             this.plButton,
-            this.lvSN});
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
+            this.lvSN,
+            this.btnSave});
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmAssIn_KeyDown);
             this.Load += new System.EventHandler(this.frmAssIn_Load);
             this.Name = "frmAssIn";
@@ -308,7 +321,7 @@ namespace SMOWMS.UI.AssetsManager
         private UserControl.Title Title1;
         internal Smobiler.Core.Controls.Label label3;
         internal Smobiler.Core.Controls.Panel plButton;
-        internal Smobiler.Core.Controls.Button button1;
+        internal Smobiler.Core.Controls.Button btnSave2;
         private Smobiler.Core.Controls.Panel plContent;
         internal Smobiler.Core.Controls.Label Label7;
         internal Smobiler.Core.Controls.TextBox txtPOID;
@@ -328,5 +341,6 @@ namespace SMOWMS.UI.AssetsManager
         private Smobiler.Core.Controls.Image image5;
         private Smobiler.Core.Controls.Label label11;
         private Smobiler.Core.Controls.Label lblQuant;
+        internal Smobiler.Core.Controls.Button btnSave;
     }
 }

@@ -89,7 +89,8 @@ namespace SMOWMS.Application.Services
                              REALID = order.REALID,
                              STATUS = order.STATUS,
                              CUSID = order.CUSID,
-                             CUSNAME = customer.NAME
+                             CUSNAME = customer.NAME,
+                             Image = user.USER_IMAGEID
                          };
 
             return result.AsNoTracking().FirstOrDefault();

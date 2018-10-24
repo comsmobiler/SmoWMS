@@ -75,7 +75,7 @@ namespace SMOWMS.UI.AssetsManager
                 {
                     ShowResult = ShowResult.Yes;
 //                    Toast("入库成功！");
-                    btnTemplate.Text = "选择（必填）   > ";
+                    btnTemplate.Text = "选择（必填）";
                     btnTemplate.Tag = null;
                     txtSLID.Text = "（必填）";
                     txtSLID.Tag = null;
@@ -177,7 +177,7 @@ namespace SMOWMS.UI.AssetsManager
                     txtPOID.Text = POID;
                     txtPOID.Tag = POID;
                     ImgBtnForPOID.Visible = false;
-                    txtPOID.Size = new Size(200, 30);
+//                    txtPOID.Size = new Size(200, 30);
                     DealLastTemp();
                     GetTotal();
                     lblQuant.Text = "剩余:  " + GetRest();
@@ -442,7 +442,7 @@ namespace SMOWMS.UI.AssetsManager
             {
                 if (popTemp.Selection != null)
                 {
-                    btnTemplate.Text = popTemp.Selection.Text + "   > ";
+                    btnTemplate.Text = popTemp.Selection.Text;
 
                     btnTemplate.Tag = popTemp.Selection.Value;
                     AssTemplate tempOutput = _autofacConfig.SettingService.GetAtbyId(btnTemplate.Tag.ToString());
@@ -529,7 +529,7 @@ namespace SMOWMS.UI.AssetsManager
             if (btnTemplate.Tag != null && txtPOID.Tag != null)
             {
                 var porow = _autofacConfig.AssPurchaseOrderService.GetPORows(txtPOID.Tag.ToString());
-                if (porow == null) throw new ArgumentNullException(nameof(porow));
+                if (porow == null) throw new ArgumentNullException("porow");
                 var row = porow.Find(a => a.TEMPLATEID == btnTemplate.Tag.ToString());
                 if (row != null)
                 {

@@ -38,6 +38,8 @@
         public int VID { get; set; }
 
         public string VNAME { get; set; }
+
+        public string Image { get; set; }
     }
 
 }

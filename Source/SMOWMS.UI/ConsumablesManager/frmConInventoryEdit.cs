@@ -212,8 +212,8 @@ namespace SMOWMS.UI.ConsumablesManager
                         {
                             btnWareHouse.Text = popWareHouse.Selection.Text + "   > ";
                             btnWareHouse.Tag = popWareHouse.Selection.Value;
-                                //清空存储类型和库位
-                                btnST.Text = "选择（选填）   > ";
+                            //清空存储类型和库位
+                            btnST.Text = "选择（选填）   > ";
                             btnST.Tag = null;
                             btnSL.Text = "选择（选填）   > ";
                             btnSL.Tag = null;
@@ -279,11 +279,20 @@ namespace SMOWMS.UI.ConsumablesManager
             }
         }
         /// <summary>
+        /// 关闭当前界面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plBack_Press(object sender, EventArgs e)
+        {
+            Close();
+        }
+        /// <summary>
         /// 保存盘点修改
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnSave_Press(object sender, EventArgs e)
+        private void plSave_Press(object sender, EventArgs e)
         {
             try
             {
@@ -320,6 +329,38 @@ namespace SMOWMS.UI.ConsumablesManager
             {
                 Toast(ex.Message);
             }
+        }
+        /// <summary>
+        /// 删除当前盘点单
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDelete_Press(object sender, EventArgs e)
+        {
+            MessageBox.Show("你确定要删除该盘点单吗?", "系统提醒", MessageBoxButtons.OKCancel, (object sender1, MessageBoxHandlerArgs args) =>
+            {
+                try
+                {
+                    if (args.Result == ShowResult.OK)     //删除该盘点单
+                    {
+                        ReturnInfo rInfo = _autofacConfig.ConInventoryService.DeleteInventory(IID);
+                        if (rInfo.IsSuccess)
+                        {
+                            ShowResult = ShowResult.Yes;
+                            Toast("删除盘点单成功.");
+                            Close();
+                        }
+                        else
+                        {
+                            Toast(rInfo.ErrorInfo);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Form.Toast(ex.Message);
+                }
+            });
         }
     }
 }

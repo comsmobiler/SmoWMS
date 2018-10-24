@@ -84,6 +84,7 @@ namespace SMOWMS.UI.MasterData
             // 
             // btnPrint
             // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
             this.btnPrint.Flex = 1;
             this.btnPrint.Margin = new Smobiler.Core.Controls.Margin(2F, 5F, 2F, 5F);
             this.btnPrint.Name = "btnPrint";
@@ -93,6 +94,7 @@ namespace SMOWMS.UI.MasterData
             // 
             // btnQuant
             // 
+            this.btnQuant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
             this.btnQuant.Flex = 1;
             this.btnQuant.Margin = new Smobiler.Core.Controls.Margin(2F, 5F, 2F, 5F);
             this.btnQuant.Name = "btnQuant";
@@ -102,6 +104,7 @@ namespace SMOWMS.UI.MasterData
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
             this.btnEdit.Flex = 1;
             this.btnEdit.Margin = new Smobiler.Core.Controls.Margin(2F, 5F, 2F, 5F);
             this.btnEdit.Name = "btnEdit";
@@ -111,6 +114,7 @@ namespace SMOWMS.UI.MasterData
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
             this.btnDelete.Flex = 1;
             this.btnDelete.Margin = new Smobiler.Core.Controls.Margin(2F, 5F, 2F, 5F);
             this.btnDelete.Name = "btnDelete";
@@ -393,7 +397,7 @@ namespace SMOWMS.UI.MasterData
             this.plButton,
             this.plContent});
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmConsumablesDetail_KeyDown);
             this.Load += new System.EventHandler(this.frmConsumablesDetail_Load);
             this.Name = "frmConsumablesDetail";

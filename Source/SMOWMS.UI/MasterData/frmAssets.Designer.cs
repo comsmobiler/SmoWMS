@@ -28,8 +28,8 @@ namespace SMOWMS.UI.MasterData
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.ActionButtonItem actionButtonItem3 = new Smobiler.Core.Controls.ActionButtonItem();
-            Smobiler.Core.Controls.ActionButtonItem actionButtonItem4 = new Smobiler.Core.Controls.ActionButtonItem();
+            Smobiler.Core.Controls.ActionButtonItem actionButtonItem1 = new Smobiler.Core.Controls.ActionButtonItem();
+            Smobiler.Core.Controls.ActionButtonItem actionButtonItem2 = new Smobiler.Core.Controls.ActionButtonItem();
             this.txtFactor = new Smobiler.Core.Controls.TextBox();
             this.fiSearch = new Smobiler.Core.Controls.FontIcon();
             this.r2000Scanner1 = new Smobiler.Device.R2000Scanner();
@@ -216,13 +216,13 @@ namespace SMOWMS.UI.MasterData
             // 
             this.ActionButton.ButtonSpacing = 12;
             this.ActionButton.Enabled = true;
-            actionButtonItem3.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
-            actionButtonItem3.Text = "资产调拨";
-            actionButtonItem4.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
-            actionButtonItem4.Text = "资产打印";
+            actionButtonItem1.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
+            actionButtonItem1.Text = "资产调拨";
+            actionButtonItem2.ImageType = Smobiler.Core.Controls.ActionButtonImageType.Text;
+            actionButtonItem2.Text = "资产打印";
             this.ActionButton.Items.AddRange(new Smobiler.Core.Controls.ActionButtonItem[] {
-            actionButtonItem3,
-            actionButtonItem4});
+            actionButtonItem1,
+            actionButtonItem2});
             this.ActionButton.ItemSize = 45;
             this.BackColor = System.Drawing.Color.White;
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
@@ -236,7 +236,7 @@ namespace SMOWMS.UI.MasterData
             this.tpSearch,
             this.gridAssRows});
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.ActionButtonPress += new Smobiler.Core.Controls.ActionButtonPressEventHandler(this.frmAssets_ActionButtonPress);
             this.Load += new System.EventHandler(this.frmAssets_Load);
             this.Name = "frmAssets";

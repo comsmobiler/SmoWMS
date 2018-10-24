@@ -6,6 +6,7 @@ using Smobiler.Core;
 using Smobiler.Core.Controls;
 using SMOWMS.Domain.Entity;
 using SMOWMS.DTOs.Enum;
+using SMOWMS.DTOs.OutputDTO;
 
 namespace SMOWMS.UI.AssetsManager
 {
@@ -15,11 +16,20 @@ namespace SMOWMS.UI.AssetsManager
         AutofacConfig autofacConfig = new AutofacConfig();     //调用配置类
         #endregion
         /// <summary>
-        /// 创建调拨单
+        /// 关闭当前页
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnCreate_Press(object sender, EventArgs e)
+        private void plBack_Press(object sender, EventArgs e)
+        {
+            Close();
+        }
+        /// <summary>
+        /// 资产调拨新增
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plAdd_Press(object sender, EventArgs e)
         {
             frmAssTransferCreate frm = new frmAssTransferCreate();
             Show(frm, (MobileForm sender1, object args) => {
@@ -45,7 +55,7 @@ namespace SMOWMS.UI.AssetsManager
         {
             try
             {
-                List<AssTransferOrder> Data = new List<AssTransferOrder>();
+                List<AssTransferOrderOutputDto> Data = new List<AssTransferOrderOutputDto>();
                 if (Client.Session["Role"].ToString() == "SMOWMSUser")
                 {
                     Data = autofacConfig.assTransferOrderService.GetByUser(Client.Session["UserID"].ToString(),OperateType.资产);

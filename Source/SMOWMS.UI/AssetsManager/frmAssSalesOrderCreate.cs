@@ -176,7 +176,7 @@ namespace SMOWMS.UI.AssetsManager
         {
             if (String.IsNullOrEmpty(popMan.Selection.Text) == false)
             {
-                btnDealMan.Text = popMan.Selection.Text + "   > ";
+                btnDealMan.Text = popMan.Selection.Text;
                 btnDealMan.Tag = popMan.Selection.Value;         //销售人编号
             }
         }
@@ -315,7 +315,7 @@ namespace SMOWMS.UI.AssetsManager
         {
             if (String.IsNullOrEmpty(popCus.Selection.Text) == false)
             {
-                btnCus.Text = popCus.Selection.Text + "   > ";
+                btnCus.Text = popCus.Selection.Text;
                 btnCus.Tag = popCus.Selection.Value;         //采购人编号
             }
         }

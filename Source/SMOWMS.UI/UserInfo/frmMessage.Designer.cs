@@ -28,9 +28,9 @@ namespace SMOWMS.UI.UserInfo
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.PopListGroup popListGroup8 = new Smobiler.Core.Controls.PopListGroup();
-            Smobiler.Core.Controls.PopListItem popListItem15 = new Smobiler.Core.Controls.PopListItem();
-            Smobiler.Core.Controls.PopListItem popListItem16 = new Smobiler.Core.Controls.PopListItem();
+            Smobiler.Core.Controls.PopListGroup popListGroup1 = new Smobiler.Core.Controls.PopListGroup();
+            Smobiler.Core.Controls.PopListItem popListItem1 = new Smobiler.Core.Controls.PopListItem();
+            Smobiler.Core.Controls.PopListItem popListItem2 = new Smobiler.Core.Controls.PopListItem();
             this.lblTitle = new Smobiler.Core.Controls.Label();
             this.Camera1 = new Smobiler.Core.Controls.Camera();
             this.popSex = new Smobiler.Core.Controls.PopList();
@@ -80,19 +80,19 @@ namespace SMOWMS.UI.UserInfo
             // 
             // popSex
             // 
-            popListItem15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            popListItem15.Text = "男";
-            popListItem15.Value = "1";
-            popListItem16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            popListItem16.Text = "女";
-            popListItem16.Value = "0";
-            popListGroup8.Items.AddRange(new Smobiler.Core.Controls.PopListItem[] {
-            popListItem15,
-            popListItem16});
-            popListGroup8.Title = "性别选择";
-            popListGroup8.Value = null;
+            popListItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            popListItem1.Text = "男";
+            popListItem1.Value = "1";
+            popListItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            popListItem2.Text = "女";
+            popListItem2.Value = "0";
+            popListGroup1.Items.AddRange(new Smobiler.Core.Controls.PopListItem[] {
+            popListItem1,
+            popListItem2});
+            popListGroup1.Title = "性别选择";
+            popListGroup1.Value = null;
             this.popSex.Groups.AddRange(new Smobiler.Core.Controls.PopListGroup[] {
-            popListGroup8});
+            popListGroup1});
             this.popSex.Name = "popSex";
             this.popSex.Selected += new System.EventHandler(this.popSex_Selected);
             // 

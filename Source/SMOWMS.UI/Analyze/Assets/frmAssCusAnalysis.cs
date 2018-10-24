@@ -167,8 +167,8 @@ namespace SMOWMS.UI.Analyze.Assets
         {
             try
             {
-                int? Id = null;;
-                if (!string.IsNullOrEmpty(btnCus.Tag?.ToString()))
+                int? Id = null; ;
+                if (!string.IsNullOrEmpty(btnCus.Tag == null ? null : btnCus.Tag.ToString()))
                 {
                     Id = int.Parse(btnCus.Tag.ToString());
                 }

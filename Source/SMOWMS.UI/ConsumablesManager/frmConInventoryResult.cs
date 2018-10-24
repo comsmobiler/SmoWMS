@@ -88,6 +88,7 @@ namespace SMOWMS.UI.ConsumablesManager
                 tabPageView1.Controls.Add(alreadyListView);
 
                 var inventory = _autofacConfig.ConInventoryService.GetConInventoryById(IID);
+                lblCreateManName.Text = inventory.HANDLEMANNAME[0].ToString();
                 lblName.Text = inventory.NAME;
                 lblHandleMan.Text = inventory.HANDLEMANNAME;
                 lblCount.Text = inventory.TOTAL.ToString();
@@ -97,13 +98,7 @@ namespace SMOWMS.UI.ConsumablesManager
                 lblST.Tag = inventory.STID;
                 lblSL.Text = inventory.SLNAME;
                 lblSL.Tag = inventory.SLID;
-                Status = (InventoryStatus)inventory
-                    .STATUS;
-
-                if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.盘点未开始)
-                {
-                    panelScan.Visible = false;
-                }
+                
                 //获得需要盘点的资产列表
                 conList = _autofacConfig.ConInventoryService.GetPendingInventoryList(IID);
 
@@ -151,7 +146,7 @@ namespace SMOWMS.UI.ConsumablesManager
                     alreadyTable.Rows.Add(Row);
                 }
 
-                if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.盘点未开始)
+                if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.未盘点)
                 {
                     Form.ActionButton.Enabled = false;
                 }
@@ -171,6 +166,24 @@ namespace SMOWMS.UI.ConsumablesManager
         {
             try
             {
+                var inventory = _autofacConfig.ConInventoryService.GetConInventoryById(IID);
+                Status = (InventoryStatus)inventory
+                    .STATUS;
+
+                if (Status == InventoryStatus.未盘点)
+                {
+                    plScan.Visible = false;
+                }
+                else if (Status == InventoryStatus.盘点结束)
+                {
+                    plButton.Visible = false;
+                }
+                else
+                {
+                    lblAction.Text = "结束盘点";
+                    imgAction.ResourceID = "icon-end";
+                }
+
                 waitListView.Rows.Clear();
                 waitListView.DataSource = waiTable;
                 waitListView.DataBind();
@@ -198,78 +211,6 @@ namespace SMOWMS.UI.ConsumablesManager
             }
         }
         /// <summary>
-        /// 盘点上传或盘点结束
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void frmConInventoryResult_ActionButtonPress(object sender, ActionButtonPressEventArgs e)
-        {
-            try
-            {
-                ReturnInfo rInfo = new ReturnInfo();
-                switch (e.Index)
-                {
-                    case 0:
-                        //上传结果
-                        ConInventoryInputDto inputDto = new ConInventoryInputDto
-                        {
-                            IID = IID,
-                            IsEnd = false,
-                            ConDictionary = conDictionary,
-                            WAREID = lblWareHouse.Tag.ToString(),
-                            MODIFYUSER = UserId
-                        };
-                        if (lblST.Tag != null) inputDto.STID = lblST.Tag.ToString();
-                        if (lblSL.Tag != null) inputDto.SLID = lblSL.Tag.ToString();
-                        rInfo = _autofacConfig.ConInventoryService.UpdateInventory(inputDto);
-                        Toast(rInfo.IsSuccess ? "上传结果成功!" : rInfo.ErrorInfo);
-                        break;
-                    case 1:
-                        //盘点结束
-                        Dictionary<string, List<decimal>> conDictionary2 = new Dictionary<string, List<decimal>>();
-                        foreach (var key in conDictionary.Keys)
-                        {
-                            if (conDictionary[key][1] == (int)ResultStatus.待盘点)
-                            {
-                                List<decimal> list = new List<decimal>();
-                                list.Add(0);
-                                list.Add(Convert.ToDecimal((int)ResultStatus.盘亏));
-                                conDictionary2.Add(key, list);
-                            }
-                            else
-                            {
-                                conDictionary2.Add(key, conDictionary[key]);
-                            }
-                        }
-
-                        ConInventoryInputDto inputDto2 = new ConInventoryInputDto
-                        {
-                            IID = IID,
-                            WAREID = lblWareHouse.Tag.ToString(),
-                            IsEnd = true,
-                            ConDictionary = conDictionary2
-                        };
-                        inputDto2.IsEnd = true;
-                        rInfo = _autofacConfig.ConInventoryService.UpdateInventory(inputDto2);
-                        if (rInfo.IsSuccess)
-                        {
-                            ShowResult = ShowResult.Yes;
-                            Close();
-                            Toast("盘点结束成功.");
-                        }
-                        else
-                        {
-                            Toast(rInfo.ErrorInfo);
-                        }
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                Toast(ex.Message);
-            }
-        }
-        /// <summary>
         /// 耗材扫描
         /// </summary>
         /// <param name="sender"></param>
@@ -287,7 +228,7 @@ namespace SMOWMS.UI.ConsumablesManager
                 if (resultList.Count == 0) throw new Exception("该库位下无可盘点耗材");
 
                 frmCIResultTotalLayout frm = new frmCIResultTotalLayout();
-                frm.lblSL.Text =sloc.WARENAME+"/"+sloc.STNAME+"/"+sloc.SLNAME;
+                frm.lblSL.Text = sloc.WARENAME + "/" + sloc.STNAME + "/" + sloc.SLNAME;
                 Form.ShowDialog(frm);
             }
             catch (Exception ex)
@@ -317,7 +258,7 @@ namespace SMOWMS.UI.ConsumablesManager
                 DataRow row = waiTable.Rows.Find(keys);
                 if (row != null)
                 {
-                   
+
                     DataRow alreadyRow = alreadyTable.NewRow();
                     alreadyRow["CID"] = row["CID"].ToString();
                     alreadyRow["LOCID"] = locId;
@@ -425,19 +366,124 @@ namespace SMOWMS.UI.ConsumablesManager
             Bind();
         }
         /// <summary>
+        /// 返回上个界面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plBack_Press(object sender, EventArgs e)
+        {
+            Close();
+        }
+        /// <summary>
+        /// 上传结果
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plSave_Press(object sender, EventArgs e)
+        {
+            ReturnInfo rInfo = new ReturnInfo();
+            //上传结果
+            ConInventoryInputDto inputDto = new ConInventoryInputDto
+            {
+                IID = IID,
+                IsEnd = false,
+                ConDictionary = conDictionary,
+                WAREID = lblWareHouse.Tag.ToString(),
+                MODIFYUSER = UserId
+            };
+            if (lblST.Tag != null) inputDto.STID = lblST.Tag.ToString();
+            if (lblSL.Tag != null) inputDto.SLID = lblSL.Tag.ToString();
+            rInfo = _autofacConfig.ConInventoryService.UpdateInventory(inputDto);
+            Toast(rInfo.IsSuccess ? "上传结果成功!" : rInfo.ErrorInfo);
+        }
+        /// <summary>
         /// 二维码扫描
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void panelScan_Press(object sender, EventArgs e)
+        private void plScan_Press(object sender, EventArgs e)
         {
-            if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.盘点未开始)
+            if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.未盘点)
             {
                 Toast("盘点未开始或已经结束.");
             }
             else
             {
                 bsSL.GetBarcode();
+            }
+        }
+        /// <summary>
+        /// 开始盘点/结束盘点
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plAction_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                ReturnInfo rInfo = new ReturnInfo();
+                if (Status == InventoryStatus.未盘点)
+                {
+                    AddCIResultInputDto inputDto = new AddCIResultInputDto
+                    {
+                        IID = IID,
+                        UserId = Client.Session["UserID"].ToString()
+                    };
+                    var inventory = _autofacConfig.ConInventoryService.GetConInventoryById(IID);
+                    rInfo = _autofacConfig.ConInventoryService.AddConInventoryResult(inputDto);
+                    if (rInfo.IsSuccess)
+                    {
+                        Toast("盘点开始");
+                        Bind();
+                    }
+                    else
+                    {
+                        throw new Exception(rInfo.ErrorInfo);
+                    }
+                }
+                else
+                {
+                    //盘点结束
+                    Dictionary<string, List<decimal>> conDictionary2 = new Dictionary<string, List<decimal>>();
+                    foreach (var key in conDictionary.Keys)
+                    {
+                        if (conDictionary[key][1] == (int)ResultStatus.待盘点)
+                        {
+                            List<decimal> list = new List<decimal>();
+                            list.Add(0);
+                            list.Add(Convert.ToDecimal((int)ResultStatus.盘亏));
+                            conDictionary2.Add(key, list);
+                        }
+                        else
+                        {
+                            conDictionary2.Add(key, conDictionary[key]);
+                        }
+                    }
+
+                    ConInventoryInputDto inputDto2 = new ConInventoryInputDto
+                    {
+                        IID = IID,
+                        WAREID = lblWareHouse.Tag.ToString(),
+                        IsEnd = true,
+                        ConDictionary = conDictionary2
+                    };
+                    inputDto2.IsEnd = true;
+                    rInfo = _autofacConfig.ConInventoryService.UpdateInventory(inputDto2);
+                    if (rInfo.IsSuccess)
+                    {
+                        ShowResult = ShowResult.Yes;
+                        Close();
+                        Toast("盘点结束成功.");
+                    }
+                    else
+                    {
+                        Toast(rInfo.ErrorInfo);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Form.Toast(ex.Message);
             }
         }
     }

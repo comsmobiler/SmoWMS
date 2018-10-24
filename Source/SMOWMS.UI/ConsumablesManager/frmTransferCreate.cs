@@ -19,79 +19,6 @@ namespace SMOWMS.UI.ConsumablesManager
         public String CID;               //耗材编号
         #endregion
         /// <summary>
-        /// 创建调拨单
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnSave_Press(object sender, EventArgs e)
-        {
-            try
-            {
-                TOInputDto TransferData = new TOInputDto();        //维修单信息
-                if (btnDealInMan.Tag == null)
-                    throw new Exception("调入管理员不能为空");
-                else
-                    TransferData.MANAGER = btnDealInMan.Tag.ToString();     //调入管理员
-
-                if (lblLocation.Tag == null)
-                    throw new Exception("调入库位不能为空");
-                else
-                {
-                    string[] Datas = lblLocation.Tag.ToString().Split('/');
-                    TransferData.WAREID = Datas[0];     //调入仓库
-                    TransferData.STID = Datas[1];       //调入类型
-                    TransferData.DESSLID = Datas[2];    //调入库位
-                }
-
-
-                if (btnDealMan.Tag == null)
-                    throw new Exception("处理人不能为空");
-                else
-                    TransferData.HANDLEMAN = btnDealMan.Tag.ToString();     //处理人
-
-                TransferData.TRANSFERDATE = DatePicker.Value;   //维修花费
-                TransferData.NOTE = txtNote.Text;                           //备注
-                TransferData.STATUS = 0;                                    //维修单状态
-                TransferData.CREATEUSER = Client.Session["UserID"].ToString();      //创建用户
-                TransferData.CREATEDATE = DateTime.Now;
-
-                List<AssTransferOrderRow> Data = new List<AssTransferOrderRow>();
-                if (ListCons.Rows.Count == 0) throw new Exception("调拨行项不能为空!");
-                foreach (ListViewRow Row in ListCons.Rows)
-                {
-                    frmOrderCreateLayout Layout = Row.Control as frmOrderCreateLayout;
-                    ConsumablesOrderRow RowData = Layout.getData();
-                    AssTransferOrderRow assRow = new AssTransferOrderRow();
-
-                    assRow.IMAGE = RowData.IMAGE;
-                    assRow.CID = RowData.CID;
-                    assRow.INTRANSFERQTY = RowData.QTY;
-                    assRow.WAREID = RowData.WAREID;
-                    assRow.STID = RowData.STID;
-                    assRow.SLID = RowData.SLID;
-                    assRow.STATUS = RowData.STATUS;
-                    assRow.CREATEDATE = DateTime.Now;
-                    Data.Add(assRow);
-                }
-                TransferData.Rows = Data;
-                ReturnInfo r = autofacConfig.assTransferOrderService.AddAssTransferOrder(TransferData, OperateType.耗材);
-                if (r.IsSuccess)
-                {
-                    ShowResult = ShowResult.Yes;
-                    Form.Close();          //创建成功
-                    Toast("创建调拨单成功!");
-                }
-                else
-                {
-                    throw new Exception(r.ErrorInfo);
-                }
-            }
-            catch (Exception ex)
-            {
-                Toast(ex.Message);
-            }
-        }
-        /// <summary>
         /// 调入管理员选择
         /// </summary>
         /// <param name="sender"></param>
@@ -451,10 +378,87 @@ namespace SMOWMS.UI.ConsumablesManager
                 Toast(ex.Message);
             }
         }
-
-        private void frmTransferCreate_Load(object sender, EventArgs e)
+        /// <summary>
+        /// 关闭当前页面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plBack_Press(object sender, EventArgs e)
         {
+            Close();
+        }
+        /// <summary>
+        /// 调拨单创建
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void plSave_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                TOInputDto TransferData = new TOInputDto();        //维修单信息
+                if (btnDealInMan.Tag == null)
+                    throw new Exception("调入管理员不能为空");
+                else
+                    TransferData.MANAGER = btnDealInMan.Tag.ToString();     //调入管理员
 
+                if (lblLocation.Tag == null)
+                    throw new Exception("调入库位不能为空");
+                else
+                {
+                    string[] Datas = lblLocation.Tag.ToString().Split('/');
+                    TransferData.WAREID = Datas[0];     //调入仓库
+                    TransferData.STID = Datas[1];       //调入类型
+                    TransferData.DESSLID = Datas[2];    //调入库位
+                }
+
+
+                if (btnDealMan.Tag == null)
+                    throw new Exception("处理人不能为空");
+                else
+                    TransferData.HANDLEMAN = btnDealMan.Tag.ToString();     //处理人
+
+                TransferData.TRANSFERDATE = DatePicker.Value;   //维修花费
+                TransferData.NOTE = txtNote.Text;                           //备注
+                TransferData.STATUS = 0;                                    //维修单状态
+                TransferData.CREATEUSER = Client.Session["UserID"].ToString();      //创建用户
+                TransferData.CREATEDATE = DateTime.Now;
+
+                List<AssTransferOrderRow> Data = new List<AssTransferOrderRow>();
+                if (ListCons.Rows.Count == 0) throw new Exception("调拨行项不能为空!");
+                foreach (ListViewRow Row in ListCons.Rows)
+                {
+                    frmOrderCreateLayout Layout = Row.Control as frmOrderCreateLayout;
+                    ConsumablesOrderRow RowData = Layout.getData();
+                    AssTransferOrderRow assRow = new AssTransferOrderRow();
+
+                    assRow.IMAGE = RowData.IMAGE;
+                    assRow.CID = RowData.CID;
+                    assRow.INTRANSFERQTY = RowData.QTY;
+                    assRow.WAREID = RowData.WAREID;
+                    assRow.STID = RowData.STID;
+                    assRow.SLID = RowData.SLID;
+                    assRow.STATUS = RowData.STATUS;
+                    assRow.CREATEDATE = DateTime.Now;
+                    Data.Add(assRow);
+                }
+                TransferData.Rows = Data;
+                ReturnInfo r = autofacConfig.assTransferOrderService.AddAssTransferOrder(TransferData, OperateType.耗材);
+                if (r.IsSuccess)
+                {
+                    ShowResult = ShowResult.Yes;
+                    Form.Close();          //创建成功
+                    Toast("创建调拨单成功!");
+                }
+                else
+                {
+                    throw new Exception(r.ErrorInfo);
+                }
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
         }
     }
 }

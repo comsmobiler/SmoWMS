@@ -28,57 +28,6 @@ namespace SMOWMS.UI.MasterData
         #endregion
 
         /// <summary>
-        /// 修改资产
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Button1_Press(object sender, EventArgs e)
-        {
-            try
-            {
-                AssetsInputDto assetsInputDto = new AssetsInputDto
-                {
-                    ASSID = txtAssID.Text,
-                    BUYDATE = DatePickerBuy.Value,
-                    CREATEUSER = UserId,
-                    IMAGE = ImgPicture.ResourceID,
-                    SLID = SLID,
-                    STID = STID,
-                    WAREID = WAREID,
-                    MODIFYUSER = UserId,
-                    NAME = txtName.Text,
-                    NOTE = txtNote.Text,
-                    PLACE = txtPlace.Text,                  
-                    SPECIFICATION = txtSpe.Text,
-                    TYPEID = TypeId,
-                    UNIT = txtUnit.Text,
-                    VENDOR = txtVendor.Text,
-                    EXPIRYDATE = DatePickerExpiry.Value,
-                    SN = txtSN.Text
-                };
-                if (String.IsNullOrEmpty(txtPrice.Text) == false)
-                {
-                    assetsInputDto.PRICE = decimal.Parse(txtPrice.Text);
-                }
-                ReturnInfo returnInfo = _autofacConfig.SettingService.UpdateAssets(assetsInputDto);
-                if (returnInfo.IsSuccess)
-                {
-                    ShowResult = ShowResult.Yes;
-                    Close();
-                    Toast("修改成功.");
-                }
-                else
-                {
-                    Toast(returnInfo.ErrorInfo);
-                }
-            }
-            catch (Exception ex)
-            {
-                Toast(ex.Message);
-            }
-        }
-
-        /// <summary>
         /// 价格改变时
         /// </summary>
         /// <param name="sender"></param>
@@ -88,7 +37,7 @@ namespace SMOWMS.UI.MasterData
             try
             {
                 decimal price;
-                if (decimal.TryParse(txtPrice.Text, out price) == false)
+                if (decimal.TryParse(txtPrice1.Text, out price) == false)
                 {
                     throw new Exception("请输入正确的金额。");
                 }
@@ -183,8 +132,8 @@ namespace SMOWMS.UI.MasterData
                 if (string.IsNullOrEmpty(e.error))
                 {
                     e.SaveFile(UserId + DateTime.Now.ToString("yyyyMMddHHmmss") + ".png");
-                    ImgPicture.ResourceID = UserId + DateTime.Now.ToString("yyyyMMddHHmmss");
-                    ImgPicture.Refresh();
+                    image2.ResourceID = UserId + DateTime.Now.ToString("yyyyMMddHHmmss");
+                    image2.Refresh();
                 }
             }
             catch (Exception ex)
@@ -205,17 +154,17 @@ namespace SMOWMS.UI.MasterData
                 if (outputDto != null)
                 {
                     txtAssID.Text = outputDto.AssId;
-                    ImgPicture.ResourceID = outputDto.Image;
-                    txtNote.Text = outputDto.Note;
+                    image2.ResourceID = outputDto.Image;
+                    txtNote1.Text = outputDto.Note;
                     DatePickerExpiry.Value = outputDto.ExpiryDate;
-                    txtName.Text = outputDto.Name;
-                    txtPrice.Text = outputDto.Price.ToString();
-                    txtSpe.Text = outputDto.Specification;
-                    txtNote.Text = outputDto.Note;
-                    txtPlace.Text = outputDto.Place;
+                    txtName1.Text = outputDto.Name;
+                    txtPrice1.Text = outputDto.Price.ToString();
+                    txtSPE1.Text = outputDto.Specification;
+                    txtNote1.Text = outputDto.Note;
+                    txtPlace1.Text = outputDto.Place;
                     txtSN.Text = outputDto.SN;
-                    txtUnit.Text = outputDto.Unit;
-                    txtVendor.Text = outputDto.Vendor;
+                    txtUnit1.Text = outputDto.Unit;
+                    txtVendor1.Text = outputDto.Vendor;
                     txtATID.Text = outputDto.ATID;
                     txtType.Text = outputDto.TypeName;
                     TypeId = outputDto.TypeId;
@@ -329,6 +278,56 @@ namespace SMOWMS.UI.MasterData
             {
                 string barCode = e.Value;
                 txtSN.Text = barCode;
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
+        }
+        /// <summary>
+        /// 修改资产
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSave_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                AssetsInputDto assetsInputDto = new AssetsInputDto
+                {
+                    ASSID = txtAssID.Text,
+                    BUYDATE = DatePickerBuy.Value,
+                    CREATEUSER = UserId,
+                    IMAGE = image2.ResourceID,
+                    SLID = SLID,
+                    STID = STID,
+                    WAREID = WAREID,
+                    MODIFYUSER = UserId,
+                    NAME = txtName1.Text,
+                    NOTE = txtNote1.Text,
+                    PLACE = txtPlace1.Text,
+                    SPECIFICATION = txtSPE1.Text,
+                    TYPEID = TypeId,
+                    UNIT = txtUnit1.Text,
+                    VENDOR = txtVendor1.Text,
+                    EXPIRYDATE = DatePickerExpiry.Value,
+                    SN = txtSN.Text
+                };
+                if (String.IsNullOrEmpty(txtPrice1.Text) == false)
+                {
+                    assetsInputDto.PRICE = decimal.Parse(txtPrice1.Text);
+                }
+                ReturnInfo returnInfo = _autofacConfig.SettingService.UpdateAssets(assetsInputDto);
+                if (returnInfo.IsSuccess)
+                {
+                    ShowResult = ShowResult.Yes;
+                    Close();
+                    Toast("修改成功.");
+                }
+                else
+                {
+                    Toast(returnInfo.ErrorInfo);
+                }
             }
             catch (Exception ex)
             {

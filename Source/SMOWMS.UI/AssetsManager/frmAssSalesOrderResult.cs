@@ -122,23 +122,24 @@ namespace SMOWMS.UI.AssetsManager
             try
             {
                 var po = _autofacConfig.AssSalesOrderService.GetById(SOID);
-                lblName.Text = po.NAME;
-                lblPMan.Text = po.SALESPERSONNAME;
-                lblRealId.Text = po.REALID;
+                lblName.Text = "名称:" + po.NAME;
+                lblPMan.Text = "销售人:" + po.SALESPERSONNAME;
+                lblRealId.Text = "实际编号:" + po.REALID;
                 lblStatus.Tag = po.STATUS;
-                lblCustomer.Text = po.CUSNAME;
+                lblCustomer.Text = "客户:" + po.CUSNAME;
                 lblTID.Text = SOID;
                 Status = po.STATUS;
+                imgUser.ResourceID = po.Image;
                 switch (po.STATUS)
                 {
                     case 1:
-                        lblStatus.Text = "出库中";
+                        lblStatus.Text = "状态:出库中";
                         break;
                     case 2:
-                        lblStatus.Text = "已完成";
+                        lblStatus.Text = "状态:已完成";
                         break;
                     case 0:
-                        lblStatus.Text = "销售中";
+                        lblStatus.Text = "状态:销售中";
                         break;
                 }
                 var row = _autofacConfig.AssSalesOrderService.GetRows(SOID);
@@ -146,6 +147,68 @@ namespace SMOWMS.UI.AssetsManager
                 {
                     lvSORow.DataSource = row;
                     lvSORow.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
+        }
+
+        private void ibAssOut_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (Status)
+                {
+                    case 2:
+                        throw new Exception("出库已完成！");
+                    case 0:
+                    case 1:
+                        frmAssOut frmAssOut = new frmAssOut
+                        {
+                            SOID = SOID,
+                            IsFromSO = true
+                        };
+                        Show(frmAssOut, (MobileForm sender1, object args) =>
+                        {
+                            if (frmAssOut.ShowResult == ShowResult.Yes)
+                            {
+                                Bind();
+                            }
+                        });
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
+        }
+
+        private void ibAssRetiring_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (Status)
+                {
+                    case 0:
+                        throw new Exception("未开始出库，无法退库！");
+                    case 2:
+                    case 1:
+                        frmAssRetiring frmAssRetiring = new frmAssRetiring
+                        {
+                            SOID = SOID,
+                            IsFromSO = true
+                        };
+                        Show(frmAssRetiring, (MobileForm sender1, object args) =>
+                        {
+                            if (frmAssRetiring.ShowResult == ShowResult.Yes)
+                            {
+                                Bind();
+                            }
+                        });
+                        break;
                 }
             }
             catch (Exception ex)

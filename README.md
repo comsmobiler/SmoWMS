@@ -14,19 +14,19 @@ SmoWMS is a Warehouse Management solution for APPs, developed by .NET. The devel
 ## 环境要求
 
 ### 客户端运行环境要求
-Android版本：支持Android 4.1及以上版本   
-IOS版本：支持IOS 8.0及以上版本
+Android版本：支持Android 4.4及以上版本   
+IOS版本：支持IOS 9.0及以上版本
 
 ### 源代码运行环境要求
 .NET FrameWork版本: .支持NET FrameWork 4.0及以上版本   
 Visual Studio版本：支持Visual studio 2010及以上版本    
-SmobilerDesigner版本：450.1532931155([下载并安装SmobilerDesigner](https://www.smobiler.com/SmobilerDesigner.exe?v=4.5.0))     
+SmobilerDesigner版本：450及以上([下载并安装SmobilerDesigner](https://www.smobiler.com/SmobilerDesigner.exe))     
 ![下载](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/down.gif)
 
 ## SmobilerClient（开发调试客户端）获取
-[Android版调试客户端](https://www.smobiler.com/Smobiler.apk?v=4.5.0)          
+[Android版调试客户端](https://www.smobiler.com/Smobiler.apk)          
 [iOS版调试客户端](https://www.smobiler.com/download.html) (使用iPhone/iPad的safari浏览器打开此链接)        
-注意：该项目客户端版本为4.5.0，designer版本为450.1532931155，项目使用的designer和客户端版本必须保持一致！！
+注意：该项目客户端版本为4.5.0及以上，designer版本为450及以上，项目使用的designer和客户端版本必须保持一致！！
 
 ## 打开项目
 确认.NET FrameWork已安装且版本正确。   

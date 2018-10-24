@@ -79,7 +79,7 @@ namespace SMOWMS.UI.MasterData
             this.panel1,
             this.ListViewCon});
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.Load += new System.EventHandler(this.frmConsumables_Load);
             this.Name = "frmConsumables";
 

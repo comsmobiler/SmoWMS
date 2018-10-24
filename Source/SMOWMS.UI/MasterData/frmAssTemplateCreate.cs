@@ -78,7 +78,56 @@ namespace SMOWMS.UI.MasterData
         /// <param name="e"></param>
         private void btnType_Press(object sender, EventArgs e)
         {
-            ShowDialog(tree, GetType);
+            try
+            {
+//                AssetTypeTree tree = new AssetTypeTree();
+
+                ShowDialog(tree, GetType);
+
+//                if (tree.IsChoose)
+//                {
+//                    btnType.Tag = tree.ID;
+//                    btnType.Text = tree.TypeName;
+//                }
+//                ShowDialog(tree, (MobileForm sender1, object args) =>
+//                {
+//                    if (tree.IsChoose == true)
+//                    {
+//                        
+//                    }
+//                });
+
+
+//                PopType.Groups.Clear();
+//                PopListGroup typeGroup = new PopListGroup();
+//                typeGroup.Title = "资产类型";
+//                var typelist = _autofacConfig.assTypeService.GetAll();
+//                foreach (var type in typelist)
+//                {
+//                    PopListItem item = new PopListItem
+//                    {
+//                        Value = type.TYPEID,
+//                        Text = type.NAME
+//                    };
+//                    typeGroup.Items.Add(item);
+//                }
+//                PopType.Groups.Add(typeGroup);
+//                if (!string.IsNullOrEmpty(btnType.Text))
+//                {
+//                    foreach (PopListItem row in PopType.Groups[0].Items)
+//                    {
+//                        if (row.Text == btnType.Text)
+//                        {
+//                            PopType.SetSelections(row);
+//                        }
+//                    }
+//                }
+//                PopType.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
         }
 
         /// <summary>

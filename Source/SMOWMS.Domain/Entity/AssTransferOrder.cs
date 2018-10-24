@@ -56,11 +56,6 @@ namespace SMOWMS.Domain.Entity
         /// 状态(0 调拨中,1 调拨完成,2 取消调拨,默认为调拨中)
         /// </summary>
         public int? STATUS { get; set; }
-        //        /// <summary>
-        //        /// 是否开启SN控制(0 未开启，1开启)
-        //        /// </summary>
-        //        public int ISSNCONTROL { get; set; }
-
         /// <summary>
         /// 类型(0-资产,1-耗材)
         /// </summary>

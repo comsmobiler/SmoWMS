@@ -234,7 +234,7 @@ namespace SMOWMS.UI.AssetsManager
                 {
                     txtPOID.Text = POID;
                     ImgBtnForPOID.Visible = false;
-                    txtPOID.Size = new Size(200, 30);
+//                    txtPOID.Size = new Size(200, 30);
                 }
 
             }

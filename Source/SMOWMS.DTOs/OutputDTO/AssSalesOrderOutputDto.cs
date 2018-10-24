@@ -53,5 +53,7 @@
         public int CUSID { get; set; }
 
         public string CUSNAME { get; set; }
+
+        public string Image { get; set; }
     }
 }

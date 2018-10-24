@@ -113,11 +113,11 @@ namespace SMOWMS.UI.Menu
                                 switch (layout.lblStatus.Text)
                                 {
                                     case "已完成":
-                                        layout.lblStatus.ForeColor = Color.FromArgb(43, 125, 43);
+                                        layout.lblStatus.ForeColor = Color.FromArgb(3, 58, 82);
                                         layout.ibEdit.Visible = false;
                                         break;
                                     case "入库中":
-                                        layout.lblStatus.ForeColor = Color.FromArgb(43, 140, 255);
+                                        layout.lblStatus.ForeColor = Color.FromArgb(77, 216, 101);
                                         layout.ibEdit.Visible = false;
                                         break;
                                     case "采购中":
@@ -140,11 +140,11 @@ namespace SMOWMS.UI.Menu
                                 switch (layout.lblStatus.Text)
                                 {
                                     case "已完成":
-                                        layout.lblStatus.ForeColor = Color.FromArgb(43, 125, 43);
+                                        layout.lblStatus.ForeColor = Color.FromArgb(3, 58, 82);
                                         layout.ibEdit.Visible = false;
                                         break;
                                     case "出库中":
-                                        layout.lblStatus.ForeColor = Color.FromArgb(43, 140, 255);
+                                        layout.lblStatus.ForeColor = Color.FromArgb(77, 216, 101);
                                         layout.ibEdit.Visible = false;
                                         break;
                                     case "销售中":
@@ -170,11 +170,11 @@ namespace SMOWMS.UI.Menu
                                 switch (layout.lblStatus.Text)
                                 {
                                     case "已完成":
-                                        layout.lblStatus.ForeColor = Color.FromArgb(43, 125, 43);
+                                        layout.lblStatus.ForeColor = Color.FromArgb(3, 58, 82);
                                         layout.ibEdit.Visible = false;
                                         break;
                                     case "入库中":
-                                        layout.lblStatus.ForeColor = Color.FromArgb(43, 140, 255);
+                                        layout.lblStatus.ForeColor = Color.FromArgb(77, 216, 101);
                                         layout.ibEdit.Visible = false;
                                         break;
                                     case "采购中":
@@ -198,11 +198,11 @@ namespace SMOWMS.UI.Menu
                                 switch (layout.lblStatus.Text)
                                 {
                                     case "已完成":
-                                        layout.lblStatus.ForeColor = Color.FromArgb(43, 125, 43);
+                                        layout.lblStatus.ForeColor = Color.FromArgb(3, 58, 82);
                                         layout.ibEdit.Visible = false;
                                         break;
                                     case "出库中":
-                                        layout.lblStatus.ForeColor = Color.FromArgb(43, 140, 255);
+                                        layout.lblStatus.ForeColor = Color.FromArgb(77, 216, 101);
                                         layout.ibEdit.Visible = false;
                                         break;
                                     case "销售中":

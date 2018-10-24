@@ -89,7 +89,7 @@ namespace SMOWMS.UI.AssetsManager
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(146)))), ((int)(((byte)(223)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
             this.btnSave.BorderRadius = 4;
             this.btnSave.FontSize = 17F;
             this.btnSave.Location = new System.Drawing.Point(10, 35);
@@ -160,7 +160,7 @@ namespace SMOWMS.UI.AssetsManager
             this.plSearch,
             this.plButton,
             this.spContent});
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmAssTemplateChoose_KeyDown);
             this.Load += new System.EventHandler(this.frmAssTemplateChoose_Load);
             this.Name = "frmAssTemplateChoose";

@@ -144,6 +144,31 @@ namespace SMOWMS.UI.Layout
                 Toast(ex.Message);
             }
         }
-    
+
+        /// <summary>
+        /// ±‡º≠≈Ãµ„µ•
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ibEdit_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                frmAssInventoryEdit edit = new frmAssInventoryEdit { IID = lblName.BindDataValue.ToString() };
+                Form.Show(edit, (MobileForm sender1, object args) =>
+                    {
+                        if (edit.ShowResult == ShowResult.Yes)
+                        {
+                            ((frmAssInventory)Form).Bind();
+                        }
+
+                    }
+                );
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
+        }
     }
 }

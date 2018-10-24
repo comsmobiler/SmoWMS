@@ -137,7 +137,7 @@ namespace SMOWMS.UI.Layout
             // 
             this.ibEdit.Location = new System.Drawing.Point(220, 60);
             this.ibEdit.Name = "ibEdit";
-            this.ibEdit.ResourceID = "edit1";
+            this.ibEdit.ResourceID = "icon-edit";
             this.ibEdit.Size = new System.Drawing.Size(30, 30);
             this.ibEdit.Press += new System.EventHandler(this.ibEdit_Press);
             // 

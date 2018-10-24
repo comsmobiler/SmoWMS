@@ -108,23 +108,24 @@ namespace SMOWMS.UI.AssetsManager
             try
             {
                 var po = _autofacConfig.AssPurchaseOrderService.GetById(POID);
-                lblName.Text = po.NAME;
-                lblPMan.Text = po.PURCHASERNAME;
-                lblRealId.Text = po.REALID;
+                lblName.Text = "名称:" + po.NAME;
+                lblPMan.Text = "采购人:" + po.PURCHASERNAME;
+                lblRealId.Text = "实际编号:" + po.REALID;
                 lblStatus.Tag = po.STATUS;
-                lblVendor.Text = po.VNAME;
+                lblVendor.Text = "供应商:" + po.VNAME;
                 lblTID.Text = POID;
-                Status = po.STATUS;
+                Status =  po.STATUS;
+                imgUser.ResourceID = po.Image;
                 switch (po.STATUS)
                 {
                     case 1:
-                        lblStatus.Text = "入库中";
+                        lblStatus.Text ="状态:入库中";
                         break;
                     case 2:
-                        lblStatus.Text = "已完成";
+                        lblStatus.Text = "状态:已完成";
                         break;
                     case 0:
-                        lblStatus.Text = "采购中";
+                        lblStatus.Text = "状态:采购中";
                         break;
                 }
                 var row = _autofacConfig.AssPurchaseOrderService.GetRows(POID);
@@ -150,6 +151,69 @@ namespace SMOWMS.UI.AssetsManager
             if (e.KeyCode == KeyCode.Back)
             {
                 Close();
+            }
+        }
+
+
+        private void ibAssIn_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (Status)
+                {
+                    case 2:
+                        throw new Exception("入库已完成！");
+                    case 0:
+                    case 1:
+                        frmAssIn frmAssIn = new frmAssIn
+                        {
+                            POID = POID,
+                            IsFromPO = true
+                        };
+                        Show(frmAssIn, (MobileForm sender1, object args) =>
+                        {
+                            if (frmAssIn.ShowResult == ShowResult.Yes)
+                            {
+                                Bind();
+                            }
+                        });
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
+        }
+
+        private void ibAssReturn_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (Status)
+                {
+                    case 0:
+                        throw new Exception("入库未开始,无法退货！");
+                    case 2:
+                    case 1:
+                        frmAssReturn frmAssReturn = new frmAssReturn
+                        {
+                            POID = POID,
+                            IsFromPO = true
+                        };
+                        Show(frmAssReturn, (MobileForm sender1, object args) =>
+                        {
+                            if (frmAssReturn.ShowResult == ShowResult.Yes)
+                            {
+                                Bind();
+                            }
+                        });
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
             }
         }
     }

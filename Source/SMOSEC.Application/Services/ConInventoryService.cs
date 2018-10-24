@@ -216,32 +216,22 @@ namespace SMOWMS.Application.Services
                            NAME = conInventory.NAME,
                            CREATEDATE = conInventory.CREATEDATE,
                            CREATEUSER = user.USER_NAME,
+                           CREATEUSERNAME = "",
                            TOTAL = conInventory.TOTAL,
                            RESULTCOUNT = conInventory.RESULTCOUNT,
+                           COUNT = "",
                            STATUS = conInventory.STATUS,
                            STATUSNAME = "",
-                           CanStart = "",
-                           CanEdit = "",
-                           CanDelete = "",
                            Time = ""
                        };
             var temTable = LINQToDataTable.ToDataTable(list);
             foreach (DataRow row in temTable.Rows)
             {
                 int status = int.Parse(row["STATUS"].ToString());
+                row["CREATEUSERNAME"] = row["CREATEUSER"].ToString()[0];
                 row["STATUSNAME"] = Enum.GetName(typeof(InventoryStatus), status);
-                switch (status)
-                {
-                    case (int)InventoryStatus.盘点未开始:
-                        row["CanStart"] = "开始盘点";
-                        row["CanDelete"] = "删除";
-                        row["CanEdit"] = "编辑";
-                        break;
-                    case (int)InventoryStatus.盘点中:
-                        row["CanStart"] = "开始盘点";
-                        break;
-                }
-                row["Time"] = DateTime.Parse(row["CREATEDATE"].ToString()).ToShortDateString();
+                row["COUNT"] = row["RESULTCOUNT"] + "/" + row["TOTAL"];;
+                row["Time"] = string.Format("{0:yyyy.MM.dd}", row["CREATEDATE"]);
             }
             return temTable;
         }
@@ -430,7 +420,7 @@ namespace SMOWMS.Application.Services
             if (sb.Length == 0)
             {
                 var assbo = Mapper.Map<ConInventoryInputDto, ConInventory>(inputDto);
-                assbo.STATUS = (int)InventoryStatus.盘点未开始;
+                assbo.STATUS = (int)InventoryStatus.未盘点;
                 assbo.CREATEDATE = DateTime.Now;
                 assbo.MODIFYDATE = DateTime.Now;
 
@@ -479,7 +469,7 @@ namespace SMOWMS.Application.Services
             else
             {
                 //根据盘点单状态，已开始盘点就不能删除了
-                if (inventory.STATUS == (int)InventoryStatus.盘点未开始)
+                if (inventory.STATUS == (int)InventoryStatus.未盘点)
                 {
                     //可以删除
                     try

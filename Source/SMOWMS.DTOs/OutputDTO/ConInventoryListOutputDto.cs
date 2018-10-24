@@ -18,12 +18,12 @@ namespace SMOWMS.DTOs.OutputDTO
         public string NAME { get; set; }
 
         /// <summary>
-        /// 盘点状态(0-盘点结束,1-盘点中，2-盘点未开始)
+        /// 盘点状态(0-盘点结束,1-盘点中，2-未盘点)
         /// </summary>
         public int STATUS { get; set; }
 
         /// <summary>
-        /// 盘点状态(0-盘点结束,1-盘点中，2-盘点未开始)
+        /// 盘点状态(0-盘点结束,1-盘点中，2-未盘点)
         /// </summary>
         public string STATUSNAME { get; set; }
 
@@ -31,7 +31,10 @@ namespace SMOWMS.DTOs.OutputDTO
         /// 创建时间
         /// </summary>
         public DateTime CREATEDATE { get; set; }
-
+        /// <summary>
+        /// 创建者-姓
+        /// </summary>
+        public string CREATEUSERNAME { get; set; }
         /// <summary>
         /// 创建者
         /// </summary>
@@ -47,20 +50,11 @@ namespace SMOWMS.DTOs.OutputDTO
         /// </summary>
         public int RESULTCOUNT { get; set; }
 
+        
         /// <summary>
-        /// 是否可编辑
+        ///  已盘点数/需盘点数
         /// </summary>
-        public string CanEdit { get; set; }
-
-        /// <summary>
-        /// 是否可删除
-        /// </summary>
-        public string CanDelete { get; set; }
-
-        /// <summary>
-        /// 是否显示"开始盘点"
-        /// </summary>
-        public string CanStart { get; set; }
+        public string COUNT { get; set;}
 
         /// <summary>
         /// 时间

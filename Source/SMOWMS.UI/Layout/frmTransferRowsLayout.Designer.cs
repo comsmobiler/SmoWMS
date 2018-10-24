@@ -48,34 +48,35 @@ namespace SMOWMS.UI.Layout
             // lblID
             // 
             this.lblID.DataMember = "TOID";
-            this.lblID.DisplayFormat = "单号  {0}";
+            this.lblID.DisplayFormat = "单号:  {0}";
             this.lblID.DisplayMember = "TOID";
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(141)))));
+            this.lblID.Location = new System.Drawing.Point(0, 10);
             this.lblID.Name = "lblID";
             this.lblID.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.lblID.Size = new System.Drawing.Size(150, 30);
-            this.lblID.Text = "单号";
+            this.lblID.Size = new System.Drawing.Size(150, 15);
+            this.lblID.Text = "单号:";
             // 
             // lblDate
             // 
-            this.lblDate.DisplayFormat = "日期  {0:yyyy/MM/dd}";
-            this.lblDate.DisplayMember = "TRANSFERDATE";
-            this.lblDate.Location = new System.Drawing.Point(150, 0);
+            this.lblDate.DisplayMember = "CREATEDATE";
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(141)))));
+            this.lblDate.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
+            this.lblDate.Location = new System.Drawing.Point(150, 7);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.lblDate.Size = new System.Drawing.Size(150, 30);
-            this.lblDate.Text = "日期";
+            this.lblDate.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 5F, 0F);
+            this.lblDate.Size = new System.Drawing.Size(150, 15);
             // 
             // lblContent
             // 
-            this.lblContent.DisplayFormat = "备注  {0}";
+            this.lblContent.DisplayFormat = "备注:  {0}";
             this.lblContent.DisplayMember = "NOTE";
-            this.lblContent.FontSize = 12F;
-            this.lblContent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
-            this.lblContent.Location = new System.Drawing.Point(0, 30);
+            this.lblContent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(141)))));
+            this.lblContent.Location = new System.Drawing.Point(0, 25);
             this.lblContent.Name = "lblContent";
             this.lblContent.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.lblContent.Size = new System.Drawing.Size(300, 20);
-            this.lblContent.Text = "备注 ";
+            this.lblContent.Size = new System.Drawing.Size(300, 15);
+            this.lblContent.Text = "备注:";
             // 
             // frmTransferRowsLayout
             // 

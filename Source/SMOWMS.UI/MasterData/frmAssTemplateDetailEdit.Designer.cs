@@ -55,6 +55,7 @@ namespace SMOWMS.UI.MasterData
             this.txtVendor = new Smobiler.Core.Controls.TextBox();
             this.PopType = new Smobiler.Core.Controls.PopList();
             this.CamPicture = new Smobiler.Core.Controls.Camera();
+            this.btnSave2 = new Smobiler.Core.Controls.Button();
             // 
             // Title1
             // 
@@ -76,14 +77,16 @@ namespace SMOWMS.UI.MasterData
             this.plButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.plButton.Location = new System.Drawing.Point(0, 480);
             this.plButton.Name = "plButton";
-            this.plButton.Size = new System.Drawing.Size(300, 40);
+            this.plButton.Size = new System.Drawing.Size(300, 50);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(100, 5);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.btnSave.BorderRadius = 0;
+            this.btnSave.Location = new System.Drawing.Point(12, 0);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 30);
-            this.btnSave.Text = "确定";
+            this.btnSave.Size = new System.Drawing.Size(276, 38);
+            this.btnSave.Text = "保存";
             this.btnSave.Press += new System.EventHandler(this.btnSave_Press);
             // 
             // plContent
@@ -369,6 +372,16 @@ namespace SMOWMS.UI.MasterData
             this.CamPicture.Name = "CamPicture";
             this.CamPicture.ImageCaptured += new Smobiler.Core.Controls.CameraOnlineCallBackHandler(this.CamPicture_ImageCaptured);
             // 
+            // btnSave2
+            // 
+            this.btnSave2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246)))));
+            this.btnSave2.BorderRadius = 0;
+            this.btnSave2.Location = new System.Drawing.Point(261, 12);
+            this.btnSave2.Name = "btnSave2";
+            this.btnSave2.Size = new System.Drawing.Size(30, 13);
+            this.btnSave2.Text = "保存";
+            this.btnSave2.Press += new System.EventHandler(this.btnSave_Press);
+            // 
             // frmAssTemplateDetailEdit
             // 
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
@@ -377,7 +390,9 @@ namespace SMOWMS.UI.MasterData
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.Title1,
             this.plButton,
-            this.plContent});
+            this.plContent,
+            this.btnSave2});
+            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(124)))), ((int)(((byte)(246))))));
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmAssTemplateDetailEdit_KeyDown);
             this.Load += new System.EventHandler(this.frmAssTemplateDetailEdit_Load);
             this.Name = "frmAssTemplateDetailEdit";
@@ -412,5 +427,6 @@ namespace SMOWMS.UI.MasterData
         internal Smobiler.Core.Controls.TextBox txtVendor;
         internal Smobiler.Core.Controls.PopList PopType;
         private Smobiler.Core.Controls.Camera CamPicture;
+        private Smobiler.Core.Controls.Button btnSave2;
     }
 }

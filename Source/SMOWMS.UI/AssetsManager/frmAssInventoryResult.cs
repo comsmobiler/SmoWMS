@@ -146,20 +146,22 @@ namespace SMOWMS.UI.AssetsManager
 
                 var inventory = _autofacConfig.AssInventoryService.GetAssInventoryById(IID);
                 txtName.Text = inventory.NAME;
-                txtHandleMan.Text = inventory.HANDLEMANNAME;
-                txtCount.Text = inventory.TOTAL.ToString();
-                txtWare.Text = inventory.WareNAME;
-                txtST.Text = string.IsNullOrEmpty(inventory.STID) ? "全部" : inventory.STNAME;
-                txtSL.Text = string.IsNullOrEmpty(inventory.SLID) ? "全部" : inventory.SLNAME;
-                txtType.Text = string.IsNullOrEmpty(inventory.TYPEID) ? "全部" : inventory.TYPENAME;
+                txtHandleMan.Text = "盘点人:" + inventory.HANDLEMANNAME;
+                string count = inventory.TOTAL.ToString();
+                txtCount.Text = "需盘点总数:"+count;
+                txtWare.Text ="仓库:"+ inventory.WareNAME;
+                txtST.Text = string.IsNullOrEmpty(inventory.STID) ? "存储类型:"+"全部" : "存储类型:" + inventory.STNAME;
+                txtSL.Text = string.IsNullOrEmpty(inventory.SLID) ? "库位:" + "全部" : "库位:" + inventory.SLNAME;
+                txtType.Text = string.IsNullOrEmpty(inventory.TYPEID) ? "资产类型:" + "全部" : "资产类型:" + inventory.TYPENAME;
                 Status = (InventoryStatus)inventory
                     .STATUS;
                 WAREID = inventory.WAREID;
                 STID = inventory.STID;
                 SLID = inventory.SLID;
-                if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.盘点未开始)
+                imgUser.ResourceID = inventory.Image;
+                if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.未盘点)
                 {
-                    plButton.Visible = false;
+                    plScan.Visible = false;
                 }
 
 
@@ -189,7 +191,7 @@ namespace SMOWMS.UI.AssetsManager
                 }
                 if (inventory.TOTAL == 0)
                 {
-                    txtCount.Text = waiTable1.Rows.Count.ToString();
+                    txtCount.Text = "需盘点总数:" + waiTable1.Rows.Count.ToString();
                 }
 
 
@@ -211,11 +213,28 @@ namespace SMOWMS.UI.AssetsManager
                     alreadyTable.Rows.Add(Row);
                 }
 
-                if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.盘点未开始)
+//                if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.盘点未开始)
+//                {
+//                    Form.ActionButton.Enabled = false;
+//                }
+                if (Status == InventoryStatus.未盘点)
                 {
-                    Form.ActionButton.Enabled = false;
+                    ibStart.Text = "开始盘点";
+                    ibUpload.Visible = false;
+                    plScan.Visible = false;
+//                    Toast("盘点未开始或已经结束.");
                 }
-
+                else if (Status == InventoryStatus.盘点中)
+                {
+                    ibStart.Text = "结束盘点";
+                    ibUpload.Visible = true;
+                    plScan.Visible = true;
+                }
+                else if (Status == InventoryStatus.盘点结束)
+                {
+                    plButton.Visible = false;
+                    plScan.Visible = false;
+                }
                 //绑定数据
                 Bind();
             }
@@ -380,70 +399,6 @@ namespace SMOWMS.UI.AssetsManager
         /// <param name="e"></param>
         private void frmAssInventoryResult_ActionButtonPress(object sender, ActionButtonPressEventArgs e)
         {
-            try
-            {
-                ReturnInfo rInfo = new ReturnInfo();
-                switch (e.Index)
-                {
-                    case 0:
-                        //上传结果
-                        AssInventoryInputDto inputDto = new AssInventoryInputDto
-                        {
-                            IID = IID,
-                            IsEnd = false,
-                            AssDictionary = assDictionary
-                        };
-                        inputDto.IsEnd = false;
-                        rInfo = _autofacConfig.AssInventoryService.UpdateInventory(inputDto);
-                        Toast(rInfo.IsSuccess ? "上传结果成功." : rInfo.ErrorInfo);
-                        break;
-                    case 1:
-                        //盘点结束
-                        Dictionary<string, int> assDictionary2 = new Dictionary<string, int>();
-                        foreach (var key in assDictionary.Keys)
-                        {
-
-                            if (assDictionary[key] == (int)ResultStatus.待盘点)
-                            {
-                                assDictionary2.Add(key, (int)ResultStatus.盘亏);
-                            }
-                            else
-                            {
-                                assDictionary2.Add(key, assDictionary[key]);
-                            }
-                        }
-
-
-                        AssInventoryInputDto inputDto2 = new AssInventoryInputDto
-                        {
-                            IID = IID,
-                            IsEnd = false,
-                            AssDictionary = assDictionary2
-                        };
-                        inputDto2.IsEnd = true;
-                        rInfo = _autofacConfig.AssInventoryService.UpdateInventory(inputDto2);
-                        if (rInfo.IsSuccess)
-                        {
-                            ShowResult = ShowResult.Yes;
-                            Close();
-                            Toast("盘点结束成功.");
-                        }
-                        else
-                        {
-                            Toast(rInfo.ErrorInfo);
-                        }
-                        break;
-                    default:
-                        break;
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Toast(ex.Message);
-            }
-
 
         }
         private static object lockobj = new object();
@@ -492,7 +447,7 @@ namespace SMOWMS.UI.AssetsManager
         /// <param name="e"></param>
         private void panelScan_Press(object sender, EventArgs e)
         {
-            if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.盘点未开始)
+            if (Status == InventoryStatus.盘点结束 || Status == InventoryStatus.未盘点)
             {
                 Toast("盘点未开始或已经结束.");
             }
@@ -520,6 +475,95 @@ namespace SMOWMS.UI.AssetsManager
                 {
                     AddAssToDictionary(assId, RFID);
                 }
+            }
+        }
+
+        private void ibUpload_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                ReturnInfo rInfo = new ReturnInfo();
+                AssInventoryInputDto inputDto = new AssInventoryInputDto
+                {
+                    IID = IID,
+                    IsEnd = false,
+                    AssDictionary = assDictionary
+                };
+                inputDto.IsEnd = false;
+                rInfo = _autofacConfig.AssInventoryService.UpdateInventory(inputDto);
+                Toast(rInfo.IsSuccess ? "上传结果成功." : rInfo.ErrorInfo);
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
+            }
+        }
+
+        private void ibStart_Press(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Status == InventoryStatus.盘点中)
+                {
+                    //盘点结束
+                    ReturnInfo rInfo = new ReturnInfo();
+                    Dictionary<string, int> assDictionary2 = new Dictionary<string, int>();
+                    foreach (var key in assDictionary.Keys)
+                    {
+
+                        if (assDictionary[key] == (int)ResultStatus.待盘点)
+                        {
+                            assDictionary2.Add(key, (int)ResultStatus.盘亏);
+                        }
+                        else
+                        {
+                            assDictionary2.Add(key, assDictionary[key]);
+                        }
+                    }
+
+
+                    AssInventoryInputDto inputDto2 = new AssInventoryInputDto
+                    {
+                        IID = IID,
+                        IsEnd = false,
+                        AssDictionary = assDictionary2
+                    };
+                    inputDto2.IsEnd = true;
+                    rInfo = _autofacConfig.AssInventoryService.UpdateInventory(inputDto2);
+                    if (rInfo.IsSuccess)
+                    {
+                        ShowResult = ShowResult.Yes;
+                        Close();
+                        Toast("盘点结束成功.");
+                    }
+                    else
+                    {
+                        Toast(rInfo.ErrorInfo);
+                    }
+                }
+                else
+                {
+                    //开始盘点
+                    AddAIResultInputDto inputDto = new AddAIResultInputDto { IID = IID };
+                    var inventory = _autofacConfig.AssInventoryService.GetAssInventoryById(IID);
+                    ReturnInfo returnInfo = _autofacConfig.AssInventoryService.AddAssInventoryResult(inputDto);
+                    if (returnInfo.IsSuccess)
+                    {
+                        Status=InventoryStatus.盘点中;
+                        ibStart.Text = "结束盘点";
+                        ibUpload.Visible = true;
+                        plScan.Visible = true;
+                    }
+                    else
+                    {
+                        Toast(returnInfo.ErrorInfo);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Toast(ex.Message);
             }
         }
     }
