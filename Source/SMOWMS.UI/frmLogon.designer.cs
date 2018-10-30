@@ -79,7 +79,7 @@ namespace SMOWMS.UI
             this.btnRegist.BackColor = System.Drawing.Color.Transparent;
             this.btnRegist.BorderRadius = 0;
             this.btnRegist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(153)))), ((int)(((byte)(238)))));
-            this.btnRegist.Location = new System.Drawing.Point(90, 425);
+            this.btnRegist.Location = new System.Drawing.Point(160, 283);
             this.btnRegist.Name = "btnRegist";
             this.btnRegist.Size = new System.Drawing.Size(60, 30);
             this.btnRegist.Text = "Á¢¼´×¢²á";
@@ -91,7 +91,7 @@ namespace SMOWMS.UI
             this.btnDemo.BorderColor = System.Drawing.Color.White;
             this.btnDemo.BorderRadius = 0;
             this.btnDemo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(153)))), ((int)(((byte)(238)))));
-            this.btnDemo.Location = new System.Drawing.Point(150, 425);
+            this.btnDemo.Location = new System.Drawing.Point(220, 283);
             this.btnDemo.Name = "btnDemo";
             this.btnDemo.Size = new System.Drawing.Size(60, 30);
             this.btnDemo.Text = "ÑÝÊ¾ÕËºÅ";
@@ -164,7 +164,7 @@ namespace SMOWMS.UI
             // line1
             // 
             this.line1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.line1.Location = new System.Drawing.Point(150, 434);
+            this.line1.Location = new System.Drawing.Point(220, 292);
             this.line1.Name = "line1";
             this.line1.Orientation = Smobiler.Core.Controls.OrientationAlignment.Vertical;
             this.line1.Size = new System.Drawing.Size(1, 15);
