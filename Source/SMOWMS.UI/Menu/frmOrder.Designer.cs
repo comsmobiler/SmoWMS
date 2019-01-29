@@ -149,7 +149,7 @@ namespace SMOWMS.UI.Menu
         }
         #endregion
         private Smobiler.Core.Controls.Label lblTitle;
-        private UserControl.MenuToolbar menuToolbar;
+        public UserControl.MenuToolbar menuToolbar;
         private Smobiler.Core.Controls.Panel plContent;
         private Smobiler.Core.Controls.SegmentedControl scType;
         private Smobiler.Core.Controls.Panel plAllData;

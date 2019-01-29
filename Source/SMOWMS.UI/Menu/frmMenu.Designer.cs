@@ -180,6 +180,6 @@ namespace SMOWMS.UI.Menu
         private Smobiler.Core.Controls.Panel plWareHouse;
         internal Smobiler.Core.Controls.Button btnWareHouse;
         private Smobiler.Core.Controls.IconMenuView iconMenu;
-        private UserControl.MenuToolbar menuToolbar;
+        public UserControl.MenuToolbar menuToolbar;
     }
 }
