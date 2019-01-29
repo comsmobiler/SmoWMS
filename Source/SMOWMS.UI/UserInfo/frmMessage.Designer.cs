@@ -397,7 +397,7 @@ namespace SMOWMS.UI.UserInfo
         private Smobiler.Core.Controls.Label lblTitle;
         internal Smobiler.Core.Controls.Camera Camera1;
         internal Smobiler.Core.Controls.PopList popSex;
-        private UserControl.MenuToolbar menuToolbar;
+        public UserControl.MenuToolbar menuToolbar;
         private Smobiler.Core.Controls.Panel spContent;
         internal Smobiler.Core.Controls.Panel plImage;
         internal Smobiler.Core.Controls.ImageButton imgUser;
