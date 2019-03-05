@@ -6,6 +6,8 @@ using Smobiler.Core;
 using Smobiler.Core.Controls;
 using SMOWMS.UI.UserInfo;
 using SMOWMS.DTOs.Enum;
+using SMOWMS.UI.Menu;
+using SMOWMS.UI.UserControl;
 
 namespace SMOWMS.UI.Layout
 {
@@ -22,11 +24,17 @@ namespace SMOWMS.UI.Layout
         {
             try
             {
-                String editLbltxt=((frmMessage)Form).eInfo.ToString();
-                if (((frmMessage)Form).eInfo == EuserInfo.ÐÞ¸ÄêÇ³Æ)
+                frmToolBarMenu fm = (frmToolBarMenu)this.Form;
+                frmMessageLayout fml = (frmMessageLayout)fm.tabPageView1.Controls[4];
+                // String editLbltxt=((frmMessage)Form).eInfo.ToString();
+                String editLbltxt = fml.eInfo.ToString();
+                // if (((frmMessage)Form).eInfo == EuserInfo.ÐÞ¸ÄêÇ³Æ)
+                if (fml.eInfo == EuserInfo.ÐÞ¸ÄêÇ³Æ)
                 {
-                    if (((frmMessage)Form).lblName.Text.Trim().Length > 0)
-                        txtEditInfo.Text = ((frmMessage)Form).lblName.Text;
+                    // if (((frmMessage)Form).lblName.Text.Trim().Length > 0)
+                    //   txtEditInfo.Text = ((frmMessage)Form).lblName.Text;
+                    if (fml.lblName.Text.Trim().Length > 0)
+                        txtEditInfo.Text = fml.lblName.Text;
                     else
                         txtEditInfo.Text = "";
                 }
@@ -54,12 +62,17 @@ namespace SMOWMS.UI.Layout
         {
             try
             {
-                if (((frmMessage)Form).eInfo == EuserInfo.ÐÞ¸ÄêÇ³Æ)
+                frmToolBarMenu fm = (frmToolBarMenu)this.Form;
+                frmMessageLayout fml = (frmMessageLayout)fm.tabPageView1.Controls[4];
+                // if (((frmMessage)Form).eInfo == EuserInfo.ÐÞ¸ÄêÇ³Æ)
+                if (fml.eInfo == EuserInfo.ÐÞ¸ÄêÇ³Æ)
                 {
                     if (String.IsNullOrEmpty(txtEditInfo.Text.Trim()) == false)
                     {
-                        ((frmMessage)Form).UpdateUserInfo(EuserInfo.ÐÞ¸ÄêÇ³Æ, txtEditInfo.Text);
-                        ((frmMessage)Form).lblName.Text = txtEditInfo.Text;
+                        //((frmMessage)Form).UpdateUserInfo(EuserInfo.ÐÞ¸ÄêÇ³Æ, txtEditInfo.Text);
+                        //((frmMessage)Form).lblName.Text = txtEditInfo.Text;
+                       fml.UpdateUserInfo(EuserInfo.ÐÞ¸ÄêÇ³Æ, txtEditInfo.Text);
+                      fml.lblName.Text = txtEditInfo.Text;
                         this.Close();
                     }
                     else

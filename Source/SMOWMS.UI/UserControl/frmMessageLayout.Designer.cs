@@ -1,40 +1,24 @@
-using System;
+Ôªøusing System;
 using Smobiler.Core;
-namespace SMOWMS.UI.UserInfo
+namespace SMOWMS.UI.UserControl
 {
-    partial class frmMessage : Smobiler.Core.Controls.MobileForm
+    partial class frmMessageLayout : Smobiler.Core.Controls.MobileUserControl
     {
-        #region "SmobilerForm generated code "
+        #region "SmobilerUserControl generated code "
 
-        public frmMessage()
-            : base()
-        {
-            //This call is required by the SmobilerForm.
-            InitializeComponent();
-
-            //Add any initialization after the InitializeComponent() call
-        }
-
-        //SmobilerForm overrides dispose to clean up the component list.
+        //SmobilerUserControl overrides dispose to clean up the component list.
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
         }
 
-
-        //NOTE: The following procedure is required by the SmobilerForm
-        //It can be modified using the SmobilerForm.  
+        //NOTE: The following procedure is required by the SmobilerUserControl
+        //It can be modified using the SmobilerUserControl.  
         //Do not modify it using the code editor.
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.PopListGroup popListGroup1 = new Smobiler.Core.Controls.PopListGroup();
-            Smobiler.Core.Controls.PopListItem popListItem1 = new Smobiler.Core.Controls.PopListItem();
-            Smobiler.Core.Controls.PopListItem popListItem2 = new Smobiler.Core.Controls.PopListItem();
             this.lblTitle = new Smobiler.Core.Controls.Label();
-            this.Camera1 = new Smobiler.Core.Controls.Camera();
-            this.popSex = new Smobiler.Core.Controls.PopList();
-            this.menuToolbar = new SMOWMS.UI.UserControl.MenuToolbar();
             this.spContent = new Smobiler.Core.Controls.Panel();
             this.plImage = new Smobiler.Core.Controls.Panel();
             this.imgUser = new Smobiler.Core.Controls.ImageButton();
@@ -61,6 +45,8 @@ namespace SMOWMS.UI.UserInfo
             this.lblEmail = new Smobiler.Core.Controls.Label();
             this.btnMessage = new Smobiler.Core.Controls.Button();
             this.btnExit = new Smobiler.Core.Controls.Button();
+            this.Camera1 = new Smobiler.Core.Controls.Camera();
+            this.popSex = new Smobiler.Core.Controls.PopList();
             // 
             // lblTitle
             // 
@@ -71,40 +57,7 @@ namespace SMOWMS.UI.UserInfo
             this.lblTitle.Location = new System.Drawing.Point(107, 51);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(100, 40);
-            this.lblTitle.Text = "∏ˆ»À–≈œ¢";
-            // 
-            // Camera1
-            // 
-            this.Camera1.Name = "Camera1";
-            this.Camera1.ImageCaptured += new Smobiler.Core.Controls.CameraOnlineCallBackHandler(this.Camera1_ImageCaptured);
-            // 
-            // popSex
-            // 
-            popListItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            popListItem1.Text = "ƒ–";
-            popListItem1.Value = "1";
-            popListItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            popListItem2.Text = "≈Æ";
-            popListItem2.Value = "0";
-            popListGroup1.Items.AddRange(new Smobiler.Core.Controls.PopListItem[] {
-            popListItem1,
-            popListItem2});
-            popListGroup1.Title = "–‘±—°‘Ò";
-            popListGroup1.Value = null;
-            this.popSex.Groups.AddRange(new Smobiler.Core.Controls.PopListGroup[] {
-            popListGroup1});
-            this.popSex.Name = "popSex";
-            this.popSex.Selected += new System.EventHandler(this.popSex_Selected);
-            // 
-            // menuToolbar
-            // 
-            this.menuToolbar.BackColor = System.Drawing.Color.White;
-            this.menuToolbar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuToolbar.Location = new System.Drawing.Point(64, 165);
-            this.menuToolbar.Name = "menuToolbar";
-            this.menuToolbar.SelectedIndex = -1;
-            this.menuToolbar.selectName = null;
-            this.menuToolbar.Size = new System.Drawing.Size(100, 50);
+            this.lblTitle.Text = "‰∏™‰∫∫‰ø°ÊÅØ";
             // 
             // spContent
             // 
@@ -182,7 +135,7 @@ namespace SMOWMS.UI.UserInfo
             this.label1.Name = "label1";
             this.label1.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
             this.label1.Size = new System.Drawing.Size(80, 35);
-            this.label1.Text = "–‘±";
+            this.label1.Text = "ÊÄßÂà´";
             // 
             // btnSex
             // 
@@ -194,7 +147,7 @@ namespace SMOWMS.UI.UserInfo
             this.btnSex.Name = "btnSex";
             this.btnSex.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 10F, 0F);
             this.btnSex.Size = new System.Drawing.Size(220, 35);
-            this.btnSex.Text = "ƒ–   >";
+            this.btnSex.Text = "Áî∑   >";
             this.btnSex.Press += new System.EventHandler(this.btnSex_Press);
             // 
             // plAddress
@@ -215,7 +168,7 @@ namespace SMOWMS.UI.UserInfo
             this.label5.Name = "label5";
             this.label5.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
             this.label5.Size = new System.Drawing.Size(80, 35);
-            this.label5.Text = "µÿ÷∑";
+            this.label5.Text = "Âú∞ÂùÄ";
             // 
             // txtAddress
             // 
@@ -245,7 +198,7 @@ namespace SMOWMS.UI.UserInfo
             this.label4.Name = "label4";
             this.label4.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
             this.label4.Size = new System.Drawing.Size(80, 35);
-            this.label4.Text = "≥ˆ…˙»’∆⁄";
+            this.label4.Text = "Âá∫ÁîüÊó•Êúü";
             // 
             // dpkBirthday
             // 
@@ -282,7 +235,7 @@ namespace SMOWMS.UI.UserInfo
             this.label7.Name = "label7";
             this.label7.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
             this.label7.Size = new System.Drawing.Size(80, 40);
-            this.label7.Text = "’À∫≈";
+            this.label7.Text = "Ë¥¶Âè∑";
             // 
             // lblID
             // 
@@ -311,7 +264,7 @@ namespace SMOWMS.UI.UserInfo
             this.Label2.Name = "Label2";
             this.Label2.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
             this.Label2.Size = new System.Drawing.Size(80, 35);
-            this.Label2.Text = "µÁª∞";
+            this.Label2.Text = "ÁîµËØù";
             // 
             // lblPhone
             // 
@@ -340,7 +293,7 @@ namespace SMOWMS.UI.UserInfo
             this.label3.Name = "label3";
             this.label3.Padding = new Smobiler.Core.Controls.Padding(10F, 0F, 0F, 0F);
             this.label3.Size = new System.Drawing.Size(80, 40);
-            this.label3.Text = "” œ‰";
+            this.label3.Text = "ÈÇÆÁÆ±";
             // 
             // lblEmail
             // 
@@ -361,7 +314,7 @@ namespace SMOWMS.UI.UserInfo
             this.btnMessage.Location = new System.Drawing.Point(0, 400);
             this.btnMessage.Name = "btnMessage";
             this.btnMessage.Size = new System.Drawing.Size(300, 40);
-            this.btnMessage.Text = "–ﬁ∏ƒ";
+            this.btnMessage.Text = "‰øÆÊîπ";
             this.btnMessage.Press += new System.EventHandler(this.btnMessage_Press);
             // 
             // btnExit
@@ -374,31 +327,34 @@ namespace SMOWMS.UI.UserInfo
             this.btnExit.Location = new System.Drawing.Point(0, 440);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(300, 40);
-            this.btnExit.Text = "◊¢œ˙";
+            this.btnExit.Text = "Ê≥®ÈîÄ";
             this.btnExit.Press += new System.EventHandler(this.btnExit_Press);
             // 
-            // frmMessage
+            // Camera1
+            // 
+            this.Camera1.Name = "Camera1";
+            this.Camera1.ImageCaptured += new Smobiler.Core.Controls.CameraOnlineCallBackHandler(this.Camera1_ImageCaptured);
+            // 
+            // popSex
+            // 
+            this.popSex.Name = "popSex";
+            this.popSex.Selected += new System.EventHandler(this.popSex_Selected);
+            // 
+            // frmMessageLayout
             // 
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
             this.Camera1,
             this.popSex});
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.lblTitle,
-            this.menuToolbar,
             this.spContent});
-            this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
-            this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmMessage_KeyDown);
-            this.Load += new System.EventHandler(this.frmMessage_Load);
-            this.Name = "frmMessage";
+            this.Load += new System.EventHandler(this.frmMessageLayout_Load);
+            this.Name = "frmMessageLayout";
 
         }
         #endregion
 
         private Smobiler.Core.Controls.Label lblTitle;
-        internal Smobiler.Core.Controls.Camera Camera1;
-        internal Smobiler.Core.Controls.PopList popSex;
-        public UserControl.MenuToolbar menuToolbar;
         private Smobiler.Core.Controls.Panel spContent;
         internal Smobiler.Core.Controls.Panel plImage;
         internal Smobiler.Core.Controls.ImageButton imgUser;
@@ -425,5 +381,7 @@ namespace SMOWMS.UI.UserInfo
         private Smobiler.Core.Controls.Label lblEmail;
         internal Smobiler.Core.Controls.Button btnMessage;
         internal Smobiler.Core.Controls.Button btnExit;
+        private Smobiler.Core.Controls.Camera Camera1;
+        private Smobiler.Core.Controls.PopList popSex;
     }
 }

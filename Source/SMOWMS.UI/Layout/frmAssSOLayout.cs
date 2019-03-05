@@ -7,6 +7,7 @@ using Smobiler.Core.Controls;
 using SMOWMS.CommLib;
 using SMOWMS.UI.AssetsManager;
 using SMOWMS.UI.Menu;
+using SMOWMS.UI.UserControl;
 
 namespace SMOWMS.UI.Layout
 {
@@ -37,12 +38,16 @@ namespace SMOWMS.UI.Layout
         {
             try
             {
+                frmToolBarMenu fm = (frmToolBarMenu)this.Form;
+                frmOrderLayout frmorder = (frmOrderLayout)fm.tabPageView1.Controls[1];
+
                 frmAssSalesOrderEdit edit = new frmAssSalesOrderEdit { SOID = lblName.BindDataValue.ToString() };
                 Form.Show(edit, (MobileForm sender1, object args) =>
                 {
                     if (edit.ShowResult == ShowResult.Yes)
                     {
-                        ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);
+                        //((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);
+                        frmorder.Bind(frmorder.type, frmorder.orderType);
                     }
 
                 }
@@ -62,12 +67,16 @@ namespace SMOWMS.UI.Layout
         {
             try
             {
+                frmToolBarMenu fm = (frmToolBarMenu)this.Form;
+                frmOrderLayout frmorder = (frmOrderLayout)fm.tabPageView1.Controls[1];
+
                 frmAssSalesOrderResult result = new frmAssSalesOrderResult { SOID = lblName.BindDataValue.ToString() };
                 Form.Show(result, (MobileForm sender1, object args) =>
                 {
                     if (result.ShowResult == ShowResult.Yes || result.ShowResult == ShowResult.None)
                     {
-                        ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);
+                        // ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);
+                        frmorder.Bind(frmorder.type, frmorder.orderType);
                     }
                 });
             }

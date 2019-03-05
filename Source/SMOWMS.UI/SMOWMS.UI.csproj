@@ -789,7 +789,43 @@
     <Compile Include="MasterData\frmWHStorgageType.Designer.cs">
       <DependentUpon>frmWHStorgageType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\frmToolBarMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu\frmToolBarMenu.Designer.cs">
+      <DependentUpon>frmToolBarMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="UserControl\frmAnalyzeLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\frmAnalyzeLayout.Designer.cs">
+      <DependentUpon>frmAnalyzeLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\frmMasterDataLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\frmMasterDataLayout.Designer.cs">
+      <DependentUpon>frmMasterDataLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\frmMenuLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\frmMenuLayout.Designer.cs">
+      <DependentUpon>frmMenuLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\frmMessageLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\frmMessageLayout.Designer.cs">
+      <DependentUpon>frmMessageLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\frmOrderLayout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\frmOrderLayout.Designer.cs">
+      <DependentUpon>frmOrderLayout.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\MenuToolbar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1394,6 +1430,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\frmOrder.resx">
       <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmToolBarMenu.resx">
+      <DependentUpon>frmToolBarMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\frmAnalyzeLayout.resx">
+      <DependentUpon>frmAnalyzeLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\frmMasterDataLayout.resx">
+      <DependentUpon>frmMasterDataLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\frmMenuLayout.resx">
+      <DependentUpon>frmMenuLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\frmMessageLayout.resx">
+      <DependentUpon>frmMessageLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\frmOrderLayout.resx">
+      <DependentUpon>frmOrderLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\MenuToolbar.resx">
       <DependentUpon>MenuToolbar.cs</DependentUpon>

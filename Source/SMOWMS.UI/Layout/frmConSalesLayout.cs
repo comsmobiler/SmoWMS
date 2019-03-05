@@ -7,6 +7,7 @@ using Smobiler.Core.Controls;
 using SMOWMS.UI.ConsumablesManager;
 using SMOWMS.CommLib;
 using SMOWMS.UI.Menu;
+using SMOWMS.UI.UserControl;
 
 namespace SMOWMS.UI.Layout
 {
@@ -35,10 +36,14 @@ namespace SMOWMS.UI.Layout
         /// <param name="e"></param>
         private void plRow_Press(object sender, EventArgs e)
         {
+            frmToolBarMenu fm = (frmToolBarMenu)this.Form;
+            frmOrderLayout frmorder = (frmOrderLayout)fm.tabPageView1.Controls[1];
+
             frmConSalesResult frm = new frmConSalesResult();
             frm.SOID = lblName.BindDataValue.ToString();
             Form.Show(frm, (MobileForm sender1, object args) => {
-                ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);
+                //  ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);
+                frmorder.Bind(frmorder.type, frmorder.orderType);
             });
         }
         /// <summary>
@@ -48,12 +53,16 @@ namespace SMOWMS.UI.Layout
         /// <param name="e"></param>
         private void ibEdit_Press(object sender, EventArgs e)
         {
+            frmToolBarMenu fm = (frmToolBarMenu)this.Form;
+            frmOrderLayout frmorder = (frmOrderLayout)fm.tabPageView1.Controls[1];
+
             frmConSalesCreate frm = new frmConSalesCreate { SOID = lblName.BindDataValue.ToString() };
             Form.Show(frm, (MobileForm sender1, object args) =>
             {
                 if (frm.ShowResult == ShowResult.Yes)
                 {
-                    ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);
+                    frmorder.Bind(frmorder.type, frmorder.orderType);
+                   // ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);
                 }
             });
         }

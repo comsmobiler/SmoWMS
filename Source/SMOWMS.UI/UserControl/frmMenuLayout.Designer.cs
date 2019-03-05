@@ -1,20 +1,19 @@
 ﻿using System;
 using Smobiler.Core;
-namespace SMOWMS.UI.Menu
+namespace SMOWMS.UI.UserControl
 {
-    partial class frmMenu : Smobiler.Core.Controls.MobileForm
+    partial class frmMenuLayout : Smobiler.Core.Controls.MobileUserControl
     {
-        #region "SmobilerForm generated code "
+        #region "SmobilerUserControl generated code "
 
-        //SmobilerForm overrides dispose to clean up the component list.
+        //SmobilerUserControl overrides dispose to clean up the component list.
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
         }
 
-
-        //NOTE: The following procedure is required by the SmobilerForm
-        //It can be modified using the SmobilerForm.  
+        //NOTE: The following procedure is required by the SmobilerUserControl
+        //It can be modified using the SmobilerUserControl.  
         //Do not modify it using the code editor.
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
@@ -32,17 +31,11 @@ namespace SMOWMS.UI.Menu
             Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem9 = new Smobiler.Core.Controls.IconMenuViewItem();
             Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem10 = new Smobiler.Core.Controls.IconMenuViewItem();
             Smobiler.Core.Controls.IconMenuViewItem iconMenuViewItem11 = new Smobiler.Core.Controls.IconMenuViewItem();
-            this.popWareHouse = new Smobiler.Core.Controls.PopList();
             this.lblTitle = new Smobiler.Core.Controls.Label();
             this.plWareHouse = new Smobiler.Core.Controls.Panel();
             this.btnWareHouse = new Smobiler.Core.Controls.Button();
             this.iconMenu = new Smobiler.Core.Controls.IconMenuView();
-            this.menuToolbar = new SMOWMS.UI.UserControl.MenuToolbar();
-            // 
-            // popWareHouse
-            // 
-            this.popWareHouse.Name = "popWareHouse";
-            this.popWareHouse.Selected += new System.EventHandler(this.popWareHouse_Selected);
+            this.popWareHouse = new Smobiler.Core.Controls.PopList();
             // 
             // lblTitle
             // 
@@ -155,36 +148,31 @@ namespace SMOWMS.UI.Menu
             this.iconMenu.Size = new System.Drawing.Size(0, 0);
             this.iconMenu.ItemPress += new Smobiler.Core.Controls.IconMenuViewItemPressClickHandler(this.iconMenu_ItemPress);
             // 
-            // menuToolbar
+            // popWareHouse
             // 
-            this.menuToolbar.BackColor = System.Drawing.Color.White;
-            this.menuToolbar.Name = "menuToolbar";
-            this.menuToolbar.SelectedIndex = -1;
-            this.menuToolbar.selectName = null;
-            this.menuToolbar.Size = new System.Drawing.Size(0, 50);
+            this.popWareHouse.Name = "popWareHouse";
+            this.popWareHouse.Selected += new System.EventHandler(this.popWareHouse_Selected);
             // 
-            // frmMenu
+            // frmMenuLayout
             // 
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
             this.popWareHouse});
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.lblTitle,
             this.plWareHouse,
-            this.iconMenu,
-            this.menuToolbar});
+            this.iconMenu});
             this.Layout = Smobiler.Core.Controls.LayoutPosition.Relative;
-            this.Statusbar = new Smobiler.Core.Controls.MobileFormStatusbar(Smobiler.Core.Controls.MobileFormStatusbarStyle.Default, System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(164)))), ((int)(((byte)(229))))));
-            this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmMenu_KeyDown);
-            this.Load += new System.EventHandler(this.frmMenu_Load);
-            this.Name = "frmMenu";
+            this.Size = new System.Drawing.Size(300, 500);
+            this.Load += new System.EventHandler(this.frmMenuLayout_Load);
+            this.Name = "frmMenuLayout";
 
         }
         #endregion
-        private Smobiler.Core.Controls.PopList popWareHouse;
+
         private Smobiler.Core.Controls.Label lblTitle;
         private Smobiler.Core.Controls.Panel plWareHouse;
         internal Smobiler.Core.Controls.Button btnWareHouse;
         private Smobiler.Core.Controls.IconMenuView iconMenu;
-        public UserControl.MenuToolbar menuToolbar;
+        private Smobiler.Core.Controls.PopList popWareHouse;
     }
 }

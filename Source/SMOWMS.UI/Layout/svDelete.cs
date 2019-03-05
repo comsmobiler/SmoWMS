@@ -10,6 +10,7 @@ using SMOWMS.UI.Menu;
 using SMOWMS.DTOs.OutputDTO;
 using SMOWMS.DTOs.Enum;
 using SMOWMS.UI.MasterData;
+using SMOWMS.UI.UserControl;
 
 namespace SMOWMS.UI.Layout
 {
@@ -32,6 +33,9 @@ namespace SMOWMS.UI.Layout
         {
             try
             {
+                frmToolBarMenu fm = (frmToolBarMenu)this.Form;
+                frmOrderLayout frmorder = (frmOrderLayout)fm.tabPageView1.Controls[1];
+
                 switch (Parent.Parent.ToString())
                 {
                     case "SMOWMS.UI.Layout.frmAssPOLayout":
@@ -47,7 +51,8 @@ namespace SMOWMS.UI.Layout
                                         ReturnInfo rInfo = autofacConfig.AssPurchaseOrderService.DeletePurchaseOrder(((frmAssPOLayout)Parent.Parent).POID);
                                         if (rInfo.IsSuccess)
                                         {
-                                            ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);  //刷新当前列表
+                                            frmorder.Bind(frmorder.type, frmorder.orderType);
+                                           // ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);  //刷新当前列表
                                             Toast("删除采购单成功");
                                         }
                                         else
@@ -80,7 +85,8 @@ namespace SMOWMS.UI.Layout
                                         ReturnInfo rInfo = autofacConfig.AssSalesOrderService.DeleteSalesOrder(((frmAssSOLayout)Parent.Parent).SOID);
                                         if (rInfo.IsSuccess)
                                         {
-                                            ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);  //刷新当前列表
+                                            frmorder.Bind(frmorder.type, frmorder.orderType);
+                                            // ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);  //刷新当前列表
                                             Toast("删除销售单成功");
                                         }
                                         else
@@ -113,7 +119,8 @@ namespace SMOWMS.UI.Layout
                                         ReturnInfo rInfo = autofacConfig.ConPurchaseOrderService.DeletePurchaseOrder(((frmConPurchaseLayout)Parent.Parent).POID);
                                         if (rInfo.IsSuccess)
                                         {
-                                            ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);  //刷新当前列表
+                                            frmorder.Bind(frmorder.type, frmorder.orderType);
+                                            //((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);  //刷新当前列表
                                             Toast("删除采购单成功");
                                         }
                                         else
@@ -146,7 +153,8 @@ namespace SMOWMS.UI.Layout
                                         ReturnInfo rInfo = autofacConfig.ConSalesOrderService.DeleteSalesOrder(((frmConSalesLayout)Parent.Parent).SOID);
                                         if (rInfo.IsSuccess)
                                         {
-                                            ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);  //刷新当前列表
+                                            frmorder.Bind(frmorder.type, frmorder.orderType);
+                                            //  ((frmOrder)Form).Bind(((frmOrder)Form).type, ((frmOrder)Form).orderType);  //刷新当前列表
                                             Toast("删除销售单成功");
                                         }
                                         else

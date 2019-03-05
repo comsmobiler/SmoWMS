@@ -65,8 +65,9 @@ namespace SMOWMS.UI
                     String Role = autofacConfig.coreUserService.GetUserByID(userID).USER_ROLE;
                     Client.Session["UserID"] = userID;
                     Client.Session["Role"] = Role;
-                    frmMenu frmMenu = new frmMenu();
-                    this.Show(frmMenu);
+                    //frmMenu frmMenu = new frmMenu();
+                   // this.Form.Show(frmMenu);
+                    this.Show(new frmToolBarMenu());
                 }
                 else
                 {
@@ -152,8 +153,8 @@ namespace SMOWMS.UI
                     String Role = autofacConfig.coreUserService.GetUserByID("12345678917").USER_ROLE;
                     Client.Session["UserID"] = "12345678917";
                     Client.Session["Role"] = Role;
-                    frmMenu frm = new frmMenu();
-                    Show(frm);
+                    //frmMenu frm = new frmMenu();
+                    Show(new frmToolBarMenu()); 
                 }
                 else
                 {
