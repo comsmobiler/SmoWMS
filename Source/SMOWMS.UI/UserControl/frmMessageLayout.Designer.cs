@@ -18,6 +18,9 @@ namespace SMOWMS.UI.UserControl
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
+            Smobiler.Core.Controls.PopListGroup popListGroup1 = new Smobiler.Core.Controls.PopListGroup();
+            Smobiler.Core.Controls.PopListItem popListItem1 = new Smobiler.Core.Controls.PopListItem();
+            Smobiler.Core.Controls.PopListItem popListItem2 = new Smobiler.Core.Controls.PopListItem();
             this.lblTitle = new Smobiler.Core.Controls.Label();
             this.spContent = new Smobiler.Core.Controls.Panel();
             this.plImage = new Smobiler.Core.Controls.Panel();
@@ -337,6 +340,19 @@ namespace SMOWMS.UI.UserControl
             // 
             // popSex
             // 
+            popListItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            popListItem1.Text = "男";
+            popListItem1.Value = "1";
+            popListItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            popListItem2.Text = "女";
+            popListItem2.Value = "0";
+            popListGroup1.Items.AddRange(new Smobiler.Core.Controls.PopListItem[] {
+            popListItem1,
+            popListItem2});
+            popListGroup1.Title = "性别选择";
+            popListGroup1.Value = null;
+            this.popSex.Groups.AddRange(new Smobiler.Core.Controls.PopListGroup[] {
+            popListGroup1});
             this.popSex.Name = "popSex";
             this.popSex.Selected += new System.EventHandler(this.popSex_Selected);
             // 

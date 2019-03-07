@@ -43,6 +43,7 @@ namespace SMOWMS.UI.Layout
                     {
                         frmChangePwd frm = new frmChangePwd();
                         frm.oldPwd = txtPwd.Text;
+                        Form.Show(frm);
                     }
                     else
                     {
