@@ -4,13 +4,14 @@
 SmoWMS，仓库管理系统。是一款以.NET开发的移动端仓库管理解决方案。     
 IDE为VisualStudio，开发平台为Smobiler，SmobilerDesigner通过实现.NET的component组件方式，借助VisualStudio集成开发环境来开发移动应用。SmobilerClient是通用的框架客户端，使用自有的stml协议实现客户端的原生控件渲染和事件。云平台可在云端生成Android和IOS的安装文件。      
 SmoWMS is a Warehouse Management solution for APPs, developed by .NET. The development environment is VisualStudio, the development platform is Smobiler.      
-![登录页](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/logon.gif)    
+![登录页](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/logon.gif)   
 
+也可前往Gitee码云获取源码，https://gitee.com/smobiler/SmoWMS
 该项目已经打包了Android和iOS的安装包。供大家体验。
 + [Android下载](https://apps.smobiler.cn/App/AppDetails?AppID=110)
 + [iOS下载](https://apps.smobiler.cn/App/AppDetails?AppID=110)（iOS用户需使用safari浏览器打开此链接下载）           
 我们为该demo提供了试用的登陆账号：12345678912，密码为：123456
-+ [Gitee下载](https://gitee.com/smobiler/SmoWMS)    
+
 ## 环境要求
 
 ### 客户端运行环境要求
