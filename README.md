@@ -6,7 +6,8 @@ IDE为VisualStudio，开发平台为Smobiler，SmobilerDesigner通过实现.NET�
 SmoWMS is a Warehouse Management solution for APPs, developed by .NET. The development environment is VisualStudio, the development platform is Smobiler.      
 ![登录页](https://github.com/comsmobiler/SmoWMS/blob/master/Resources/logon.gif)   
 
-也可前往Gitee码云获取源码，https://gitee.com/smobiler/SmoWMS
+也可前往Gitee码云获取源码，https://gitee.com/smobiler/SmoWMS  
+
 该项目已经打包了Android和iOS的安装包。供大家体验。
 + [Android下载](https://apps.smobiler.cn/App/AppDetails?AppID=110)
 + [iOS下载](https://apps.smobiler.cn/App/AppDetails?AppID=110)（iOS用户需使用safari浏览器打开此链接下载）           
