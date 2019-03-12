@@ -235,7 +235,8 @@ namespace SMOWMS.UI.UserControl
             {
                 if (String.IsNullOrEmpty(e.error))
                 {
-                    e.SaveFile(UserID + ".png");   //保存图片文件到服务器
+                    e.SaveFile(UserID + ".png",MobileResourceManager.DefaultImagePath);
+                    //  e.SaveFile(UserID + ".png");   //保存图片文件到服务器
                     imgUser.ResourceID = UserID;
                     imgUser.Refresh();       //刷新当前显示界面
                     UpdateUserInfo(EuserInfo.修改头像, imgUser.ResourceID);

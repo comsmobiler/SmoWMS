@@ -34,6 +34,8 @@ namespace SMOWMS.UI.Layout
             this.LblTId = new Smobiler.Core.Controls.Label();
             this.numQuant = new Smobiler.Core.Controls.Numeric();
             this.numPrice = new Smobiler.Core.Controls.Numeric();
+            this.labQuant1 = new Smobiler.Core.Controls.Label();
+            this.labPrice1 = new Smobiler.Core.Controls.Label();
             // 
             // plRow
             // 
@@ -44,7 +46,9 @@ namespace SMOWMS.UI.Layout
             this.lblName,
             this.LblTId,
             this.numQuant,
-            this.numPrice});
+            this.numPrice,
+            this.labQuant1,
+            this.labPrice1});
             this.plRow.Name = "plRow";
             this.plRow.Size = new System.Drawing.Size(300, 84);
             this.plRow.Touchable = true;
@@ -87,9 +91,8 @@ namespace SMOWMS.UI.Layout
             // numQuant
             // 
             this.numQuant.DataMember = "QUANT";
-            this.numQuant.DisplayFormat = "销售数量:{0}";
             this.numQuant.DisplayMember = "QUANT";
-            this.numQuant.Location = new System.Drawing.Point(58, 44);
+            this.numQuant.Location = new System.Drawing.Point(129, 44);
             this.numQuant.MaxValue = 999999F;
             this.numQuant.Name = "numQuant";
             this.numQuant.Size = new System.Drawing.Size(150, 16);
@@ -97,12 +100,27 @@ namespace SMOWMS.UI.Layout
             // numPrice
             // 
             this.numPrice.DataMember = "PRICE";
-            this.numPrice.DisplayFormat = "销售单价:{0}";
             this.numPrice.DisplayMember = "PRICE";
-            this.numPrice.Location = new System.Drawing.Point(58, 60);
+            this.numPrice.Location = new System.Drawing.Point(129, 60);
             this.numPrice.MaxValue = 999999F;
             this.numPrice.Name = "numPrice";
             this.numPrice.Size = new System.Drawing.Size(150, 16);
+            // 
+            // labQuant1
+            // 
+            this.labQuant1.FontSize = 12F;
+            this.labQuant1.Location = new System.Drawing.Point(69, 44);
+            this.labQuant1.Name = "labQuant1";
+            this.labQuant1.Size = new System.Drawing.Size(60, 16);
+            this.labQuant1.Text = "销售数量：";
+            // 
+            // labPrice1
+            // 
+            this.labPrice1.FontSize = 12F;
+            this.labPrice1.Location = new System.Drawing.Point(69, 60);
+            this.labPrice1.Name = "labPrice1";
+            this.labPrice1.Size = new System.Drawing.Size(60, 16);
+            this.labPrice1.Text = "销售单价：";
             // 
             // frmAssSORowLayout
             // 
@@ -120,5 +138,7 @@ namespace SMOWMS.UI.Layout
         internal Smobiler.Core.Controls.Label LblTId;
         internal Smobiler.Core.Controls.Numeric numQuant;
         internal Smobiler.Core.Controls.Numeric numPrice;
+        private Smobiler.Core.Controls.Label labQuant1;
+        private Smobiler.Core.Controls.Label labPrice1;
     }
 }

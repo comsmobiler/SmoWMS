@@ -2,6 +2,7 @@ using System;
 using Smobiler.Core.Controls;
 using SMOWMS.CommLib;
 using SMOWMS.DTOs.InputDTO;
+using Smobiler.Core;
 
 namespace SMOWMS.UI.MasterData
 {
@@ -125,7 +126,8 @@ namespace SMOWMS.UI.MasterData
             {
                 if (string.IsNullOrEmpty(e.error))
                 {
-                    e.SaveFile(UserId + DateTime.Now.ToString("yyyyMMddHHmmss") + ".png");
+                    e.SaveFile(UserId + DateTime.Now.ToString("yyyyMMddHHmmss") + ".png",MobileResourceManager.DefaultImagePath);
+                    // e.SaveFile(UserId + DateTime.Now.ToString("yyyyMMddHHmmss") + ".png");
                     ImgPicture.ResourceID = UserId + DateTime.Now.ToString("yyyyMMddHHmmss");
                     ImgPicture.Refresh();
                 }

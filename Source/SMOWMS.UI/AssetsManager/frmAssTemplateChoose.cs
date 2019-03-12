@@ -39,6 +39,13 @@ namespace SMOWMS.UI.AssetsManager
                         ATRow.CheckBox1.Checked = true;
                     }
 
+                }else
+                {
+                    foreach (var row in lvAssTemplate.Rows)
+                    {
+                        frmATChooseLayout ATRow = (frmATChooseLayout)row.Control;
+                        ATRow.CheckBox1.Checked = false;
+                    }
                 }
                 
             }
@@ -46,6 +53,20 @@ namespace SMOWMS.UI.AssetsManager
             {
                 Toast(ex.Message);
             }
+        }
+
+
+        /// <summary>
+        /// 更新全选状态
+        /// </summary>
+        public void updateCheckBox()
+        {
+            GetAT();
+            DataRow[] checkPro = AllATTable.Select("IsChecked=" + true);
+            if (AllATTable.Rows.Count != checkPro.Length)
+                Checkall.Checked = false;
+            else Checkall.Checked = true;
+
         }
 
         /// <summary>
@@ -79,6 +100,8 @@ namespace SMOWMS.UI.AssetsManager
                 Toast(ex.Message);
             }
         }
+
+
 
 
         /// <summary>
