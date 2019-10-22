@@ -43,14 +43,15 @@ namespace SMOWMS.UI.Menu
                 }
 
             }
-            if (tabPageView1.PageIndex == 1)
+            if (tabPageView1.PageIndex == 1&&this.ActionButton.Enabled==false)
             {
                 this.ActionButton.Enabled = true;
             }
-            else
+            else if(tabPageView1.PageIndex != 1) 
             {
                 this.ActionButton.Enabled = false;
             }
+            
 
         }
 
