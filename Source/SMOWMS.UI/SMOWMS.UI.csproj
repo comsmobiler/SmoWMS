@@ -800,7 +800,11 @@
     <Compile Include="Menu\frmToolBarMenu.Designer.cs">
       <DependentUpon>frmToolBarMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\frmAnalyzeLayout.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1577,7 +1581,7 @@
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
