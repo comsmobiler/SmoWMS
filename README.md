@@ -50,4 +50,4 @@ SmobilerDesigner版本：450及以上([下载并安装SmobilerDesigner](https://
 + [数据库生成办法](https://www.smobiler.com/forum.php?mod=viewthread&tid=793&highlight=smoONE)
 + [将该项目打包成你的独立APP](https://www.smobiler.com/yunapp.aspx)
 + [Smobiler官网](http://www.smobiler.com/)
-+ 技术交流群：308522976
++ 技术交流群： 一群：308522976(已满) 二群：930868351
