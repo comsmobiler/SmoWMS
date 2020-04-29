@@ -93,7 +93,7 @@ namespace SMOWMS.UI.Layout
             this.numQuant.DataMember = "QUANT";
             this.numQuant.DisplayMember = "QUANT";
             this.numQuant.Location = new System.Drawing.Point(126, 44);
-            this.numQuant.MaxValue = 999999F;
+            this.numQuant.MaxValue = 999999;
             this.numQuant.Name = "numQuant";
             this.numQuant.Size = new System.Drawing.Size(103, 16);
             // 
@@ -102,7 +102,7 @@ namespace SMOWMS.UI.Layout
             this.numPrice.DataMember = "PRICE";
             this.numPrice.DisplayMember = "PRICE";
             this.numPrice.Location = new System.Drawing.Point(126, 60);
-            this.numPrice.MaxValue = 999999F;
+            this.numPrice.MaxValue = 999999;
             this.numPrice.Name = "numPrice";
             this.numPrice.Size = new System.Drawing.Size(103, 16);
             // 

@@ -76,7 +76,7 @@ namespace SMOWMS.UI.Layout
             this.numQuant.DisplayMember = "QUANTPURCHASED";
             this.numQuant.FontSize = 13F;
             this.numQuant.Location = new System.Drawing.Point(170, 20);
-            this.numQuant.MaxValue = 10000F;
+            this.numQuant.MaxValue = 10000;
             this.numQuant.MinusIconColor = System.Drawing.Color.Black;
             this.numQuant.Name = "numQuant";
             this.numQuant.Size = new System.Drawing.Size(130, 20);
@@ -103,7 +103,7 @@ namespace SMOWMS.UI.Layout
             this.numPrice.DisplayMember = "REALPRICE";
             this.numPrice.FontSize = 13F;
             this.numPrice.Location = new System.Drawing.Point(170, 40);
-            this.numPrice.MaxValue = 10000F;
+            this.numPrice.MaxValue = 10000;
             this.numPrice.MinusIconColor = System.Drawing.Color.Black;
             this.numPrice.Name = "numPrice";
             this.numPrice.Size = new System.Drawing.Size(130, 20);

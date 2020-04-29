@@ -35,7 +35,7 @@ namespace SMOWMS.UI.Layout
         {
             if (Check.Checked == true)
             {
-                if (numNumber.Value > Convert.ToDouble(lblNumber.BindDataValue))
+                if (numNumber.Value > Convert.ToDecimal(lblNumber.BindDataValue))
                 {
                     if (((frmTransferDeal)Form).Type == PROCESSMODE.调拨确认)
                         throw new Exception("确认数量不能超过调拨数量!");
